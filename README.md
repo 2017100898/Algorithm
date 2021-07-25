@@ -1,7 +1,6 @@
 # Algorithm
 
-<img src= "https://img.shields.io/badge/language-C++-pink">
-
+<img src= "https://img.shields.io/badge/language-C++-pink"> <img src= "https://img.shields.io/github/last-commit/2017100898/Algorithm?color=lavender&label=last%20commit">
 
 🌍    Baekjoon  Online Judge (BOJ)   
 ✨    주로 C++, 아주 가끔 Python 사용합니다.   
