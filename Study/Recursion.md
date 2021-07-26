@@ -18,7 +18,7 @@ BOJ 9613에서 구현한 GCD는 다음과 같다.
 ```C++
 
 long long GCD(int a, int b){
-    if( a%b == 0){
+    if(a%b== 0){
         return b;
     }
 
