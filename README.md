@@ -1,5 +1,5 @@
 # Today I Learned
-<img src= "https://img.shields.io/github/last-commit/2017100898/Algorithm?color=lavender&label=last%20commit">
+<img src= "https://img.shields.io/github/last-commit/2017100898/TIL?color=lavender&label=last%20commit">
 
 ### Algorithm
 * [깊이우선탐색 (DFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/DFS.md)
