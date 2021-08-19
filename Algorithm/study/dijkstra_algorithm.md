@@ -22,3 +22,33 @@
 	1. 이후 정점 A를 Q에서 제거하고, S에 넣는다. 앞으로 A는 사용하지 않는다.
 	2. Q에 있는 노드 중 출발점으로부터의 거리가 가장 짧은 노드를 골라서 그 노드를 A로 변경한다.
 6. 더 이상 미방문 노드를 선택할 수 없을 때까지 3~5의 과정을 반복한다.
+
+
+## 구현
+```C++
+int dijkstra(int start) {
+    que.push({0, start});
+
+    while (!que.empty()) {
+        int cost = -que.top().first;
+        int A = que.top().second;
+        que.pop();
+
+        if(D[A]<cost)
+            continue;
+
+        for (int i = 0; i < vec[A].size(); i++) {
+            to = vec[A][i].first; 
+            weight = vec[A][i].second;
+
+            if (D[to] > D[A] + weight) {
+                D[to] = D[A] + weight;
+                que.push({-D[to], to});
+            }
+        }
+    }
+
+    return 0;
+}
+
+```
