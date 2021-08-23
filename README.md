@@ -18,3 +18,6 @@
 * [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
 ### MachineLearning
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
+
+### SQL
+* [엔터티 (Entity)](https://github.com/2017100898/TIL/blob/main/SQL/entity.md)
