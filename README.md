@@ -21,3 +21,4 @@
 
 ### SQL
 * [엔터티 (Entity)](https://github.com/2017100898/TIL/blob/main/SQL/entity.md)
+* [속성 (Attribute)](https://github.com/2017100898/TIL/blob/main/SQL/attribute.md)
