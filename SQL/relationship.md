@@ -11,6 +11,9 @@
 * 관계 선택성: 필수 관계, 선택 관계
 
 ### 관계 차수의 표현
+<img width="481" alt="스크린샷 2021-08-31 오후 7 43 22" src="https://user-images.githubusercontent.com/64299475/131489574-a7eefde2-896e-42b2-b7a2-4e12585f8e41.png">
+<img width="481" alt="스크린샷 2021-08-31 오후 7 43 31" src="https://user-images.githubusercontent.com/64299475/131489567-9fb07959-0913-44e6-9442-3d3778e1b909.png">
+<img width="481" alt="스크린샷 2021-08-31 오후 7 43 38" src="https://user-images.githubusercontent.com/64299475/131489561-01c4c46b-5265-4b57-89df-6597315a5b19.png">
 
 
 ## 관계 체크사항
