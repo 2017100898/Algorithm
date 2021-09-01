@@ -2,6 +2,9 @@
 
 🐢 프로그래머스의 [SQL 키트](https://programmers.co.kr/learn/courses/30/parts/17046)를 통해 연습했습니다.
 
+<img src = "https://user-images.githubusercontent.com/64299475/131700045-97549aa3-6df5-4ea5-95cf-ddc656a1753f.jpeg" height = 500>
+
+
 ### 없어진 기록 찾기
 ```sql
 SELECT OUTS.ANIMAL_ID, OUTS.NAME
