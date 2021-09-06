@@ -14,6 +14,7 @@
 
 ### Simple Concept
 
+<img width="226" alt="스크린샷 2021-09-06 오후 1 45 15" src="https://user-images.githubusercontent.com/64299475/132226087-a842a843-ed09-43e3-b834-c348ed667fdc.png">
 
 
 * Developer: 여러 디바이스에서 사용 가능한 어플리케이션을 만들고 싶다.
