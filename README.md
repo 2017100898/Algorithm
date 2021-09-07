@@ -21,6 +21,9 @@
 ### MachineLearning
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
 
+### Network
+* [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
+
 ### OS
 * [What is an Operating System?](https://github.com/2017100898/TIL/blob/main/OS/1%20What%20is%20an%20Operating%20System%3F.md)
 
