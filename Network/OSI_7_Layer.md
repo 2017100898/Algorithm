@@ -24,7 +24,8 @@
 	* 하나의 문제를 7 단계로 나눔으로써 문제 해결이 쉽다.
 	* 표준화를 통해 다양한 네트워크 장비가 오류 없이 작동하도록 한다. 
 
-![](Computer%20Network(ing)/The_7_Layers_of_OSI.png)
+![The_7_Layers_of_OSI](https://user-images.githubusercontent.com/64299475/132338070-ff17588c-340c-46dc-8dd0-2dbb173f5945.png)
+
 
 1. **Physical Layer** : 기기가 접하는 부분, 두 장치를 유_무선으로 연결한 다음 0과 1의 조합을 주고 받게 한다. But 유_무선이든 에러가 안 날 수가 없다. 가장 복잡한 계층.
 2. **Data Link Layer** : 에러가 났을 때 에러를 검출하고 복구하는 역할을 한다. 속도 차이 등을 방지한다. 대부분 1, 2 계층은 합쳐져 있다. 흐름 제어 지원. (하지만 모든 장치 100% 지원하는 것은 아니다.)
@@ -39,7 +40,9 @@
 
 ## Peer-Communication
 
-![](Computer%20Network(ing)/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-09-07%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.00.21.png)
+
+![CYcMlns](https://user-images.githubusercontent.com/64299475/132338100-1b9c0220-4ad7-46cc-a28f-db3d6e4675bb.png)
+
 
 * Device A, B 사이에 수많은 장치들이 있다.
 * **A의 application layer 가 B의 application layer 와 통신하는 것이 최종 목적이다.**
@@ -56,18 +59,18 @@
 * 기능 : 왼쪽과 오른쪽의 Peer communication 
 * 전달 : 위에서 아래로, 아래에서 위로
 
-
-![](Computer%20Network(ing)/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-09-07%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.28.22.png)
+<img width="372" alt="스크린샷 2021-09-07 오후 7 28 22" src="https://user-images.githubusercontent.com/64299475/132338113-2a880ca8-6299-4e46-8876-b70449f473b7.png">
 
 * Router : Physical, Data Link, Network (OSI 1,2,3) 지원
 
-![](Computer%20Network(ing)/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-09-07%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.32.35.png)
+<img width="368" alt="스크린샷 2021-09-07 오후 7 32 35" src="https://user-images.githubusercontent.com/64299475/132338129-3012a1d5-bc3f-400a-8b08-27571bd45467.png">
+
 
 * 요즘에는 Application+Presentation+Session 을 합쳐서 Application 하나로 정의할 수도 있다. 
 
 ### Layering Example
 
-![](Computer%20Network(ing)/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-09-07%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%207.41.14.png)
+<img width="521" alt="스크린샷 2021-09-07 오후 7 41 14" src="https://user-images.githubusercontent.com/64299475/132338149-f811d345-d7ce-4f90-ab14-0fb40d927bfc.png">
 
 
 ## Open Source Hardwares
