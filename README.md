@@ -25,7 +25,8 @@
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
 
 ### OS
-* [What is an Operating System?](https://github.com/2017100898/TIL/blob/main/OS/1%20What%20is%20an%20Operating%20System%3F.md)
+* [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
+* [컴퓨터시스템 (Computer System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
