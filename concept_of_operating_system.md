@@ -1,4 +1,4 @@
-# What is an Operating System?
+# Concept of Operating System
 * 운영체제는 컴퓨터를 계속 운영하기 위해서 고안된 시스템이다.
 * 운영체제는 100% **소프트웨어**다.
 * 윈도우를 제외한 대부분의 운영체제는 UNIX를 기반으로 한다.
