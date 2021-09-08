@@ -35,3 +35,4 @@
 * [SQL기본 (SQL Basic)](https://github.com/2017100898/TIL/blob/main/SQL/sqlbasic.md)
 * [데이터모델링 (Data Modeling)](https://github.com/2017100898/TIL/blob/main/SQL/datamodeling.md)
 * [관계 (Relationship)](https://github.com/2017100898/TIL/blob/main/SQL/relationship.md)
+* [SQLD 대비](https://github.com/2017100898/TIL/tree/main/SQL/SQLD)
