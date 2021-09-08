@@ -25,7 +25,7 @@
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
 
 ### OS
-* [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
+* [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
 * [컴퓨터시스템 (Computer System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
 
 ### SQL
