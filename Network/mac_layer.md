@@ -26,6 +26,9 @@
 1. Point-to-Point : 점에서 점을 한 줄로 연결한 것
 2. Multipoint : 한 줄에 여러 점이 연결 되어 있는 것
 
+
+![Types-of-network-topology-2](https://user-images.githubusercontent.com/64299475/132973718-b67b674f-9e8b-447e-a846-63ad2a27cd56.png)
+
 ### Topology
 * Topology 는 Combination이 가능하다.
 * **Mesh**
@@ -85,6 +88,9 @@
 	* CSMA/CA : 무선랜
 * **Controlled-access protocols**
 * **Channelization protocols**
+
+![images-2](https://user-images.githubusercontent.com/64299475/132973749-6b28e432-b26d-4339-af25-ed671bcbdd5c.png)
+
 
 ## Random Access Protocols
 * 알아서 독립적이고 분산적으로 접근하자.
