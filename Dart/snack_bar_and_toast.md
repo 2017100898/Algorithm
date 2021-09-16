@@ -48,7 +48,7 @@ class cart extends StatelessWidget {
 }
 ```
 
-<img width="598" src = "https://user-images.githubusercontent.com/64299475/133646276-901208cc-c188-485d-8192-cce94a16b5b6.png">
+<img width="398" src = "https://user-images.githubusercontent.com/64299475/133646293-cc6de939-b2a4-4fb4-b29b-c52363878339.png">
 
 # Toast
 ```dart
@@ -85,5 +85,7 @@ void flutterToast() {
 }
 ```
 
-<img width="598" src = "https://user-images.githubusercontent.com/64299475/133646293-cc6de939-b2a4-4fb4-b29b-c52363878339.png">
+
+
+<img width="398" src = "https://user-images.githubusercontent.com/64299475/133646276-901208cc-c188-485d-8192-cce94a16b5b6.png">
 
