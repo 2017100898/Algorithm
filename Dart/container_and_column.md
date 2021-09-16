@@ -33,7 +33,7 @@ class MyPage extends StatelessWidget {
             )
 ```
 
-<img height=300 src = "https://user-images.githubusercontent.com/64299475/133656042-0fc88d10-bf26-401f-a034-b7143a25a6e7.png">
+<img height=500 src = "https://user-images.githubusercontent.com/64299475/133656042-0fc88d10-bf26-401f-a034-b7143a25a6e7.png">
 
 * Box 내의 Text를 Box 경계선으로 부터 띄우기 위해서는 padding을 사용한다.
 
@@ -87,7 +87,7 @@ class MyPage extends StatelessWidget {
 
 * Center() 와 mainAxisAlignment를 동시에 실행해야 Container를 정중앙에 배치할 수 있다.
 
-<img height=300 src = "https://user-images.githubusercontent.com/64299475/133655861-95389bb4-6ef8-4dd5-bc1f-98ef8d136749.png">
+<img height=500 src = "https://user-images.githubusercontent.com/64299475/133655861-95389bb4-6ef8-4dd5-bc1f-98ef8d136749.png">
 
 * mainAxisAlignment 대신 `mainAxisSize: MainAxisSize.min`을 사용하면 Container들이 상하의 통제권을 확보할 수 있다.
 * `verticalDirection: VerticalDirection.up` 은 Container들의 정렬 순서를 위에서 아래로 만든다.
@@ -137,7 +137,7 @@ class MyPage extends StatelessWidget {
 
 * `crossAxisAlignment: CrossAxisAlignment.end`와 **Invisible Container**를 통해 Container를 오른쪽 정렬할 수 있다.
 
-<img height=300 src = "https://user-images.githubusercontent.com/64299475/133655822-48246586-2026-4a8a-8b4d-a076c0cd208d.png">
+<img height=500 src = "https://user-images.githubusercontent.com/64299475/133655822-48246586-2026-4a8a-8b4d-a076c0cd208d.png">
 
 ## 가로방향으로 화면 채우기
 ```dart
@@ -198,4 +198,4 @@ children: <Widget>[
 
 * Container 사이의 간격을 띄우고 싶다면 **SizedBox**를 활용할 수 있다.
 
-<img height=300 src = "https://user-images.githubusercontent.com/64299475/133655732-9f8d8bab-8c84-4df4-b10e-3d4c35e2e10c.png">
+<img height=500 src = "https://user-images.githubusercontent.com/64299475/133655732-9f8d8bab-8c84-4df4-b10e-3d4c35e2e10c.png">
