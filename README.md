@@ -15,6 +15,8 @@
 ### Dart
 * [Dart 문법 (Grammar of Dart Language)](https://github.com/2017100898/TIL/blob/main/Dart/grammar_of_dart_language.md)
 * [플러터 사용기 (Material App with Flutter)](https://github.com/2017100898/TIL/blob/main/Dart/material_app_with_flutter.md)
+* [컨테이너와 컬럼 (Container and Column)](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
+* [스낵바오 토스트 (Snackbar and Toast)](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
 
 ### DataStructures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
@@ -25,6 +27,7 @@
  
 ### MachineLearning
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
+* [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_measures.md)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
