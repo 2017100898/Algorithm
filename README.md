@@ -2,6 +2,7 @@
 <img src= "https://img.shields.io/github/last-commit/2017100898/TIL?color=lavender&label=last%20commit">
 
 ### Algorithm
+* [분할정복법 (Divide and Conquer)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/divide_and_conquer.md)
 * [깊이우선탐색 (DFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/DFS.md)
 * [너비우선탐색 (BFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/BFS.md)
 * [그리디 알고리즘 (Greedy Algorithm)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/greedy_algorithm.md)
@@ -28,6 +29,7 @@
 ### MachineLearning
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
 * [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_measures.md)
+* [인공신경망과 퍼셉트론(ANN and Perceptron)](https://github.com/2017100898/TIL/blob/main/MachineLearning/ann_and_perceptron.md)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
