@@ -15,10 +15,11 @@
 ![unnamed-6](https://user-images.githubusercontent.com/64299475/133933193-109ba02b-206f-4c9f-963a-f09e6cdb5afe.png)
 
 * 이미지 분석 시 사용되는 심층 신경망으로, 합성곱 신경망이라고도 한다.
+![map](https://user-images.githubusercontent.com/64299475/133933202-e3930f63-50c0-4883-b79d-8dc1249ccb7d.png)
+
 1. 입력층 합성곱 연산
 	* 입력한 이미지에서 필터를 이용하여 특징 추출한 피처맵 구축
 	* **피처맵** : 이미지에서 특징을 추출한 2차원 맵
-![map](https://user-images.githubusercontent.com/64299475/133933202-e3930f63-50c0-4883-b79d-8dc1249ccb7d.png)
 2. 피처맵에서 서브샘플링 연산
 	* 피처맵에서 서브샘플링을 통해 화면 크기 줄임
 	* 최대풀, 최소풀, 평균풀 연산을 수행

@@ -30,6 +30,7 @@
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
 * [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_measures.md)
 * [인공신경망과 퍼셉트론(ANN and Perceptron)](https://github.com/2017100898/TIL/blob/main/MachineLearning/ann_and_perceptron.md)
+* [딥러닝 개념 (Deep Learning)](https://github.com/2017100898/TIL/blob/main/MachineLearning/deeplearning.md)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
