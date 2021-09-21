@@ -87,9 +87,7 @@ class _MyCherryState extends State<MyCherry> {
 
 * 따로 reload를 하지 않아도 체리 클릭 시 숫자가 올라가는 모습을 확인할 수 있다.
 
-<img  src="https://user-images.githubusercontent.com/64299475/134207594-caba5152-c7a7-4330-94e3-d635674be58c.png" width="30%" height="30%">
-<img  src="https://user-images.githubusercontent.com/64299475/134207745-92b2e1a4-ed7d-4a77-8be5-80523b987a5e.png" width="30%" height="30%">
-<img  src="https://user-images.githubusercontent.com/64299475/134207778-011856dd-0f17-4483-9b1c-ed1e48800dfb.png" width="30%" height="30%">
+<img  src="https://user-images.githubusercontent.com/64299475/134207594-caba5152-c7a7-4330-94e3-d635674be58c.png" width="30%" height="30%"> <img  src="https://user-images.githubusercontent.com/64299475/134207745-92b2e1a4-ed7d-4a77-8be5-80523b987a5e.png" width="30%" height="30%"> <img  src="https://user-images.githubusercontent.com/64299475/134207778-011856dd-0f17-4483-9b1c-ed1e48800dfb.png" width="30%" height="30%">
 
 <br> 
 
