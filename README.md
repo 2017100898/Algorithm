@@ -2,6 +2,7 @@
 <img src= "https://img.shields.io/github/last-commit/2017100898/TIL?color=lavender&label=last%20commit">
 
 ### Algorithm
+* [백준 알고리즘 (BOJ)](https://github.com/2017100898/TIL/tree/main/Algorithm/BOJ)
 * [분할정복법 (Divide and Conquer)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/divide_and_conquer.md)
 * [깊이우선탐색 (DFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/DFS.md)
 * [너비우선탐색 (BFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/BFS.md)
@@ -18,6 +19,8 @@
 * [플러터 사용기 (Material App with Flutter)](https://github.com/2017100898/TIL/blob/main/Dart/material_app_with_flutter.md)
 * [컨테이너와 컬럼 (Container and Column)](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
 * [스낵바와 토스트 (Snackbar and Toast)](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
+* [Stateful Widget](https://github.com/2017100898/TIL/blob/main/Dart/stateful_widget.md)
+* [Final and Const Variable](https://github.com/2017100898/TIL/blob/main/Dart/final_and_const_variable.md)
 
 ### DataStructures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
