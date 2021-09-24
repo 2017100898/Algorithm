@@ -21,6 +21,7 @@
 * [스낵바와 토스트 (Snackbar and Toast)](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
 * [Stateful Widget](https://github.com/2017100898/TIL/blob/main/Dart/stateful_widget.md)
 * [Final and Const Variable](https://github.com/2017100898/TIL/blob/main/Dart/final_and_const_variable.md)
+* [Future, async, await](https://github.com/2017100898/TIL/blob/main/Dart/future_async_await.md)
 
 ### DataStructures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
@@ -38,6 +39,7 @@
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
 * [MAC Layer](https://github.com/2017100898/TIL/blob/main/Network/mac_layer.md)
+* [DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/dlc_layer.md)
 
 ### OS
 * [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
