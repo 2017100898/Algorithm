@@ -78,6 +78,7 @@
 
 ### Message Sequence Chart
 <img width="414" alt="스크린샷 2021-09-23 오후 12 57 16" src="https://user-images.githubusercontent.com/64299475/134452946-727f2626-70fb-4d0e-aa74-c72eaa44eb6f.png">
+
 1. Packet1
 	* 파란색 타이머 : 타이머 스타트, Frame 전송
 	* ACK receiving -> sending node로 전송, 타이머 멈춤
@@ -91,12 +92,17 @@
 	* _문제는 receiving node 입장에서 2번 받음. network 레이어에 올라가면 안되는데 올라감. (duplicate)_
 	* 개선 시도 됨.
 
+
+
 ### Message Sequence Chart 개선점
 <img width="414" alt="스크린샷 2021-09-23 오후 1 05 00" src="https://user-images.githubusercontent.com/64299475/134453129-6b7f858f-241e-4857-94c2-7aeb9a94aed6.png">
+
 * 주고 받는 Frame에 번호를 달기 시작함
 	* 처음에는 0, 두번째 패킷 1
 * 첫 번째 패킷을 Frame0로 보냈을 때 이것을 잘 받은 receiving node는 ACK1 보냄. _(1번 Frame 달라는 뜻)_
 * **번호는 0 아니면 1로도 충분**
+
+
 
 ### Piggybacking
 * 보내는 쪽이 Frame 보내고 받는 쪽 ACK 보냄.
@@ -138,6 +144,7 @@
 
 ### Sender
 ![Selective Repeat Automatic Repeat Request_send window](https://user-images.githubusercontent.com/64299475/134456546-f13d6617-748e-4578-b0ea-5f0bd3a64a41.jpeg)
+
 * S(size) - Window size : **2^(m-1)**
 
 ### Receiver
