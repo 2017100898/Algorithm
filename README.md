@@ -1,6 +1,18 @@
 # Today I Learned
 <img src= "https://img.shields.io/github/last-commit/2017100898/TIL?color=lavender&label=last%20commit">
 
+### Categories
+* [Algorithm](https://github.com/2017100898/TIL/tree/main/Algorithm)
+* [Dart](https://github.com/2017100898/TIL/tree/main/Dart)
+* [Data Structures](https://github.com/2017100898/TIL/tree/main/DataStructures)
+* [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
+* [Machine Learning](https://github.com/2017100898/TIL/tree/main/MachineLearning)
+* [Network](https://github.com/2017100898/TIL/tree/main/Network)
+* [OS](https://github.com/2017100898/TIL/tree/main/OS)
+* [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
+
+---
+
 ### Algorithm
 * [백준 알고리즘 (BOJ)](https://github.com/2017100898/TIL/tree/main/Algorithm/BOJ)
 * [분할정복법 (Divide and Conquer)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/divide_and_conquer.md)
@@ -17,20 +29,21 @@
 ### Dart
 * [Dart 문법 (Grammar of Dart Language)](https://github.com/2017100898/TIL/blob/main/Dart/grammar_of_dart_language.md)
 * [플러터 사용기 (Material App with Flutter)](https://github.com/2017100898/TIL/blob/main/Dart/material_app_with_flutter.md)
-* [컨테이너와 컬럼 (Container and Column)](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
-* [스낵바와 토스트 (Snackbar and Toast)](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
+* [Container and Column](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
+* [Snackbar and Toast](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
 * [Stateful Widget](https://github.com/2017100898/TIL/blob/main/Dart/stateful_widget.md)
 * [Final and Const Variable](https://github.com/2017100898/TIL/blob/main/Dart/final_and_const_variable.md)
 * [Future, async, await](https://github.com/2017100898/TIL/blob/main/Dart/future_async_await.md)
+* [For loop](https://github.com/2017100898/TIL/blob/main/Dart/for_loop.md)
 
-### DataStructures
+### Data Structures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
 * [ADTs Unsorted List and Sorted List](https://github.com/2017100898/TIL/blob/main/DataStructures/ADTs_unsorted_list_and_sorted_list.md)
 
 ### Linux
 * [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
  
-### MachineLearning
+### Machine Learning
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
 * [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_measures.md)
 * [인공신경망과 퍼셉트론(ANN and Perceptron)](https://github.com/2017100898/TIL/blob/main/MachineLearning/ann_and_perceptron.md)
