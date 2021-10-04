@@ -4,7 +4,7 @@ import 'package:weather/data/network.dart';
 import 'package:weather/screens/weather_screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-const apikey = '471965efabc008914e1ba5d0269a4a52';
+const apikey = [@$secert];
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
