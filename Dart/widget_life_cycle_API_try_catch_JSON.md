@@ -24,8 +24,9 @@
 	* API는 Key값을 확인하고 원하는 양 만큼의 데이터를 제공해 줌.
 
 ### 실행 방식
-<img width="560" alt="스크린샷 2021-10-03 오전 2 10 05" src="https://user-images.githubusercontent.com/64299475/135726055-3eb3907b-9da6-4974-b01a-e415295cb202.png">
 * 내가 제공한 파라미터가 유효한 경우에만 API는 데이터를 제공해 준다.
+<img width="560" alt="스크린샷 2021-10-03 오전 2 10 05" src="https://user-images.githubusercontent.com/64299475/135726055-3eb3907b-9da6-4974-b01a-e415295cb202.png">
+
 
 
 ## Try-catch
