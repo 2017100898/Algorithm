@@ -38,7 +38,7 @@
 * [Final and Const Variable](https://github.com/2017100898/TIL/blob/main/Dart/final_and_const_variable.md)
 * [Future, async, await](https://github.com/2017100898/TIL/blob/main/Dart/future_async_await.md)
 * [For loop](https://github.com/2017100898/TIL/blob/main/Dart/for_loop.md)
-* [Key](https://github.com/2017100898/TIL/blob/main/Dart/key.md)
+* [키 (Key)](https://github.com/2017100898/TIL/blob/main/Dart/key.md)
 * [Widget life cycle, API, Try-catch, JSON](https://github.com/2017100898/TIL/blob/main/Dart/widget_life_cycle_API_try_catch_JSON.md)
 
 ### Data Structures
@@ -58,10 +58,12 @@
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
 * [MAC Layer](https://github.com/2017100898/TIL/blob/main/Network/mac_layer.md)
 * [DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/dlc_layer.md)
+* [MAC/DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/macdlc_part1.md)
 
 ### OS
 * [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
 * [컴퓨터시스템 (Computer System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
+* [프로세스 (Process)](https://github.com/2017100898/TIL/blob/main/OS/process.md)
 * [Thread](https://github.com/2017100898/TIL/blob/main/OS/thread.md)
 
 ### SQL
