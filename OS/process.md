@@ -108,6 +108,7 @@ int main()
 
 ### Question2
 <img width="332" alt="image" src="https://user-images.githubusercontent.com/64299475/136414757-76c73a10-2f44-4a3d-8afb-39e603afa5e8.png">
+
 * pid of parent and child are **2600 and 2603**
 * fork()가 실행되면서 
 	* 부모의 pid는 2603
@@ -117,10 +118,12 @@ int main()
 
 ### Question3
 <img width="445" alt="image" src="https://user-images.githubusercontent.com/64299475/136416078-d08bc7fe-ec4e-43e9-838f-d7a2829e94f5.png">
+
 * 전역변수: data에 들어감.
 * fork() 하면서 자식 프로세스 그대로 복사
 * 부모 입장에서는 wait 실행
 * 자식 입장에서는 자신의 value+=15 실행
+
 > 결과값  
 > parent : 5  
 > child : 15  
