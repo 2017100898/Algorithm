@@ -58,13 +58,14 @@
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
 * [MAC Layer](https://github.com/2017100898/TIL/blob/main/Network/mac_layer.md)
 * [DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/dlc_layer.md)
-* [MAC/DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/macdlc_part1.md)
+* [MAC/DLC](https://github.com/2017100898/TIL/blob/main/Network/macdlc.md)
 
 ### OS
 * [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
 * [컴퓨터시스템 (Computer System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
 * [프로세스 (Process)](https://github.com/2017100898/TIL/blob/main/OS/process.md)
-* [Thread](https://github.com/2017100898/TIL/blob/main/OS/thread.md)
+* [스레드 (Thread)](https://github.com/2017100898/TIL/blob/main/OS/thread.md)
+* [프로세스 스케쥴링 (Process Scheduling)](https://github.com/2017100898/TIL/blob/main/OS/process_scheduling.md)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
