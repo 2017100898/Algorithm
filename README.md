@@ -48,6 +48,7 @@
 
 ### Design Pattern
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
+* [Design Pattern](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_pattern.md)
 
 ### Linux
 * [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
@@ -67,6 +68,7 @@
 ### OS
 * [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
 * [컴퓨터시스템 (Computer System)](https://github.com/2017100898/TIL/blob/main/OS/computer_system.md)
+* [시스템구조 (System Structure)](https://github.com/2017100898/TIL/blob/main/OS/system_structure.md)
 * [프로세스 (Process)](https://github.com/2017100898/TIL/blob/main/OS/process.md)
 * [스레드 (Thread)](https://github.com/2017100898/TIL/blob/main/OS/thread.md)
 * [프로세스 스케쥴링 (Process Scheduling)](https://github.com/2017100898/TIL/blob/main/OS/process_scheduling.md)
