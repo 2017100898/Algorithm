@@ -46,7 +46,9 @@
 
 ### Data Structures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
-* [ADTs Unsorted List and Sorted List](https://github.com/2017100898/TIL/blob/main/DataStructures/ADTs_unsorted_list_and_sorted_list.md)
+* [리스트 (List)](https://github.com/2017100898/TIL/blob/main/DataStructures/list.md)
+* [스택 (Stack)](https://github.com/2017100898/TIL/blob/main/DataStructures/stack.md)
+* [큐 (Queue)](https://github.com/2017100898/TIL/blob/main/DataStructures/queue.md)
 
 ### Design Pattern
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
