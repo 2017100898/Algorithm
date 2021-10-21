@@ -8,6 +8,7 @@
 3. 통합 : (필요 시) 해결된 답을 모은다.
 
 ## 대표 알고리즘
+* [이분검색 (Binary Search)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/binary_search.md)
 * 합병정렬 (Merge Sort)
 * 빠른정렬 (Quick Sort)
 * 쉬트라쎈 행렬곱셈 (Strassen Algorithm)
