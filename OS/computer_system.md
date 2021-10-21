@@ -2,7 +2,7 @@
 ## Organization, Architecture
 ## 연산장치 vs 기억장치
 ### 폰노인만 구조
-* 연산장치와 기억장치는 분리되어 있으며, 연산장치는 기억장치에서 데이터를 로딩해서 처리 후, 다시 기억장치로 가져다 놓는다.
+* **연산장치와 기억장치는 분리되어 있으며, 연산장치는 기억장치에서 데이터를 로딩해서 처리 후, 다시 기억장치로 가져다 놓는다.**
 * 하지만 사람은 연산 및 기억장치가 분리되어있지 않다.
 * CPU와 Memory. 거의 대부분의 OS의 기능을 Memory 관리에 집중한다.
 
@@ -10,12 +10,12 @@
 1. 두 Device 연결된 전선 (데이터 이동 통로)
 2. 통신 규약 
 
-### 연산장치
+### 연산장치 💻
 * 어떤 Input 들어왔을 때 Output 내준다.
 * 병렬 처리
 * CPU, Graphic card 
-
-### 기억장치
+ 
+### 기억장치 
 * 일정한 기간동안 정보 유지하고 있다.
 * Memory: DRAM, HDD, SSD (같은 기능을 한다.)
 * 모든 메모리들이 정보 기억 및 저장하고, 내가 그 정보를 기억, 수정, 삭제 가능하다.
@@ -34,8 +34,8 @@
 
 ### DRAM
 * Dynamic Random Access Memory
-* DRAM : 어떤 정보를 저장하기 위해서는 계속 충전을 해줘야 한다. 속도가 SRAM에 비해 느리다.
-* SRAM (Static) : 충전을 해 주지 않아도 저장 가능, 회로 더욱 복잡. 비용이 더 비싸다.
+* DRAM : 어떤 정보를 저장하기 위해서는 계속 충전을 해줘야 한다. 속도가 SRAM에 비해서 느리다.
+* SRAM (Static) : 충전을 해 주지 않아도 저장 가능, 회로가 더욱 복잡하다. 비용이 더 비싸다.
 
 ### Caching
 * 자주 쓰는 데이터만 DRAM에 옮겨서 CPU와 Direct로 연결시켜 효율을 높이는 것이 Caching concept이다.
@@ -43,11 +43,11 @@
 ### Multi(core) Processor
 * 여러 작업을 보다 효율적을 한 번에 처리하기 위해 2개 이상의 코어를 탑재하여 만든 프로세서
 * 여러 개의 주 CPU 를 가진다.
-* 장점
+* **장점**
 	* 성능 향상 (Increased throughput)
 	* 규모의 경제 (Economy of scale) : 여러 컴퓨터를 사용하는 것보다 경제적이다.
 	* 신뢰도 향상 (Increased reliability) : 작동 중 CPU 하나 멈춰도 작동하므로 안정적으로 사용할 수 있다.
-* Type
+* **Type**
 	* Asymmetric Multiprocessing : 비대칭
 	* Symmetric Multiprocessing : 대칭 - 주로 사용
 
@@ -71,14 +71,14 @@
 * 1 word = 4 byte = 32 bit
 
 ## Memory
-* 1110001110011101 : 8개 단위로 끊어서 저장, 2개의 방에 나뉘어서 저장 된다고 생각할 수 있다.
+* 11100011 | 10011101 : 8개 단위로 끊어서 저장, 2개의 방에 나뉘어서 저장 된다고 생각할 수 있다.
 * 한 방에 8개의 bit, 즉 1 byte가 저장되어있다.
 * 메모리는 지울 수 없다.
 
 ### Data Storage (Write)
 * 메모리 셀의 개별 비트를 0 또는 1로 설정하고 이전 내용을 삭제한다.
 
-### Data retrieval (Read)
+### Data Retrieval (Read)
 * 다른 저장 지역에 대한 특정한 메모리 셀의 내용을 복사한다.
 
 ## SW 
@@ -88,12 +88,10 @@
 
 ### System SW
 * OS
-* Compiler
+* **Compiler**
 	* High-level language (ex. C code) 를 assembly language (ex. add A, B)로 바꿔주는 것이다.
 	* assembly language를 binary language (ex. 10010101)로 바꾸는 것은 **Assembler**이다. 
 	
-- - - -
-
 ## User Interface
 ### CLI 
 * shell, 명령 프롬포트
@@ -107,7 +105,7 @@
 * Personal Computer
 
 ### Network Computers
-* 최근에는 Clouding으로 많이 사용 중
+* 최근에는 Clouding으로 많이 사용 중이다.
 
 ### Wireless Networks (무선통신)
 * 모바일 컴퓨터는 무선 네트워크를 통해 서로 연결 된다.
@@ -117,10 +115,10 @@
 
 ### Virtualization
 * 운영체제를 다른 OS 내의 어플리케이션으로 실행할 수 있다.
-* VMware, Virtual Box..
+* VMware, Virtual Box...
 
 ### Cloud Computing
-* 인터넷을 통해 서버, 스토리지, 데이터베이스, 네트워킹, 소프트웨어 등의 컴퓨팅 서비스를 제공하는 것.
+* 인터넷을 통해 서버, 스토리지, 데이터베이스, 네트워킹, 소프트웨어 등의 컴퓨팅 서비스를 제공하는 것이다.
 * Public, Private, Hybrid Cloud…
 * SaaS, PaaS, IaaS
 
