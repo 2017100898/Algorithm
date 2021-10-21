@@ -1,35 +1,41 @@
 # MAC Layer
+
+<img width="343" alt="스크린샷 2021-10-21 오후 10 11 29" src="https://user-images.githubusercontent.com/64299475/138284596-cbbe1b42-251b-42a2-800c-9d9332e3c9c0.png">
+
+* MAC subLayer : 공유매체에 여러 단말기가 접속할 때 에러 및 충돌을 방지하기 위한 제어를 수행한다..
+
+
 ## Basic Terminologies
-* Message
+* **Message**
 	* 송신하는 쪽에서 수신하는 쪽으로 전달하는 정보
 	* text, number, pictures, sound, video …
-* Sender
+* **Sender**
 	* 메세지를 송신하는 쪽
 	* 휴대전화, computer …
-* Receiver
+* **Receiver**
 	* Sender가 보낸 메세지를 수신하는 쪽
 	* 휴대전화, computer …
-* Medium
+* **Medium**
 	* 통신 매체
 	* 전화선, 광섬유, 레이저, radio waves …
-* Protocol
-	* Sender와 Receiver의 동작과 형태 부분 정의
+* **Protocol**
+	* *Sender와 Receiver의 동작과 형태 부분 정의*
 
 ### Data Flow Direction
-* 정보를 주고 받는 방향에 따른 명칭
-1. Simplex : Device A -> B 일방적으로 보내는 것
-2. Half-duplex : 무전기 등 Device A -> B or Device B -> A 중 한 가지만 됨
-3. Full-duplex : 전화, 인터넷 등  동일 시점에서 Device A 과 B가 양방향으로 정보 주고 받음
+> 정보를 주고 받는 방향에 따른 명칭
+1. **Simplex** : Device A -> B 일방적으로 보내는 것
+2. **Half-duplex** : 무전기 등 Device A -> B or Device B -> A 중 한 가지만 됨
+3. **Full-duplex** : 전화, 인터넷 등  동일 시점에서 Device A 과 B가 양방향으로 정보 주고 받음
 
 ### Physical Structure
-* Medium의 연결 방식에 따른 명칭
-1. Point-to-Point : 점에서 점을 한 줄로 연결한 것
-2. Multipoint : 한 줄에 여러 점이 연결 되어 있는 것
-
-
-![Types-of-network-topology-2](https://user-images.githubusercontent.com/64299475/132973718-b67b674f-9e8b-447e-a846-63ad2a27cd56.png)
+> Medium(통신매체)의 연결 방식에 따른 명칭
+1. **Point-to-Point** : 점에서 점을 한 줄로 연결한 것
+2. **Multipoint** : 한 줄에 여러 점이 연결 되어 있는 것
 
 ### Topology
+
+![Types-of-network-topology](https://user-images.githubusercontent.com/64299475/132973718-b67b674f-9e8b-447e-a846-63ad2a27cd56.png)
+
 * Topology 는 Combination이 가능하다.
 * **Mesh**
 	* 본인을 제외한 Station과 모두 연결되어 있다. (Full Mesh)
@@ -57,18 +63,18 @@
 	* 4개의 Topology를 섞어서 사용한다.
 
 ### 네트워크 규모에 따른 명칭
-* BAN (Body Area Networks)
+* BAN (Body Area Networks) 🤵🏻‍♀️
 	* 워치, 심박수 등 … 사람을 기준으로 만든 것
-* PAN (Personal Area Networks)
+* PAN (Personal Area Networks) 💻
 	* 컴퓨터와 키보드 등 매우 가까운 거리 연결한 것
-* **LAN (Local Area Networks)**
+* **LAN (Local Area Networks)** 🏠
 	* 하나의 방, 층, 건물, 캠퍼스 등을 연결한 것
 	* 대부분 한 소유주가 전체를 가지고 있는 경우다.
 	* Wireless
-* **MAN (Metropolitan Area Network)**
+* **MAN (Metropolitan Area Network)** 🗽
 	* 도시 규모의 Network
 	* LAN을 연결한 Netwok
-* **WAN (Wide Area Network)**
+* **WAN (Wide Area Network)** 🌎
 	* 큰 Network 들을 연결하는 줄을 뜻한다.
 * LAN-MAN-WAN의 Combination도 가능하다.
 * 모두 유/무선이 존재한다.
@@ -82,19 +88,20 @@
 	* ex. microsoft, 한글
 
 ## MAC (Multiple-access protocols)
-* **Random-access protocols**
+![images-2](https://user-images.githubusercontent.com/64299475/132973749-6b28e432-b26d-4339-af25-ed671bcbdd5c.png)
+
+* MAC은 **Multiple access protocols**(다중 접속 프로토콜)을 사용한다.
+* **Random-access protocols** 
 	* ALOHA
 	* CSMA/CD : 이더넷
 	* CSMA/CA : 무선랜
 * **Controlled-access protocols**
 * **Channelization protocols**
 
-![images-2](https://user-images.githubusercontent.com/64299475/132973749-6b28e432-b26d-4339-af25-ed671bcbdd5c.png)
-
-
 ## Random Access Protocols
-* 알아서 독립적이고 분산적으로 접근하자.
-* 컨트롤 타워가 없다.
+* 알아서 독립적이고 분산적으로 접근하자. 
+* 여러 사용자들이 경쟁하듯 나눠 쓰는 방식.
+* 규칙 및 컨트롤 타워가 없다.
 * 송신을 하고자 하는 Station이 있으면 본인이 **독립적으로, 자발적으로** 데이터를 쏜다. -> 충돌 발생 문제
 
 ### ALOHA
@@ -114,63 +121,75 @@
 * propagation delay 만큼 기다리지 않으면 충돌문제를 피할 수는 없다.
 
 #### Behavior of 3 persistence methods
-1. 1-persistent : 채널을 끊임없이 보고 있다가 채널이 비면 내가 반드시 쏘는 것. 지연효과에서 제일 좋지만, 끊임없이 보는 전력이 많이 쓰이게 된다. 바로 쏘면 충돌 확률이 높아진다.
-2. Nonpersistent : 센싱하다가 채널이 바쁘면 쉬고, Random하게 다시 센싱 후 비어있으면 내가 쏘는 것. 지연이 발생한다.
-3. p-persistent (hybrid) : 끝나는 시점은 알지만 그때 모두가 쏘면 에러가 발생하기 때문에 Random하게 쉬고, 다시 와서 쏘는 것.
+1. **1-persistent** : 채널을 끊임없이 보고 있다가 채널이 비면 내가 반드시 쏘는 것. 지연효과에서 제일 좋지만, 끊임없이 보는 전력이 많이 쓰이게 된다. 바로 쏘면 충돌 확률이 높아진다.
+2. **Nonpersistent** : 센싱하다가 채널이 바쁘면 쉬고, Random하게 다시 센싱 후 비어있으면 내가 쏘는 것. 지연이 발생한다.
+3. **p-persistent (hybrid)** : 끝나는 시점은 알지만 그때 모두가 쏘면 에러가 발생하기 때문에 Random하게 쉬고, 다시 와서 쏘는 것.
 
-### CSMA / CD
+### CSMA / CD 
 * 송신을 하면서 내 신호를 듣고 있다가 **충돌을 탐지하면 전송을 중지**한다.
 * 충돌 된 데이터는 결국 무용지물이 되지만, 버려지는 시간을 줄일 수 있다.
 * 이더넷 만들어내는 데 공을 세웠으며, 아직도 기반 기술로 사용되고 있다.
 
-### CSMA / CA
+### CSMA / CA 
 * 무선에서는 자신이 보내고 있는 것을 동시에 듣는 행위 어려웠다.
 * 따라서 CSMA / CA에서는 **충돌을 탐지하지 않고 사전에 피하는 것**이다. 하지만 이 과정에서도 다른 네트워크가 신호를 놓칠 수도 있기 때문에 _에러를 완전히 없앨 수는 없다._
 * **RTS** : 데이터 보낼 것임을 알림 ( = 들어오지 마! )
 * **CTS** : 데이터 보내는 중 …  (= 들어오지 마!)
 * **ACK** : 데이터 잘 도착했음을 알림 ( = 들어와도 돼!)
 * CSMA 1-persistent + CSMA
-* Contention Window : RTS, CTS 메시지 주고받는 공간
+* **Contention Window** : RTS, CTS 메시지 주고받는 공간
 
 ## Controlled Access Protocols
 * 중앙 통제자가 있으므로 명령을 받아 일할 수 있다.
+* No station can send the data unless it has been authorized by the other stations.
+* Controlled access 에 속하는 프로토콜 : **Reservation, Polling, Token Passing**
 
 ### Reservation (예약) 
-* n번 네트워크가 쏠 시간이 되면 쏜다.
-* 장점은 충돌이 발생하지 않는다.
-* 단점은 내가 쏘고 싶을 때 바로 쏠 수 없고 예약 후 기다려야 하므로 지연시간이 증가한다.
+![controlled access protocols_reservation](https://user-images.githubusercontent.com/64299475/138290171-bc59f06b-7220-410c-b19f-fab269f4c1e7.JPG)
+
+
+* 시간은 주로 간격을 두고 나뉘며 **n번 네트워크의 시간이 되면 데이터를 전송한다.**
+* 장점 : 충돌이 발생하지 않는다.
+* 단점 : 내가 전송하고 싶을 때 바로 전송할 수 없고 예약 후 기다려야 하므로 지연시간이 증가한다.
 
 ### Polling
-* Station에게 보낼 데이터 있는지, 받을 수 있는지 물어본다.
-* 충돌이 거의 발생하지 않는다.
-* 보낼 데이터가 없음에도 불구하고 메시지를 주고 받아야 하므로 낭비이다.
-* 지연이 증가한다.
+![1611640899-71449](https://user-images.githubusercontent.com/64299475/138290139-7927d530-36d9-40b5-bc38-993d25c0a5d4.png)
+
+* **Station에게 보낼 데이터 있는지, 받을 수 있는지 물어본다.**
+* 장점 : 충돌이 거의 발생하지 않는다.
+* 단점 : 보낼 데이터가 없음에도 불구하고 메시지를 주고 받아야 하므로 낭비이며 지연이 증가한다.
 
 ### Token Passing
-* Token은 권한을 뜻한다.
-* Station이 돌아가면서 발언권을 갖는다.
-* 지연이 발생한다.
-* 하지만 채널 효율이 좋고 충돌이 없다.
+<img width="454" alt="1590120663-70265" src="https://user-images.githubusercontent.com/64299475/138290146-a3bd45e3-71e1-4913-845a-628d6e241465.png">
+
+
+* Token은 권한을 뜻하며 **Station이 돌아가면서 발언권을 갖는다.**
+* 장점 : 채널 효율이 좋고 충돌이 없다.
+* 단점 : 지연이 발생한다.
+
 
 ## Channelization Protocols
+![Multiple_access](https://user-images.githubusercontent.com/64299475/138291394-17c48e22-1515-40d7-b1f8-21b56ebed02b.png)
+
+
 * multiple한 Station을 어떻게 공유할 것인가?
+* 길을 주파수, 시간 등으로 나누어 **Station 별로 다른 채널을 사용하는 방법**
 
 ### FDMA (Frequency-division multiple access)
-* Station 별로 전용 주파수를 준다.
+* Station 별로 전용 **주파수**를 준다. (라디오)
 * 하지만 주파수는 매우 비싸다.
 
 ### TDMA (Time-division multiple access)
-* 음성을 일정 단위로 쪼갠 뒤, 압축해서 n배 빠른 네트워크에 실어 보내버린다.
-* 받아서 1/n배로 늘여서 음성을 원 속도로 들려준다.
-* 압축을 해서 보내주는 것이기에 지연 시간이 발생할 수 밖에 없다. 하지만 불편한 정도는 아니다.
-* Time 안에서 Station 별로 구간을 나눌 수 있다.
+* Station 별로 전용 **시간**를 준다.
+* 음성을 일정 단위로 쪼갠 뒤, 압축해서 n배 빠른 네트워크에 실어 보내버린다. 받아서 1/n배로 늘여서 음성을 원 속도로 들려준다. ⇒ 압축을 해서 보내주는 것이기에 지연 시간이 발생할 수 밖에 없다. 하지만 불편한 정도는 아니다.
 * FDMA의 하나의 Frequency 를 또 n개로 쪼개서 Station을 배치할 수 있다.
 
 ### CDMA (Code-division multiple access)
-* 내가 데이터를 쏘지 않으면 굉장히 소량의 데이터가 흘러간다.
-* 내가 데이터를 쏘면 굉장히 큰 데이터가 흘러간다.
-* 암호화 기술과 관련 있다.
-* 본인이 곱할 데이터(d)에 코드(c)를 곱한다. 
+* Station 별로 전용 **코드**를 준다. 
+* 데이터를 사용자가 알고 있는 암호로 각각 암호화 한 후, 모두 더해서 방송 송출하듯이 전송한다. 사용자는 자신이 갖고 있는 암호키로 데이터를 복호화 하고 다른 사용자의 신호 성분은 잡음으로 수신되는 원리이다.
+* 내가 데이터를 전송하지 않으면 굉장히 소량의 데이터가 흘러간다.
+* 내가 데이터를 전송하면 굉장히 큰 데이터가 흘러간다.
+* 본인이 보낼 데이터(d)에 코드(c)를 곱한다. 
 	* 본인의 데이터 * 본인의 코드 = 1
 	* 본인의 데이터 * 다른 코드 = 0
 	* c를 알면 데이터 풀 수 있고 모르면 데이터 못 본다.
