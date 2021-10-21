@@ -1,7 +1,7 @@
 # Today I Learned
 <img src= "https://img.shields.io/github/last-commit/2017100898/TIL?color=lavender&label=last%20commit">
 
-### Categories
+## Categories
 * [Algorithm](https://github.com/2017100898/TIL/tree/main/Algorithm)
 * [Dart](https://github.com/2017100898/TIL/tree/main/Dart)
 * [Data Structures](https://github.com/2017100898/TIL/tree/main/DataStructures)
@@ -12,10 +12,10 @@
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
 * [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
 
----
 
 ### Algorithm
 * [백준 알고리즘 (BOJ)](https://github.com/2017100898/TIL/tree/main/Algorithm/BOJ)
+* [구현](https://github.com/2017100898/TIL/tree/main/Algorithm/study/implement)
 * [분할정복법 (Divide and Conquer)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/divide_and_conquer.md)
 * [깊이우선탐색 (DFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/DFS.md)
 * [너비우선탐색 (BFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/BFS.md)
@@ -28,7 +28,7 @@
 * [벨만-포드 (Bellman-Ford)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/bellman_ford_algorithm.md)
 * [다이나믹 프로그래밍 (Dynamic Programming)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/dynamic_programming.md)
 * [이분검색 알고리즘 (Binary Search Algorithm)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/binary_search.md)
-* [피보나치 수 (Fibonacci Nubers)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/fibonacci.md)
+* [피보나치 수 (Fibonacci Numbers)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/fibonacci.md)
 
 ### Dart
 * [Cute Cherry UI](https://github.com/2017100898/TIL/blob/main/Dart/cute-cherry-ui)
