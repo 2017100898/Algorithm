@@ -27,6 +27,8 @@
 * [플로이드-워셜 (Floyd-Warshall)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/floyd_warshall_algorithm.md)
 * [벨만-포드 (Bellman-Ford)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/bellman_ford_algorithm.md)
 * [다이나믹 프로그래밍 (Dynamic Programming)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/dynamic_programming.md)
+* [이분검색 알고리즘 (Binary Search Algorithm)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/binary_search.md)
+* [피보나치 수 (Fibonacci Nubers)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/fibonacci.md)
 
 ### Dart
 * [Cute Cherry UI](https://github.com/2017100898/TIL/blob/main/Dart/cute-cherry-ui)
