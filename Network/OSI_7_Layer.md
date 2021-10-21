@@ -24,10 +24,10 @@
 	* 하나의 문제를 7 단계로 나눔으로써 문제 해결이 쉽다.
 	* 표준화를 통해 다양한 네트워크 장비가 오류 없이 작동하도록 한다. 
 
-![The_7_Layers_of_OSI](https://user-images.githubusercontent.com/64299475/132338070-ff17588c-340c-46dc-8dd0-2dbb173f5945.png)
+![7layer](https://user-images.githubusercontent.com/64299475/132338070-ff17588c-340c-46dc-8dd0-2dbb173f5945.png)
 
 
-1. **Physical Layer** : 기기가 접하는 부분, 두 장치를 유_무선으로 연결한 다음 0과 1의 조합을 주고 받게 한다. But 유_무선이든 에러가 안 날 수가 없다. 가장 복잡한 계층.
+1. **Physical Layer** : 기기가 접하는 부분, 두 장치를 유/무선으로 연결한 다음 0과 1의 조합을 주고 받게 한다. But 유/무선 모두 에러가 안 날 수가 없다. 가장 복잡한 계층.
 2. **Data Link Layer** : 에러가 났을 때 에러를 검출하고 복구하는 역할을 한다. 속도 차이 등을 방지한다. 대부분 1, 2 계층은 합쳐져 있다. 흐름 제어 지원. (하지만 모든 장치 100% 지원하는 것은 아니다.)
 3. **Network Layer** : Routing 이 가장 중요한 역할. 여러 길 중 방금 받은 메세지를 어떤 길로 보낼지 결정한다. 어떤 SW냐에 따라 Routing or Switching. (IP) 
 4. **Transport Layer** : 서비스 입장에서의 에러 검출 및 복구. (TCP)
@@ -40,8 +40,7 @@
 
 ## Peer-Communication
 
-
-![CYcMlns](https://user-images.githubusercontent.com/64299475/132338100-1b9c0220-4ad7-46cc-a28f-db3d6e4675bb.png)
+![peer](https://user-images.githubusercontent.com/64299475/132338100-1b9c0220-4ad7-46cc-a28f-db3d6e4675bb.png)
 
 
 * Device A, B 사이에 수많은 장치들이 있다.
@@ -70,7 +69,7 @@
 
 ### Layering Example
 
-<img width="521" alt="스크린샷 2021-09-07 오후 7 41 14" src="https://user-images.githubusercontent.com/64299475/132338149-f811d345-d7ce-4f90-ab14-0fb40d927bfc.png">
+<img src="https://user-images.githubusercontent.com/64299475/132338149-f811d345-d7ce-4f90-ab14-0fb40d927bfc.png">
 
 
 ## Open Source Hardwares
@@ -83,7 +82,7 @@
 * Raspberry Pi : 저전력의 작은 컴퓨터 필요할 때 더할 나위 없이 사용하기 좋은 하드웨어. Linux 운영체제 사용. 라즈베리 파이 덕분에 지금껏 없었던 분야의 프로그래밍이 가능해졌다.
 * ODROID, BeagleBone, INTEL NUC, Google Coral, NVIDIA Jetson… 의 등장
 * 우리는 컴퓨터를 직접 만들 수 있고, 매우 작고 파워풀해졌다! 앞으로는 이러한 컴퓨터를 어떻게 사용하는가? 가 매우 중요하다.
-* 컴퓨터 네트워크는 이러한 "컴퓨터"를 연결하는 것. 사람이 주로 end user가 아니다.
+* 컴퓨터 네트워크는 이러한 **컴퓨터**를 연결하는 것. 사람이 주로 end user가 아니다.
 
 ## Linux
 * 일반적인 데스크탑 뿐만 아니라 수 많은 전자기기에 Linux가 들어있다. 
