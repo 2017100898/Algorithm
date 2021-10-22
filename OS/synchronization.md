@@ -1,5 +1,5 @@
 # Synchronization (동기화)
-* 프로세스, 스레드 협동 시 데이터 공유 -> 문제 해결 방법
+* 프로세스, 스레드 협동 시 데이터 공유 ⇒ 문제 발생 ⇒ 해결 방법은 동기화
 
 ## Background
 * 주된 원인 : resource sharing - IPC, multithreads, multiprogramming
@@ -10,18 +10,17 @@
 	* 꽉 찼는데 producer가 계속 쓸 수도 있고 데이터가 비었는데 consumer가 데이터 받아가려 할 수도 있다.
 	
 ### Race condition
-* producer 와 consumer는 코드상으로는 문제가 없는 것 같아도 동시 실행 과정에서 문제 발생할 수 있다. 코드는 몇 줄씩 따로따로 동작한다는 보장이 없고, context switching 언제 일어날지 모른다.
-* Race condition: 내가 원하는 곳까지 가지 않고 그 전에 context switching 일어날 수 있고, 따라서 내가 원하는 값과 결과값이 다르게 나올 수 있다.
+* producer 와 consumer는 코드상으로는 문제가 없는 것 같아도 동시 실행 과정에서 문제 발생할 수 있다. **코드는 내가 원하는 순서로 동작한다는 보장이 없고, context switching 언제 일어날지 모른다.**
+* **Race condition**: 내가 원하는 곳까지 가지 않고 그 전에 context switching 일어날 수 있고, 따라서 내가 원하는 값과 결과값이 다르게 나올 수 있다.
 * 우리가 코드를 짤 때는 불확실성을 제거 해야 한다.
-* 방법: critical section에 대하여 mutually exclusive access를 보장하면 된다.
+* 방법: **critical section에 대하여 mutually exclusive access를 보장하면 된다.**
 	* mutually exclusive access: 상호배제, 내가 있으면 다른 것 못 들어오게 막는 것.
-
 
 ## Critical Section Problem
 * 프로세스들이 여러개가 있고 데이터 공유가 있다고 했을 때, critical section은 **코드의 일부**를 뜻 한다.
-* shared data가 있다고 해서 반드시 critical section은 아니지만, 문제가 될 수 있는 부분이라면 critical section이 될 수 있다.
-* 내가 critical section을 실행하고 있으면 다른 프로세스나 스레드가 해당 변수에 관해 실행을 못 하도록 보호.
-* critical section 앞 뒤에 입구와 출구를 만들어서 내가 들어가면 다른 프로세스 접근 못 하도록 만들 수 있음.
+* shared data가 있다고 해서 반드시 critical section은 아니지만, **문제가 될 수 있는 부분이라면 critical section이 될 수 있다.**
+* 내가 critical section을 실행하고 있으면 다른 프로세스나 스레드가 해당 변수에 관해 실행을 못 하도록 보호한다.
+* critical section **앞 뒤에 입구와 출구를 만들어서** 내가 들어가면 다른 프로세스 접근 못 하도록 만들 수 있음.
 
 ```cpp
 do{
@@ -33,12 +32,12 @@ do{
 ```
 
 ### critical section에 대해 보장해야하는 것
-1. Mutual Exclusion
+1. **Mutual Exclusion**
 	* 하나의 자원에 단 하나의 프로세스만 입장하도록 해야 한다.
-2. Progress
+2. **Progress**
 	* critical section에 아무도 없으면 들어갈 수 있어야 한다. (deadlock free)
-3. Bounded Waiting
-	* critical section 기다리고 있으면 언젠가는 들어갈 수 있어야 하며, 평생 기다리면 안 된다.(starvation free)
+3. **Bounded Waiting**
+	* critical section 기다리고 있으면 언젠가는 들어갈 수 있어야 하며, **평생 기다리면 안 된다.(starvation free)**
 	
 ## Software C.S :  Peterson’s Solution
 * 알고리즘으로 코드로 구현하는 것.
@@ -69,14 +68,13 @@ do{
 ```
 
 * 위 방식대로 되면, critical section 비어있을 때도 둘 다 True가 되어서 둘 다 기다리는 상황 발생할 수 있다.
-* int not_turn 이라는 변수를 만들어서 둘 중 하나는 반드시 실행되도록 만들 수 있다.
-* `wants[j] && not_turn == i`
+* **int not_turn 이라는 변수를 만들어서 둘 중 하나는 반드시 실행되도록 만들 수 있다.** `wants[j] && not_turn == i`
 * 둘 다 critical section에 들어가는 일은 없으므로 Mutual exclusion 하다.
-* Peterson’s algorithm은 느리고 비싸다. 즉, 자원의 소모가 많다.  그리고 2개의 프로세스에 대해서만 작동하는 단점을 지닌다.
+* Peterson’s algorithm은 느리고 비싸다. 즉, 자원의 소모가 많으며 2개의 프로세스에 대해서만 작동하는 단점을 지닌다.
 
 ## Hardware C.S
-* lock을 이용한 방식 : 누가 들어가면 이용 못 함.
-* Atomic : 여러 operation이 하나의 명령처럼 수행 된다.
+* **lock을 이용한 방식** : 누가 들어가면 이용 못 함.
+* **Atomic** : 여러 operation이 하나의 명령처럼 수행 된다.
 
 
 ### TestAndSet
@@ -137,7 +135,7 @@ do{
 pthread_mutex_t mutex;
 
 /* create the mutex lock*/
-pthread_mutex_init(&mutex, NULL(;
+pthread_mutex_init(&mutex, NULL);
 /* acquire the mutex lock*/
 pthread_mutex_lock?(&mutex);
 /* critical section */
@@ -146,12 +144,11 @@ pthread_mutex_unlock(&mutex);
 ```
 
 ### Busy waiting in Mutex
-* 첫 번째 프로세스만 일단 지나가고 나머지는 while 문 실행 중..  계속해서 CPU 쓰고 있음 -> **Busy waiting** (= spinlock)
-* 자원 낭비의 단점 존재
-* 하지만 waiting state로 만들면, 언제 또 다시 CPU 할당 받을지 모르고 context switching 일어남. 금방 내 차례 오면 그냥 spinlock이 효율적.
+* 첫 번째 프로세스만 일단 지나가고 나머지는 while 문 실행 중...  계속해서 CPU 쓰고 있음 ⇒ **Busy waiting** (= spinlock)
+* 자원 낭비의 단점 존재하지만, waiting state로 만들면, 언제 또 다시 CPU 할당 받을지 모르고 context switching 일어남. 금방 내 차례 오면 그냥 spinlock이 효율적.
 
 ## Semaphore
-* Mutex와 유사하지만 Multi개의 진입을 허용함.
+* Mutex와 유사하지만 **Multi개의 진입을 허용함.**
 * wait()과 signal()로 이루어져있음.
 
 ```cpp
@@ -177,8 +174,8 @@ do{
 * **Counting Semaphore** :  사용하는 자원 수가 2개 이상
 
 ### Semaphore with Block Operation
-* Avoid busy waiting
-* **block()** -> 코드 사용할 수 없는 경우 waiting queue로 가서 대기, CPU 반납, signal 호출 시 모든 프로세스 ready queue로 간다.
+* **Avoid busy waiting**
+* **block()** : 코드 사용할 수 없는 경우 waiting queue로 가서 대기, CPU 반납, signal 호출 시 모든 프로세스 ready queue로 간다.
 * wakeup()
 
 ```cpp
@@ -200,9 +197,11 @@ signal(S){
 ```
 
 * S = 2 일 때, P1 이 지나가면 S=1, P2이 지나가면 S=0이다.
-* P3은 S = -1, P4는 S = -2 이므로 S.value < 0 이 된다. -> P3와 P4는 waiting 상태로 들어가게 됨.
-* signal 호출 시 S = -1이 된다. -> **이것은 지금 waiting queue에 있는 것이 있다는 뜻** ->  따라서 wakeup() 해줘야 함.
+* P3은 S=-1, P4는 S=-2 이므로 S.value < 0 이 된다.
+* P3와 P4는 waiting 상태로 들어가게 됨.
+* signal 호출 시 S = -1이 된다. ⇒ **음수값은 지금 waiting queue에 있는 것이 있다는 뜻** ⇒  따라서 wakeup() 해줘야 함.
 
+### 구현
 ```cpp
 #include <semaphore.h>
 sem_t sem;
@@ -217,17 +216,16 @@ sem_wait(&sem);
 sem_post(&sem) //=signal
 ```
 
-
-* Problem 1 : Deadlocks and Starvation
+* **Problem 1 : Deadlocks and Starvation**
 	* P0 은 P를 다 쓰고 S를 기다리고, P1은 S를 다 쓰고 P를 기다리고 있을 때 deadlock 발생.
-* Problem 2 : Priority Inversion (우선순위 역전)
+* **Problem 2 : Priority Inversion (우선순위 역전)**
 	* Process L , M , H 있다고 가정할 때, 우선순위는 L < M < H
 	* L이 R갖고 있을 때, H가 wait(R) 중인데, M이 CPU 점령 중. L은 M보다 낮아서 실행 안 됨. 결국 H도 계속 기다림.
-	* 해결하기 위해 Prioirty-inheritance protocol 사용
+	* 해결하기 위해 *Prioirty-inheritance protocol* 사용
 		* H가 wait(R)이면, L도 H로 바꿈. 
-* Problem 3 : Incorrect use of semaphores
+* **Problem 3 : Incorrect use of semaphores**
 	* signal -> wait ?
-		* 자원이 하나지만 더 들어오게 될 수 있다.
+		* 자원보다 더 들어오게 될 수 있다.
 	* wait -> wait ?
 		* S 감소만 시키고 deadlock 발생할 수 있다.
 
