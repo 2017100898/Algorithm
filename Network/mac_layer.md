@@ -2,7 +2,7 @@
 
 <img width="343" alt="스크린샷 2021-10-21 오후 10 11 29" src="https://user-images.githubusercontent.com/64299475/138284596-cbbe1b42-251b-42a2-800c-9d9332e3c9c0.png">
 
-* MAC subLayer : 공유매체에 여러 단말기가 접속할 때 에러 및 충돌을 방지하기 위한 제어를 수행한다..
+* MAC subLayer : 공유매체에 여러 단말기가 접속할 때 에러 및 충돌을 방지하기 위한 제어를 수행한다.
 
 
 ## Basic Terminologies
