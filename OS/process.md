@@ -2,7 +2,8 @@
 ## Process Conecept
 * **OS 관점에서의 job과 task** (현재 수행 중인 일의 단위, 프로그램과 다른 개념)
 * Program:  설치된 것, 정적인 상태, 파일 시스템에 존재하는 실행파일(.exe), Program은 실행되지 않을 수 있다.
-* Processor: 프로그램이 실행되어 돌아가고 있는 동적인 상태, OS로부터 메모리 할당 받는 작업의 단위, Hardware (CPU, GPU - Processor chip)
+* Process: 프로그램이 실행되어 돌아가고 있는 동적인 상태, OS로부터 메모리 할당 받는 작업의 단위
+* Processor: Hardware (CPU, GPU - Processor chip)
 
 ### Process in Memory
 * hw1.cpp ⇒ hw1.exe (0101000011) : 기계가 알아들을 수 있게 단순 번역한 것

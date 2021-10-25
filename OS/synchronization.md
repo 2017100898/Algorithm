@@ -85,9 +85,10 @@ do{
 lock = FALSE;
 
 do{
-	while(TestAndSet(&lock)){ //여기 지나면서 lock은 TRUE로 바뀜
+	while(TestAndSet(&lock)) //여기 지나면서 lock은 TRUE로 바뀜
+		;   // do nothing
+
 	[CRITICAL SECTION]
-	}
 	lock = FALSE
 	[REMAINDER SECTION]
 
@@ -137,7 +138,7 @@ pthread_mutex_t mutex;
 /* create the mutex lock*/
 pthread_mutex_init(&mutex, NULL);
 /* acquire the mutex lock*/
-pthread_mutex_lock?(&mutex);
+pthread_mutex_lock(&mutex);
 /* critical section */
 /* release the mutex lock */
 pthread_mutex_unlock(&mutex);
@@ -239,6 +240,7 @@ sem_post(&sem) //=signal
 >  Semaphore empty = N (비어있는 크기)  
 
 #### Producer process
+##### Buffer 채우는 과정
 ```cpp
 do{
 	wait(empty); //empty--, 0이 아닐때만 내려감
@@ -252,12 +254,14 @@ do{
 ```
 
 #### consumer process
+##### Buffer 쓰는 과정
+
 ```cpp
 do{
 	wait(full); //full--, 0이 아닐때만 내려감
 	wait(mutex);
 	[Critical Section]
-	[add an item to buffer]
+	[remove an item to buffer]
 
 	signal(mutex);
 	signal(empty); //empty++
