@@ -7,6 +7,8 @@
 * CPU와 Memory. 거의 대부분의 OS의 기능을 Memory 관리에 집중한다.
 
 ### System BUS
+<img width="290" alt="9911A0435E383CD017" src="https://user-images.githubusercontent.com/64299475/138568918-fcdd7109-7c6a-4cf7-8fd5-30f3c44abda9.png">
+
 1. 두 Device 연결된 전선 (데이터 이동 통로)
 2. 통신 규약 
 
