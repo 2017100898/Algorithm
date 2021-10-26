@@ -17,6 +17,8 @@
 
 ### Routing and Forwarding
 * 네트워크 계층에서는 packet을 받아서 내보낸다. 고로 그것을 하기 위한 정보가 필요하고, 그래서 네트워크 계층에는 **table이 항상 있다**.
+* Routing: 패킷을 destination까지 보내기 위해 라우터가 **최적의 경로 찾는 것**
+* Forwarding: 패킷이 라우터에 도착하면 **forwarding table의 Output interface에 맞게 보내는 것**
 
 ## Datagram and Virtual Circuit
 * **Datagram** : Routing에 '주로' 사용 (인터넷)
