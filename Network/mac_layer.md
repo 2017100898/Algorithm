@@ -6,20 +6,22 @@
 
 
 ## Basic Terminologies
+* `컴퓨터 네트워크를 이해하기 위한 기본 단어`
 * **Message**
 	* 송신하는 쪽에서 수신하는 쪽으로 전달하는 정보
-	* text, number, pictures, sound, video …
+	* text, number, pictures, sound, video 등
 * **Sender**
 	* 메세지를 송신하는 쪽
-	* 휴대전화, computer …
+	* 휴대전화, computer 등
 * **Receiver**
 	* Sender가 보낸 메세지를 수신하는 쪽
-	* 휴대전화, computer …
+	* 휴대전화, computer 등
 * **Medium**
-	* 통신 매체
-	* 전화선, 광섬유, 레이저, radio waves …
+	* Sender에서 Receiver로 보내기 위한 물리적 통신 매체(길)
+	* 전화선, 광섬유, 레이저, radio waves 등
 * **Protocol**
 	* *Sender와 Receiver의 동작과 형태 부분 정의*
+	* TCP, IP 등
 
 ### Data Flow Direction
 > 정보를 주고 받는 방향에 따른 명칭
@@ -90,26 +92,31 @@
 ## MAC (Multiple-access protocols)
 ![images-2](https://user-images.githubusercontent.com/64299475/132973749-6b28e432-b26d-4339-af25-ed671bcbdd5c.png)
 
-* MAC은 **Multiple access protocols**(다중 접속 프로토콜)을 사용한다.
+* MAC은 **Multiple access protocols (= Media access protocols**, 다중 접속 프로토콜)을 사용한다.
 * **Random-access protocols** 
 	* ALOHA
 	* CSMA/CD : 이더넷
 	* CSMA/CA : 무선랜
 * **Controlled-access protocols**
+	* Reservation
+	* Polling
+	* Token passing
 * **Channelization protocols**
+	* FDMA
+	* TDMA
+	* CDMA
 
 ## Random Access Protocols
-* 알아서 독립적이고 분산적으로 접근하자. 
-* 여러 사용자들이 경쟁하듯 나눠 쓰는 방식.
+* `알아서 독립적이고 분산적으로 접근하자.`
+* 여러 사용자들이 경쟁하듯 나눠 쓰는 방식이다.
 * 규칙 및 컨트롤 타워가 없다.
-* 송신을 하고자 하는 Station이 있으면 본인이 **독립적으로, 자발적으로** 데이터를 쏜다. -> 충돌 발생 문제
+* 송신을 하고자 하는 Station이 있으면 본인이 **독립적으로, 자발적으로** 데이터를 쏜다. ⇒ `충돌 발생 문제`
 
 ### ALOHA
-* 보낼 데이터가 있으면 쏜다.
-* 에러가 나면 쉬었다가 몇 번 더 시도해보는 단순한 시스템.
+* `보낼 데이터가 있으면 쏜다.`
+* 에러가 나면 쉬었다가 몇 번 더 시도해보는 단순한 시스템이다.
 * 과거에는 간헐적 소량의 데이터를 주고 받았기때문에 가능했다.
-* 타 Station과 충돌이 일어날 수 있다.
-* 품질을 보장할 수 없다.
+* 타 Station과 충돌이 일어날 수 있고, 품질을 보장할 수 없다.
 
 ### Slotted ALOHA
 * 메시지들이 시작하는 시간과 끝나는 시간의 구역을 만들어서, 꼬리의 꼬리를 물어서 통신 불능상태로 가는 것은 방지하는 시스템이다.
@@ -125,14 +132,15 @@
 2. **Nonpersistent** : 센싱하다가 채널이 바쁘면 쉬고, Random하게 다시 센싱 후 비어있으면 내가 쏘는 것. 지연이 발생한다.
 3. **p-persistent (hybrid)** : 끝나는 시점은 알지만 그때 모두가 쏘면 에러가 발생하기 때문에 Random하게 쉬고, 다시 와서 쏘는 것.
 
-### CSMA / CD 
-* 송신을 하면서 내 신호를 듣고 있다가 **충돌을 탐지하면 전송을 중지**한다.
-* 충돌 된 데이터는 결국 무용지물이 되지만, 버려지는 시간을 줄일 수 있다.
-* 이더넷 만들어내는 데 공을 세웠으며, 아직도 기반 기술로 사용되고 있다.
+### CSMA/CD
+* 충돌이 나는 것을 그저 방치하지 않기 위해, 보내기 전뿐만 아니라 송신을 하면서도 계속 내 신호를 듣고 있다가 **충돌을 탐지하면 전송을 중지**한다.
+* 충돌 된 데이터는 결국 무용지물이 되지만, 조기에 발견하기에 **버려지는 시간을 줄일 수 있다.**
+* 이더넷 만들어내는 데 공을 세웠으며 아직도 기반 기술로 사용되고 있다.
+* jamming signal : 충돌을 감지하면 완전히 메시지를 깨버리고 충돌을 선언하는 메시지
 
-### CSMA / CA 
+### CSMA/CA 
 * 무선에서는 자신이 보내고 있는 것을 동시에 듣는 행위 어려웠다.
-* 따라서 CSMA / CA에서는 **충돌을 탐지하지 않고 사전에 피하는 것**이다. 하지만 이 과정에서도 다른 네트워크가 신호를 놓칠 수도 있기 때문에 _에러를 완전히 없앨 수는 없다._
+* 따라서 CSMA/CA에서는 **충돌을 탐지하지 않고 사전에 피한다.** 하지만 이 과정에서도 다른 네트워크가 신호를 놓칠 수도 있기 때문에 _에러를 완전히 없앨 수는 없다._
 * **RTS** : 데이터 보낼 것임을 알림 ( = 들어오지 마! )
 * **CTS** : 데이터 보내는 중 …  (= 들어오지 마!)
 * **ACK** : 데이터 잘 도착했음을 알림 ( = 들어와도 돼!)

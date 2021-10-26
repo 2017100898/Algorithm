@@ -68,11 +68,11 @@
 ### Delay
 * Packet 전달 시 Source host -> Destination host 까지의 걸리는 시간 (지연)
 * 네 가지 유형
-	* **transmission delay (전송지연)** : 인간이 만든 것, 표준 규격에 의거 전달하는 전송 속도
-	* **propagation delay (전파지연)** : 자연이 만들어내는 속도 (재료에 따라…)
+	* **transmission delay (전송지연)** : 인간이 만든 것, 표준 규격에 의거 전달하는 전송 지연
+	* **propagation delay (전파지연)** : 재료 등 자연이 만들어내는 지연 
 	* **processing delay (처리지연)** : 하드웨어와 소프트웨어를 사용하기 때문에 발생하는 지연
 	* **queuing delay (큐지연)** : 대기로 인해 발생하는 지연
-* 계산 가능, 계산 후 우리의 요구 수준 부합하는지 판단 필요.
+* 계산 가능, 계산 후 우리의 요구 수준 부합하는지 판단이 필요하다.
 
 ### Throughput
 <img width="580" alt="스크린샷 2021-10-24 오전 2 02 58" src="https://user-images.githubusercontent.com/64299475/138565291-adeea3d0-ea4e-41c5-be60-afa2cb3aca29.png">
@@ -133,7 +133,6 @@
 
 ### Classless Addressing
 <img width="525" alt="스크린샷 2021-10-24 오전 2 12 37" src="https://user-images.githubusercontent.com/64299475/138565586-94db7955-54b0-4783-8a15-aa1c2fadb581.png">
-
 
 * 클래스가 없는 것, 가변적으로 n bit 구현
 * IP address 부족한 문제 발생

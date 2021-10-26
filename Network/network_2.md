@@ -10,8 +10,8 @@
 * 그 위에 OS로 덮고 Controlability 확보 -> 클라우드 (가상화 기술)  -> Orchestration -> Analytics -> Application (서비스)
 * **내가 Network 원하는대로 컨트롤 가능**
 * OSI 7 Layer와 표준의 힘이 약화 되었고, Linux 산하에서 OpenSource sw로 새롭게 만들어진 네트워킹 기술들이 대거로 퍼지기 시작했으며, Linux가 network industry까지 점령했다.
-* Ericsson
-* Intel -> Linux에 투자 -> Intel & Linux 위에서 enduser application 어떻게 하면 효율적으로 돌아가게 설계할지 생각하는 단계가 됨.
+* Ericsson : "Hardware" to "Software and Service" within a decade
+* Intel ⇒ Linux에 투자 ⇒ Intel & Linux 위에서 enduser application 어떻게 하면 효율적으로 돌아가게 설계할지 생각하는 단계가 됨.
 
 #### Purpose-Built for Performance
 <img width="549" alt="스크린샷 2021-10-19 오전 2 10 01" src="https://user-images.githubusercontent.com/64299475/137777110-6d9dfe2d-a7c0-49f4-a7b4-6bb92897327c.png">
@@ -59,28 +59,28 @@
 ### Why SDN?
 <img width="484" alt="스크린샷 2021-10-19 오전 3 23 26" src="https://user-images.githubusercontent.com/64299475/137786385-b78d0cbd-0816-4f9a-b57a-6d95a2680d1a.png">
 
-* Control Plane을 바깥으로 빼냄. 
-* forwarding table을 바깥 장치로부터 가져와서 본인의 table을 업데이트만 함.
-* **받은 table에서 시킨대로만 행동함.**
+* 기존 라우터의 역할이 아닌, 패킷 길을 컨트롤하고, 네트워크를 서비스를 위한 도구로 사용하기 위해 Control Plane을 바깥으로 빼냈다. 
+* 원래는 주변 라우터들과 통신한 다음 본인 스스로 Table을 만들었지만, 지금은 외부 장치가 API를 통해 table주면, Forwarding table을 바깥 장치로부터 가져와서 본인의 table을 업데이트만 한다. 그리고 오로지 **받은 table에서 시킨대로만 행동한다.**
 
 ### OpenFlow based SDN Network
 <img width="439" alt="스크린샷 2021-10-24 오전 2 35 35" src="https://user-images.githubusercontent.com/64299475/138566199-333ffe06-33e5-483f-9622-b68e3ef6e94b.png">
 
 * 중앙 집중형 SDN 컨트롤러와 OpenFlow 프로토콜 
-* Secure Channel : 외부와의 통신하는 채널 (보안) -> Flow Table update
-* 통신사업자의 라우터가 있는 자리에 OpenFlow Switch로 모두 바꿈.
+* *Secure Channel* : 외부와의 통신하는 채널 (보안) ⇒ Flow Table update
+* 통신사업자의 라우터가 있는 자리에 OpenFlow Switch로 모두 바꾼다. table은 외부의 컨트롤러가 만들고 내려준다.
 
 #### OpenFlow Protocol
-* 룰을 주고 그 룰에 맞으면 취할 액션을 정의해주는 것
+* OpenFlow : 룰을 주고 그 룰에 맞으면 취할 액션을 정의해주는 것
 * Rule : 2,3,4계층의 address 줌 (cross layer)
 * Action : 관련 액션 
 * Stats : Packet+byte counters
-* controller : Open flow 명령 내림
-* OpenFlow Switch
-* 계층 파괴 되었음.
+* controller : 중앙집중의 Center이며, Open flow 명령 내린다.
+* OpenFlow Switch : controller에게서 명령을 받는다.
+* Controller가 중앙집중으로 전체 네트워크 상황을 봐가면서 행동할 수 있으므로 네트워크가 할 수 있는 일이 굉장히 많아졌다.
+
 
 ## Network Function Virtualization (NFV)
-* 네트워크의 기능이 가상화 되어 있음.
+* 네트워크의 기능이 가상화 되어 있는 것.
 * Standard 기반의 Volume server, Volume Storage(=disk), switch 존재.
 * Virtualized 된 network function SW들
 
@@ -107,7 +107,12 @@
 * METIS 2020
 	* 5G - SDN Controller 가 이동통신 장비들의 줄 관리 함.
 	* 그 위에 NFV SW들이 제어
-* 5G 이동통신: SDN, 클라우드(distributed), 네트워크 슬라이싱, Orchestration
+* 5G 이동통신
+	* 5G 이동통신에서 네트워크 장치는 어디든 있을 수 있다.
+	* SDN, 클라우드(distributed), 네트워크 슬라이싱, Orchestration
+	* 이동통신 네트워크는 이제 요구를 받아주는 그릇이다.
+* 5G 이동 통신의 기본 철학은 SDN, NFV이다. 
+	* 5G는 SDN, 필요할 때 필요한만큼 CPU를  띄우는 Distributed Cloud, 필요한 사람에게 나눠줌을 보장하는 Network Slicing, 다양한 Network Function의 Virtualization, 체계적인 관리 Orchestration로 이루어져 있다.
  
 ## P4 (Programming language)
 * Data Plane 영역까지 코드로 짜겠다
