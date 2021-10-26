@@ -1,9 +1,8 @@
 # Process
 ## Process Conecept
-* **OS 관점에서의 job과 task** (현재 수행 중인 일의 단위, 프로그램과 다른 개념)
-* Program:  설치된 것, 정적인 상태, 파일 시스템에 존재하는 실행파일(.exe), Program은 실행되지 않을 수 있다.
-* Process: 프로그램이 실행되어 돌아가고 있는 동적인 상태, OS로부터 메모리 할당 받는 작업의 단위
-* Processor: Hardware (CPU, GPU - Processor chip)
+* **Process**: **OS 관점에서의 job과 task** (현재 수행 중인 일의 단위, 프로그램과 다른 개념), 프로그램이 실행되어 돌아가고 있는 동적인 상태, OS로부터 메모리 할당 받는 작업의 단위 
+* **Program**:  설치된 것, 정적인 상태, 파일 시스템에 존재하는 실행파일(.exe), Program은 실행되지 않을 수 있다.
+* **Processor**: Hardware (CPU, GPU - Processor chip), 컴퓨터 운영을 위해 명령어들을 처리하는 논리회로
 
 ### Process in Memory
 * hw1.cpp ⇒ hw1.exe (0101000011) : 기계가 알아들을 수 있게 단순 번역한 것
@@ -35,6 +34,8 @@
 <img height = 300, src="https://user-images.githubusercontent.com/64299475/138258612-5c2942eb-65e8-46b8-9cb2-4c2c174252eb.jpg">
 
 * OS가 프로세스를 유지, 관리하기 위해 갖고 있는 구조체
+* State: running, ready, waiting, etc.
+* Program counter (PC) : 다음 명령 주소
 
 ### Process Sate
 * 좀더 효율적으로 프로세스 관리, CPU 할당하기 위함.
@@ -71,7 +72,7 @@
 	* **CPU bound process** : 계산 많이 하는 프로세스
 #### Short-term Scheduler (or CPU scheduler)
 * ready queue 내의 수많은 프로세스 중 누가 다음 번에 CPU 사용할 것인가?
-* 정말 자주 일어남 - 중요
+* 정말 자주 일어남 ✔️
 
 ## Operations on Processes
 ### Process는 어떻게 만들어지는가?
@@ -119,10 +120,10 @@ int main()
 
 * pid of parent and child are **2600 and 2603**
 * fork()가 실행되면서 
-	* 부모의 pid는 2603
-	* 실제 부모의 pid1 (`getpid()`)는 2600
-	* 자식의 pid1 (`getpid()`)는 2603
-	* pid는 0
+	* A : 자식의 pid == 0 
+	* B : 자식의 pid1 == 2603 `getpid()`
+	* C : 부모의 pid == 2603
+	* D : 부모의 pid1 == 2600 `getpid()`
 
 ### Question3
 <img width="445" alt="image" src="https://user-images.githubusercontent.com/64299475/136416078-d08bc7fe-ec4e-43e9-838f-d7a2829e94f5.png">
@@ -134,7 +135,7 @@ int main()
 
 > 결과값  
 > parent : 5  
-> child : 15  
+> child : 20
 
 ## Interprocess Communication (IPC)
 * 프로세스가 여러 개 있을 때 `다른 프로세스의 침범` 문제 생길 수 있다.
