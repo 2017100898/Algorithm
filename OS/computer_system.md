@@ -43,7 +43,7 @@
 * 자주 쓰는 데이터만 DRAM에 옮겨서 CPU와 Direct로 연결시켜 효율을 높이는 것이 Caching concept이다.
 
 ### Multi(core) Processor
-* 여러 작업을 보다 효율적을 한 번에 처리하기 위해 2개 이상의 코어를 탑재하여 만든 프로세서
+* 여러 작업을 보다 효율적으로 한 번에 처리하기 위해 2개 이상의 코어를 탑재하여 만든 프로세서
 * 여러 개의 주 CPU 를 가진다.
 * **장점**
 	* 성능 향상 (Increased throughput)

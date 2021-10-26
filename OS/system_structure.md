@@ -44,7 +44,8 @@
 
 ## What does OS do?
 * CPU는 오직 한 번에 하나의 프로세스만 지원한다.
-	1. Process Management
+* OS가 하는 일
+	1. Process Management (Create/run/terminate processes)
 	2. Memory Management
 	3. I/O Management
 	4. Protection

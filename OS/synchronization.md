@@ -40,7 +40,7 @@ do{
 	* critical section 기다리고 있으면 언젠가는 들어갈 수 있어야 하며, **평생 기다리면 안 된다.(starvation free)**
 	
 ## Software C.S :  Peterson’s Solution
-* 알고리즘으로 코드로 구현하는 것.
+* 알고리즘을 코드로 구현하는 것.
 
 ### Algorithm 1
 * Consider two Pi , i = {1,2}
