@@ -65,10 +65,13 @@
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
-* [MAC Layer](https://github.com/2017100898/TIL/blob/main/Network/mac_layer.md)
-* [DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/dlc_layer.md)
-* [MAC/DLC](https://github.com/2017100898/TIL/blob/main/Network/macdlc.md)
-* [Network-1](https://github.com/2017100898/TIL/blob/main/Network/network_1.md)
+* [Data Link Layer: MAC Layer](https://github.com/2017100898/TIL/blob/main/Network/mac_layer.md)
+* [Data Link Layer: DLC Layer](https://github.com/2017100898/TIL/blob/main/Network/dlc_layer.md)
+* [Data Link Layer: MAC/DLC](https://github.com/2017100898/TIL/blob/main/Network/macdlc.md)
+* [Network Layer-1](https://github.com/2017100898/TIL/blob/main/Network/network_2.md)
+* [Network Layer-2](https://github.com/2017100898/TIL/blob/main/Network/network_1.md)
+* [Transport Layer](https://github.com/2017100898/TIL/blob/main/Network/transport_layer.md)
+
 
 ### OS
 * [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
