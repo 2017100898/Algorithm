@@ -50,8 +50,11 @@
 ### Layers
 ![2-Figure2-1](https://user-images.githubusercontent.com/64299475/135898567-e607b2e6-3027-4b3a-974b-73a83c343bb9.png)
 
-* **PCF** : 어떠한 대장도 존재하지 않고 각자가 동일한 능력을 가져서 동작한다. 유선에서 온 것들은 너무 늦지 않게 무선으로 준다. 노트북 중에 한 대라도 PCF 소프트웨어 돌아간다면 공유기와 같은 역할 한다. (Contention-free service,  완전히 없는 건 아님, IEEE802.11에서 지원)
+* **PCF** : 유선에서 온 것들은 너무 늦지 않게 무선으로 준다. 노트북 중에 한 대라도 PCF 소프트웨어 돌아간다면 공유기와 같은 역할 한다. (Contention-free service,  완전히 없는 건 아님, IEEE802.11에서 지원)
 * **DCF** : 어떤 대장도 존재하지 않고 각자가 동일하게 작동한다.(Contention service)
+
+> contention-free : 중앙제어기가 각 Station 에게 전송 기회를 주기 때문에 각 Station이 채널 접근에 대한 경쟁 없다.   
+> contention based : 여러 Station 들이 하나의 채널을 두고 서로 경쟁하며 나누어쓰는 방식
 
 
 ### AP Repetition

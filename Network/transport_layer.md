@@ -24,7 +24,7 @@
 
 ### Socket Addresses
 * 4계층 위에서 코드를 작성하는 사람이라면, IP address, port number 함께 생각하는 사람이 많다.
-* **Socket Address = IP+Port number** `120.231.010.10/80`
+* **Socket Address = IP+Port number** `120.231.010.10:80`
 
 ### Multiplexing and Demultiplexing
 <img width="639" alt="스크린샷 2021-10-24 오후 1 13 00" src="https://user-images.githubusercontent.com/64299475/138580466-e00fd310-6d17-4d5b-9c67-3f75d614cd00.png">
@@ -51,17 +51,16 @@
 	* 오직 **checksum**만 있다.
 	* checksum : 네트워크를 통해 값이 변경되었는지 검사하는 값
 * 모든 UDP 패킷은 독립적이다.
-* 사용자의 데이터를 실어 나르는 프로토콜. 
-* Process to Process, Port address 집어넣을 수 있게 됨으로써 어느 프로그램이 어느 프로그램에 전달하는지 알 수 있는 것이 중요
-* **UDP는 신뢰성 보장 안 해도 되는 작은 메시지 주고 받을 때 주로 사용** (유실될 수도 있음)
+* **UDP는 사용자의 데이터를 실어 나르는 프로토콜으로, 신뢰성 보장 안 해도 되는 작은 메시지 간헐적으로 주고 받을 때 주로 사용** (유실될 수도 있음)
+* Process to Process, Port address 집어넣을 수 있게 됨으로써 어느 프로그램이 어느 프로그램에 전달하는지 알 수 있는 것이 중요하다.
+
 
 ### Frame Format
 <img width="427" alt="스크린샷 2021-10-20 오후 9 05 19" src="https://user-images.githubusercontent.com/64299475/138089431-754b349b-2231-400f-82c7-6790aa40fa0b.png">
 
 * Source Port, Destination Port, UDP total length, checksum, (padding) …
-* 어느 프로세스가 보냈는지에 대한 식별과 어느 프로세스로 보내야하는지에 관한 정보전달
-	* **Encapsulation and Decapsulation** (제일 중요한 기능)
-
+* 어느 프로세스가 보냈는지에 대한 *식별*과 어느 프로세스로 보내야하는지에 관한 정보전달 (제일 중요한 기능)
+	* **Encapsulation and Decapsulation** 
 ### Queuing at Client Site
 <img width="437" alt="스크린샷 2021-10-20 오후 9 16 17" src="https://user-images.githubusercontent.com/64299475/138090777-bd1c606a-e80d-4c21-875c-847d6f336921.png">
 
@@ -177,7 +176,7 @@
 
 <img width="617" alt="스크린샷 2021-10-23 오후 5 22 05" src="https://user-images.githubusercontent.com/64299475/138548844-5a5d0c8c-beb9-4344-b9f5-50c2cf56d485.png">
 
-* 메시지가 여러개 올 수도 있으니 타이머 켜놓고 일정시간 만큼 기다린 뒤 ACK 전송하는 방법
+* ACK delaying Timer - 메시지가 여러개 올 수도 있으니 타이머 켜놓고 일정시간 만큼 기다린 뒤 ACK 전송하는 방법
 * 장점 : 매번 응답을 주는 것보다 효율이 올라간다.
 * 단점 : 급할 때는 응답 바로바로하지 않으면, 상대방은 응답 기다려야 하므로 오히려 효율이 떨어진다.
 
@@ -196,8 +195,7 @@
 <img width="784" alt="스크린샷 2021-10-23 오후 5 30 12" src="https://user-images.githubusercontent.com/64299475/138549172-3acfb5b3-a199-4b27-a36b-060e8b25acf0.png">
 
 * 수신 버퍼와 상관이 없다.
-* 클라이언트와 서버사이에 많은 줄과 장치가 있다는 것을 예측할 수는 있으나 얼마나 많은지는 모른다.
-* 따라서,  네트워크의 상태 정확히 알 수 없다.
+* 클라이언트와 서버 사이에 많은 줄과 장치가 있다는 것을 예측할 수는 있으나 얼마나 많은지는 모른다. 따라서, 네트워크의 상태 정확히 알 수 없다. 
 * 과부하를 주지 않기 위해, 처음에는 천천히 시작한다. (연결 설정 후, 첫 번째 데이터 보낼 때 적용) 즉, 하나의 segment만 보낸다.
 	* congestion window : 1
 * 시간이 지나 ACK를 받으면 , congestion window : 2
