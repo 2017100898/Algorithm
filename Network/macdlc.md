@@ -43,14 +43,15 @@
 
 ### Topologies
 ![R800x0](https://user-images.githubusercontent.com/64299475/135896855-d7cf0d98-f139-4fe0-8cb6-ee995ee8f1e1.png)
-* **Ad hoc network** : _유무선 공유기가 없어도_ 컴퓨터들끼리 통신 가능 
-* Access point : Ad hoc에 있는 장치 모아서 트래픽을 인터넷에 보내고 받을 수 있는 장치 - 유무선 공유기
+* **Ad hoc network** : 유무선 공유기가 없어도, 근거리의 컴퓨터들끼리 통신 가능한 형태.
+* Access point : 결국 Ad hoc에 있는 장치 모아서 트래픽을 인터넷에 보내고 받을 수 있는 장치를 Access point라 한다. (유무선 공유기)
+* **Infrastructure network** : Access point를 통해 다른 노드들의 무선랜 신호를 받아 인터넷(Infrastructure)으로 보내고, 인터넷의 신호를 다시 와이파이로 보내주는 형태.
 
 ### Layers
 ![2-Figure2-1](https://user-images.githubusercontent.com/64299475/135898567-e607b2e6-3027-4b3a-974b-73a83c343bb9.png)
 
-* **PCF** : 유선에서 온 것들은 너무 늦지 않게 무선으로 주는 것 - 노트북 중에 한 대라도 PCF 돌아간다면 공유기와 같은 역할 함. (Contention-free service,  완전히 없는 건 아님)
-* **DCF** : 어떤 대장도 존재하지 않고 각자가 동일하게 작동 (Contention service)
+* **PCF** : 어떠한 대장도 존재하지 않고 각자가 동일한 능력을 가져서 동작한다. 유선에서 온 것들은 너무 늦지 않게 무선으로 준다. 노트북 중에 한 대라도 PCF 소프트웨어 돌아간다면 공유기와 같은 역할 한다. (Contention-free service,  완전히 없는 건 아님, IEEE802.11에서 지원)
+* **DCF** : 어떤 대장도 존재하지 않고 각자가 동일하게 작동한다.(Contention service)
 
 
 ### AP Repetition
@@ -103,6 +104,9 @@
 * Mesh node : Sensor, actuator로부터 정보 받거나 주는 것
 * Mesh gateway : 필요 시 인터넷 연결
 
+### BLE Mesh Application
+* 원하는 지점에 배터리로 동작하고 BLE로 연결 된 전구를 놓고, 사람 또는 자동차의 움직임을 탐지하면 불을 켜고 시간차에 따라 인근 전구에게 불을 켜라고 명령할 수 있다. 사람이 탐지될 때만 불을 켤 수 있으므로 전력 사용을 줄일 수 있다.
+
 ## LoRa
 * Wide Area Network for IoT
 * 저전력, 속도 낮음 - 사람을 위한 것이 아닌 센서/기계를 위한 것.
@@ -130,8 +134,12 @@
 ### Protocol Stack
 <img width="434" alt="스크린샷 2021-10-07 오전 2 55 54" src="https://user-images.githubusercontent.com/64299475/136257645-dee32236-eebe-4f41-a500-3d804a73cc43.png">
 
-* Application 끼리는 필요한 정보 주고 받고 무선의 해당하는 부분은 LoRaWAN을 따르며 OpenSource 등을 사용.
+* Application 끼리는 필요한 정보 주고 받고 무선의 해당하는 부분은 LoRaWAN을 따르며 OpenSource 등을 사용할 수 있다.
 
 ## LoRa/LoRaWAN Implementation
 * Ethernet, Wifi, Bluetooth의 MAC은 바꿀 수 없음.
 * **LoRa, LoRaWAN의 MAC은 바꿀 수 있음.**
+
+
+
+

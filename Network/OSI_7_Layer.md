@@ -19,6 +19,8 @@
 * 집단적으로 데이터를 가공하여 거시적 관점에서 로봇 제어함으로써 인공지능, 데이터 사이언스 등 **뇌**에 해당하는 부분이 강화되었다.
 
 # OSI 7 Layer 🚀✨🔥
+* Open Systems Interconnection model
+* 컴퓨터 네트워킹의 가장 중요한 원칙
 * **네트워크를 여러 단계로 나눈 이유?**
 	* 데이터의 흐름을 한 눈에 볼 수 있다.
 	* 하나의 문제를 7 단계로 나눔으로써 문제 해결이 쉽다.
@@ -28,12 +30,12 @@
 
 
 1. **Physical Layer** : 기기가 접하는 부분, 두 장치를 유/무선으로 연결한 다음 0과 1의 조합을 주고 받게 한다. But 유/무선 모두 에러가 안 날 수가 없다. 가장 복잡한 계층.
-2. **Data Link Layer** : 에러가 났을 때 에러를 검출하고 복구하는 역할을 한다. 속도 차이 등을 방지한다. 대부분 1, 2 계층은 합쳐져 있다. 흐름 제어 지원. (하지만 모든 장치 100% 지원하는 것은 아니다.)
-3. **Network Layer** : Routing 이 가장 중요한 역할. 여러 길 중 방금 받은 메세지를 어떤 길로 보낼지 결정한다. 어떤 SW냐에 따라 Routing or Switching. (IP) 
-4. **Transport Layer** : 서비스 입장에서의 에러 검출 및 복구. (TCP)
+2. **Data Link Layer** : 에러가 났을 때 에러를 검출하고 복구하는 역할을 한다. 두 장치의 속도 차이 등을 방지한다. 대부분 1, 2 계층은 합쳐져 있다. 흐름 제어 지원. (**하지만 모든 장치 100% 지원하는 것은 아니다.**) 
+3. **Network Layer** : Routing 이 가장 중요한 역할. 여러 길 중 방금 받은 메세지를 어떤 길로 보낼지 결정한다. 어떤 SW냐에 따라 Routing or Switching. (**IP**) 
+4. **Transport Layer** : **서비스 입장에서의** 에러 검출 및 복구. (**TCP**)
 5. **Session Layer** : Authentication (유튜브 가격에 따른 다른 기능 제공 / 넷플릭스 요금제), Permission (로그인), Session (음성-데이터-영상 구분해서 보냄) 서비스 시작 지점, 서비스 제공 범위, 서비스 구성요소들간의 관계 결정
 6. **Presentation Layer** : 코드 간 번역, 저장 규칙, 암호화 등 미디어를 컴퓨터에 어떻게 저장할 것인지 결정한다.
-7.  **Application Layer** : 사람이 접하는 부분, UI, 사용자의 입출력
+7.  **Application Layer** : 사람(end-user)이 접하는 부분, UI, 사용자의 입출력
 
 * **[ Upper Layer ]** Application / Presentation / Session
 * **[ Lower Layer ]** Transport / Network / Data Link / Physical
@@ -43,6 +45,7 @@
 ![peer](https://user-images.githubusercontent.com/64299475/132338100-1b9c0220-4ad7-46cc-a28f-db3d6e4675bb.png)
 
 
+* Peer-Communication : 같은 계층끼리 의미있는 행동을 함으로써 통신하는 것을 뜻한다. 동일한 Layer끼리 기능적으로 통신할 수 있다.
 * Device A, B 사이에 수많은 장치들이 있다.
 * **A의 application layer 가 B의 application layer 와 통신하는 것이 최종 목적이다.**
 
@@ -56,12 +59,13 @@
 8.  Device B의 Physical로 메시지를 보내고, B의 Application 까지 올라간다.
 
 * 기능 : 왼쪽과 오른쪽의 Peer communication 
-* 전달 : 위에서 아래로, 아래에서 위로
+* 전달 : 위에서 아래로, 아래에서 위로 (큰 의미 X)
 
 <img width="372" alt="스크린샷 2021-09-07 오후 7 28 22" src="https://user-images.githubusercontent.com/64299475/132338113-2a880ca8-6299-4e46-8876-b70449f473b7.png">
 
 * Router : Physical, Data Link, Network (OSI 1,2,3) 지원
 
+### TCP/IP Protocol Suite
 <img width="368" alt="스크린샷 2021-09-07 오후 7 32 35" src="https://user-images.githubusercontent.com/64299475/132338129-3012a1d5-bc3f-400a-8b08-27571bd45467.png">
 
 
@@ -71,22 +75,32 @@
 
 <img src="https://user-images.githubusercontent.com/64299475/132338149-f811d345-d7ce-4f90-ab14-0fb40d927bfc.png">
 
+* Physical Layer : Powerline(PLC)
+* DataLink Layer : IEEE 802, BLE, Wifi, NFC (1계층까지 걸쳐있다.)
+* NWK Layer : IP
+* Transport Layer : TCP
+* Application/Data Layer : HTTP
+* 하나의 소프트웨어가 여러 계층의 일을 할 수 있다.
 
 ## Open Source Hardwares
-* 아두이노 : 회로도 공개 및 오픈소스라는 개념을 하드웨어에 적용. 디지털과 아날로그 정보를 받아 결국 다시 디지털과 아날로그로 출력하는 장치. 하고 싶은 것을 굉장히 쉽게 할 수 있도록 해주고, 다양한 기능과 형태, 성능의 제품이 있다. 
+* *Open Source SW* : 소스가 공개 되어 있고, 사용할 수 있으며 개선하고 contribution 할 수 있는 소프트웨어.
+*  *Open Source HW* : Open Source SW의 개념을 하드웨어에 적용한 것이다. 대표적 예제는 `아두이노`
+* **아두이노** : 회로도 공개 및 오픈소스라는 개념을 하드웨어에 적용한 것이다. 디지털과 아날로그 정보를 받아 처리한 후 다시 디지털과 아날로그로 출력하는 장치다. 하고 싶은 것을 굉장히 쉽게 할 수 있도록 해주며, **범용성**이 있으며 다양한 기능과 형태, 성능의 제품이 있다. 개발자들은 이를 통해 자기가 원하는 하드웨어를 아주 쉽게 구현할 수 있게 되었다.
 * 아두이노 Shields (써드파티) : 아두이노는 범용성을 띠어야 했기에 써드파티인 Shields 업체들이 아두이노가 하지 못 한 기능을 추가할 수 있게 되었다. 아두이노의 기능을 강화하고 각 분야에 특화된  보드들을 만들기 시작했으며 아두이노의 쓰임새가 확산되었다고 볼 수 있다.
 * Open Source 정신이 확산되기 시작했다. (집단지성의 작용)
-* Facebook’s Open Source Datacenter - 모든 건물 설계도, 서버, 네트워크, 회로도 공개 (OCP)
+* Facebook’s Open Source Datacenter : 모든 건물 설계도, 서버, 네트워크, 회로도 등 공개 (Open Compute Project - OCP)
+
 
 ## Single Board Computer (SBC)
-* Raspberry Pi : 저전력의 작은 컴퓨터 필요할 때 더할 나위 없이 사용하기 좋은 하드웨어. Linux 운영체제 사용. 라즈베리 파이 덕분에 지금껏 없었던 분야의 프로그래밍이 가능해졌다.
-* ODROID, BeagleBone, INTEL NUC, Google Coral, NVIDIA Jetson… 의 등장
-* 우리는 컴퓨터를 직접 만들 수 있고, 매우 작고 파워풀해졌다! 앞으로는 이러한 컴퓨터를 어떻게 사용하는가? 가 매우 중요하다.
+* **Not Open Source HW** : 소스 공개 하지 않음.
+* 라즈베리파이는 학생 모두에게 컴퓨터를 나눠주고 소프트웨어 교육을 하기 위해 등장했다.
+* **Raspberry Pi** : `저전력의 작은 컴퓨터 필요할 때` 더할 나위 없이 사용하기 좋은 하드웨어다. Linux 운영체제 사용한다. 라즈베리 파이 덕분에 지금껏 없었던 분야의 프로그래밍이 가능해졌다.
+* 라즈베리파이 이후 ODROID, BeagleBone, INTEL NUC, Google Coral, NVIDIA Jetson 등 성능 개선된 작은 컴퓨터들이 많이 등장했다.
+* 우리는 컴퓨터를 직접 만들 수 있고, 매우 작고 파워풀해졌다. `앞으로는 이러한 컴퓨터를 어떻게 사용하는가?` 가 매우 중요하다.
 * 컴퓨터 네트워크는 이러한 **컴퓨터**를 연결하는 것. 사람이 주로 end user가 아니다.
 
 ## Linux
 * 일반적인 데스크탑 뿐만 아니라 수 많은 전자기기에 Linux가 들어있다. 
-* Open source hardware: 거의 대부분 Linux 고려, Linux 기반 네트워킹이 가장 중요한 화두가 되었다. 거의 모든 것의 기반이자 표준이라고 표현할 수 있다. 
+* Open Source Hardwares : 거의 대부분 Linux 고려, Linux 기반 네트워킹이 가장 중요한 화두가 되었다. 거의 모든 것의 기반이자 표준이라고 표현할 수 있다. 
 * Ubuntu, debian, CentOS, fedora, mint, elementary…
-* Ubuntu : 일반 데스크탑, 대형 Server, Cloud computing, 작은 IoT 등 다양한 컴퓨터 위에서 돌아갈 수 있다.
-* 경량의 Ubuntu도 굉장히 많다. (Ubuntu MATE…) 
+* Ubuntu : 일반 데스크탑, 대형 Server, Cloud computing, 작은 IoT 등 다양한 컴퓨터 위에서 돌아갈 수 있다. 경량의 Ubuntu도 굉장히 많다. (Ubuntu MATE…) 

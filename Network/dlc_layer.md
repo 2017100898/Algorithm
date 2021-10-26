@@ -58,15 +58,18 @@
 ## Simple Protocol
 ![99391F4B5CFF047313](https://user-images.githubusercontent.com/64299475/138452379-5c528228-67c7-477f-ab52-80c81a137883.jpeg)
 
+* Sending node와 Receiving node는 Network Layer와 Data-link Layer로 이루어져 있다. 
+* Sending node의 network layer가 보낼 것이 있을 때, Data-link Layer에 내리고 (패킷 전달), Sending node의 Data-link Layer는 Framing 후, logical 한 링크를 통해 Receiving node에 전송한다. Receiving node는 Unframing 후, 데이터를 Network Layer로 올린다. Sending node Data-link에서 Receving node의 Data-Layer에 Frame을 전달할 때는 약간의 시간이 걸린다.
 * Flow control, Error control 하지 않고 송신단이 보내고 싶은 것이 있을 때 바로 전송을 하고 수신단은 잘 받는다.
-* Data-link layer 위에 Network Layer가 존재한다. 
-* Sending node의 network layer 가 보낼 것이 있을 때 data-link layer로 내리고 sending node data-link layer ⇒ logical link ⇒ receiving node의 data-link layer로 전송하고 (receiver가 수신 프레임을 바로 처리한다고 가정) network layer로 올린다. 
 * 자연계에서는 불가능하다.
 
 ### FSM for the simple protocol
 #### 상태천이도 (STD)
+<img width="562" alt="스크린샷 2021-10-26 오후 10 16 52" src="https://user-images.githubusercontent.com/64299475/138886723-6eaf465a-8cba-4020-badc-dae6bbdfc5d1.png">
+
+* Ready : Ready 상태
 * Packet came from network layer : 이벤트
-* Make a frame and send it : 액션
+* Make a frame and send it : 액션 (이벤트가 뜨면 액션)
 * 그 다음 상태 -> Ready
 * **Ready -> 이벤트 -> 액션 -> Ready**
 * Start : 프로그램이 최초로 살아날 때의 시작 상태
@@ -98,7 +101,7 @@
 * 잘 받았으면 Sending node에게 ACK code를 돌려준다. 잘 받았다는 뜻.
 
 1. 보내고 ACK 올 때까지 기다린다. (stop - wait)
-2. 제대로 ACK 오면 잘 보낸 것이고, ACK 안 오면 에러났다고 판단. 정해진 횟수만큼 재전송 한다.
+2. 제대로 ACK 오면 잘 보낸 것이고, ACK 안 오면 에러났다고 판단하며, 정해진 횟수만큼 재전송 한다.
 
 ### FSM for the stop-and-wait protocol
 
@@ -136,8 +139,8 @@
 ## Go-Back-N Protocol
 <img width="487" alt="스크린샷 2021-09-23 오후 1 25 21" src="https://user-images.githubusercontent.com/64299475/134454455-85fd9b25-ddb5-4266-8bb8-151cb1b41185.png">
 
-* Stop-and-wait 의 문제점 : 보내는 데이터가 많아질 수록 전송 시간 오래 걸리고 통신링크의 *효율 떨어짐*.
-* 통신 링크가 놀고있는 시간 제대로 활용해 봐야함. **기다리는 것이 아닌, 보내는 쪽에서 미리 정한 숫자만큼의 메시지를 ACK 없더라도 일단 보냄.** 
+* Stop-and-wait 의 문제점 : 보내는 데이터가 많아질 수록 전송 시간 오래 걸리고 통신링크의 *효율 떨어진다*.
+* 통신 링크가 놀고있는 시간 제대로 활용해 봐야한다. 무작정 **기다리는 것이 아닌, 보내는 쪽에서 미리 정한 숫자만큼의 메시지를 ACK 없더라도 일단 보낸다.** 
 * **S(size), send window size** : 상대방으로부터 ACK 없어도 보낼 수 있는 메시지의 range (사진 상의 회색부분, 15개, **2^m - 1**)
 * **S(f)** : 메시지 보냈으나 ACK 안 온 첫번째 메시지 가리킴 (주황색 : 응답안와서 ACK 기다리고 있는 것들)
 * **S(n)** : 다음에 보낼 메시지 가리킴
@@ -214,19 +217,20 @@
 
 ## DLC Example - PPP
 ### PPP (Point-to-Point Protocol)
-* 휴대폰의 기본 매커니즘. 3계층 이상의 어플리케이션에 대한 것을 설정하고 유지관리하기 위함.
-* 이 사용자가 합법적인지, 얼마만큼의 지원받으면 되는지 등의 관리 기능 갖고 있음. (인증)
+* Connection-oriented
+* 휴대폰의 기본 매커니즘이다. 3계층 이상의 어플리케이션에 대한 것을 설정하고 유지관리한다.
+* 이 사용자가 합법적인지, 얼마만큼의 지원받으면 되는지 등의 관리 기능 갖고 있다. (인증)
 
 ### Frame format
 ![unnamed](https://user-images.githubusercontent.com/64299475/134458825-b7785a0c-21af-453d-bd00-0fc52d444420.gif)
 
-* Dead 상태에서 PPP 동작하면 연결 작업 시작.
-* 서로 요청하고자 하는 것을 맞춰나감. 옵션 맞으면 Authenticate(인증)단계 들어감. - 적합한지, 불법인지?
-* 합법적인 사용자 아니면 다시 Dead
-* 합법적인 사용자면 Network 단계로 들어감. (3계층 이상에서 잘 돌아가도록 config 잡아줌)
+* Dead 상태에서 PPP 동작하면 연결 작업을 시작한다.
+* 서로 요청하고자 하는 것을 맞춰나가고 옵션 맞으면 Authenticate(인증) 단계 들어간다.
+* 합법적인 사용자인지 판단한 후 아니면 다시 Dead한다.
+* 합법적인 사용자면 Network 단계로 들어간다. (3계층 이상에서 잘 돌아가도록 config 잡아준다.)
 
 ### Multiplexing in PPP
 ![forouzan-ppp-6-638](https://user-images.githubusercontent.com/64299475/134459425-a9fdbf00-455f-43b4-8db5-5f3a385eaf63.jpeg)
 
-* Data-link layer 안에 CHAP, PAP, IPCP,…  (보안 인증 방법) 존재.
-* 내가 인증을 해야 한다? AP 써야 함. ⇒ CHAP, PAP 중 내가 사용할 것의 코드 씀.
+* Data-link layer 안에 CHAP, PAP, IPCP,…  (보안 인증 방법) 존재한다.
+* 내가 인증을 해야 한다면 AP 써야 한다. ⇒ CHAP, PAP 중 내가 사용할 것의 코드 쓴다.
