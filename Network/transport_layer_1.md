@@ -16,7 +16,7 @@
 ### Addressing
 <img width="427" alt="스크린샷 2021-10-20 오후 8 45 58" src="https://user-images.githubusercontent.com/64299475/138086854-c62776ee-f0c4-44a0-80f6-c2f0eb003f7a.png">
 
-* Host 안에서 어느 프로그램이 통신의 대상인지 식별하는 과정 필요.
+* Host 안에서 어느 프로그램이 통신의 대상인지 식별하는 과정 필요하다.
 	* Data link layer에서는 MAC address 알아야 된다.
 	* Network layer에서는 IP address 알아야 된다.
 	* 그리고 **Transport layer는 Port number (address)** (0~65,535)를 알아야 된다.
@@ -27,7 +27,7 @@
 * **Socket Address = IP+Port number** `120.231.010.10:80`
 
 ### Multiplexing and Demultiplexing
-<img width="639" alt="스크린샷 2021-10-24 오후 1 13 00" src="https://user-images.githubusercontent.com/64299475/138580466-e00fd310-6d17-4d5b-9c67-3f75d614cd00.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138580466-e00fd310-6d17-4d5b-9c67-3f75d614cd00.png">
 
 * Multiplexing : 하나의 IP 위에서 여러 개의 프로세스 동시에 활용하는 것
 * Demultiplexing : 하나의 IP에서 온 것을 여러 개의 프로세스에 배정하는 것
@@ -38,7 +38,7 @@
 	* ex. TCP (연결설정, 데이터 주고받음, 혼잡제어, 흐름제어, 에러검출), SCTP (TCP 보다 신뢰성 보장, but 막 쓰면 안 됨)
 * **Connectionless**
 	* 필요할 때 필요한 것을 보낸다. (ACK X, 패킷 번호 X)
-	* 연결, 해제 과정 없음.
+	* 연결, 해제 과정이 없다.
 	* ex. UDP
 
 ### Reliable vs Unreliable
@@ -51,7 +51,7 @@
 	* 오직 **checksum**만 있다.
 	* checksum : 네트워크를 통해 값이 변경되었는지 검사하는 값
 * 모든 UDP 패킷은 독립적이다.
-* **UDP는 사용자의 데이터를 실어 나르는 프로토콜으로, 신뢰성 보장 안 해도 되는 작은 메시지 간헐적으로 주고 받을 때 주로 사용** (유실될 수도 있음)
+* **UDP는 사용자의 데이터를 실어 나르는 프로토콜으로, 신뢰성 보장 안 해도 되는 작은 메시지 간헐적으로 주고 받을 때 주로 사용한다.** 유실될 수도 있다.
 * Process to Process, Port address 집어넣을 수 있게 됨으로써 어느 프로그램이 어느 프로그램에 전달하는지 알 수 있는 것이 중요하다.
 
 
@@ -62,16 +62,16 @@
 * 어느 프로세스가 보냈는지에 대한 *식별*과 어느 프로세스로 보내야하는지에 관한 정보전달 (제일 중요한 기능)
 	* **Encapsulation and Decapsulation** 
 ### Queuing at Client Site
-<img width="437" alt="스크린샷 2021-10-20 오후 9 16 17" src="https://user-images.githubusercontent.com/64299475/138090777-bd1c606a-e80d-4c21-875c-847d6f336921.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138090777-bd1c606a-e80d-4c21-875c-847d6f336921.png">
 
-* Server가 Client 보다 항상 먼저 동작하고 있어야 함. 
-	* TCP도 동일하지만 UDP는 연결 설정 과정이 없어서 필수적임.
+* Server가 Client 보다 항상 먼저 동작하고 있어야 한다.
+	* TCP도 동일하지만 UDP는 연결 설정 과정이 없기때문에 필수적이다.
 	
 #### Client
-* 프로세스 살아나면 본인의 random Port number OS로 부터 받음. 
-* source port 번호로 사용함.
-* UDP 에게 전달 및 포트번호 기반으로 헤더 만들고 완성
-* UDP 헤더가 붙은 데이터를 IP에 전달 (buffer 꽉 찼으면 5계층 ⇒ 4계층으로 데이터 내릴 수 있음)
+* 프로세스 살아나면 본인의 random Port number OS로 부터 받는다. 
+* source port 번호로 사용한다.
+* UDP 에게 전달 및 포트번호 기반으로 헤더 만들고 완성한다.
+* UDP 헤더가 붙은 데이터를 IP에 전달한다. buffer가 꽉 찼으면 5계층 ⇒ 4계층으로 데이터를 내릴 수 있다.
 * 3계층에서 데이터 및 UDP 받아서 해당하는 어플리케이션 destination 번호를 보고 해당하는 것에 데이터 전달
 
 #### Server
@@ -98,7 +98,7 @@
 * TCP is a **stream-oriented protocol**
 * 메시지 단위가 아닌 **byte 단위로 센다.** (Stream of bytes, 패킷 아님)
 * 보내는쪽 : sequence 
-* 번호 받는쪽 : ack에 의해 응답 but 메시지 번호와 상관없이 byte 사용
+* 번호 받는쪽 : ack에 의해 응답 but 메시지 번호와 상관없이 byte 사용한다.
 
 ### Sending and Receiving Bufers
 <img width="511" alt="스크린샷 2021-10-22 오후 4 01 19" src="https://user-images.githubusercontent.com/64299475/138546041-6f9f0c79-354b-4561-bfc2-5c5bfbf19f54.png">
@@ -155,7 +155,7 @@
 > SYN Flooding Attack : 서버 포트 열고 대기하고 있을 때 SYN 엄청 많이 보내서 서비스 불능 상태로 만드는 것.  
 
 #### 데이터 보내기 (Full-Duplex)
-![image9](https://user-images.githubusercontent.com/64299475/138548179-dbb5ec1d-4cbf-4dff-9c0f-4f85688fe9d3.png)
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138548179-dbb5ec1d-4cbf-4dff-9c0f-4f85688fe9d3.png">
 
 * 8001번째 byte 데이터를 시작으로 보낸다. `8001~9000`
 * 15001 : random number 유지
@@ -165,7 +165,7 @@
 * Urgent Data : 받았는데 Urgent Bit로 셋팅 되어 있으면, 이것 먼저 본다.
 
 #### Connection termination
-<img width="778" alt="network" src="https://user-images.githubusercontent.com/64299475/138548464-81bc9f30-faac-4f5b-b786-6f1c875f8b07.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138548464-81bc9f30-faac-4f5b-b786-6f1c875f8b07.png">
 
 * Client가 FIN 요청 했으나 Server는 FIN 안 하면 `Half Close` 상태가 된다.
 * Server가 ACK 해도 본인은 계속 데이터 보낼 수 있다. 
@@ -174,7 +174,7 @@
 ### Flow control
 #### Normal Operation
 
-<img width="617" alt="스크린샷 2021-10-23 오후 5 22 05" src="https://user-images.githubusercontent.com/64299475/138548844-5a5d0c8c-beb9-4344-b9f5-50c2cf56d485.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138548844-5a5d0c8c-beb9-4344-b9f5-50c2cf56d485.png">
 
 * ACK delaying Timer - 메시지가 여러개 올 수도 있으니 타이머 켜놓고 일정시간 만큼 기다린 뒤 ACK 전송하는 방법
 * 장점 : 매번 응답을 주는 것보다 효율이 올라간다.
@@ -186,13 +186,13 @@
 * 701이 없어졌으면 ACK 로 다시 요청하면 된다.
 
 #### Fast retransmission
-<img width="598" alt="스크린샷 2021-10-23 오후 5 24 33" src="https://user-images.githubusercontent.com/64299475/138548978-fe2095b9-b755-472c-940f-2ba42e847f57.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138548978-fe2095b9-b755-472c-940f-2ba42e847f57.png">
 
-* 동일한 ACK 메시지가 3번 연속해서 오면 타이머 restart 하면서 바로 재전송하는 방법. (빠르게 에러 검출 및 복구하기 위함)
+* 동일한 ACK 메시지가 3번 연속해서 오면 타이머 restart 하면서 바로 재전송하는 방법이다. 빠르게 에러 검출 및 복구를 하기 위함이다.
 
 ### Slow Start, Exponential increase
 
-<img width="784" alt="스크린샷 2021-10-23 오후 5 30 12" src="https://user-images.githubusercontent.com/64299475/138549172-3acfb5b3-a199-4b27-a36b-060e8b25acf0.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138549172-3acfb5b3-a199-4b27-a36b-060e8b25acf0.png">
 
 * 수신 버퍼와 상관이 없다.
 * 클라이언트와 서버 사이에 많은 줄과 장치가 있다는 것을 예측할 수는 있으나 얼마나 많은지는 모른다. 따라서, 네트워크의 상태 정확히 알 수 없다. 
@@ -200,14 +200,14 @@
 	* congestion window : 1
 * 시간이 지나 ACK를 받으면 , congestion window : 2
 * ACK 2개 받으면, congestion window : 4, 8, 16…
-* 2 제곱으로 개수를 올려보면서, 에러가 나는지 안나는지 보고 조절하는 방법.
+* 2 제곱으로 개수를 올려보면서, 에러가 나는지 안나는지 보고 조절하는 방법이다.
 
 ### Congestion avoidance, additive increase
-* 2제곱이 아닌, linear 하게 1씩 증가시키는 것.
+* 2제곱이 아닌, linear 하게 1씩 증가시키는 방법이다.
 
 ### Taho TCP
 * Slow Start, Exponential increase +  Congestion avoidance, additive increase
 * 2, 4, 8 로 가다가 에러가 나면, congestion window 다시 1로 떨어뜨린다. (threshold : 4)
-* 2, 4 까지만 가고 그 이후로는 +1 씩 진행하는 방법.
-* +1 하다가 떨어지면 max 값의 반에 해당하는 값을 threshold로 설정
+* 2, 4 까지만 가고 그 이후로는 +1 씩 진행하는 방법이다.
+* +1 하다가 떨어지면 max 값의 반에 해당하는 값을 threshold로 설정한다.
 * Taho에 변형을 한 Reno TCP도 존재한다. 

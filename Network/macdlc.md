@@ -86,7 +86,9 @@
 * BLE는 도어락, 가정장치, 센서 등을 타겟으로 만들어진 장치.
 
 ### BLE Layer Stack
-![stack-link-layer](https://user-images.githubusercontent.com/64299475/135902934-222b2db9-4416-4cd4-9555-400b4e5992ea.png)
+<img width="450" src="https://user-images.githubusercontent.com/64299475/135902934-222b2db9-4416-4cd4-9555-400b4e5992ea.png">
+
+
 
 * Bluetooth SIG: 1,7 계층, Application 까지 모두 표준화 됨. (Samsung-LG 호환O)
 * BLE: 1, 2계층
@@ -101,7 +103,7 @@
 * Health-care 분야 (체중계, 혈당체크,…)
 
 ### BLE SW Stack
-<img width="486" alt="스크린샷" src="https://user-images.githubusercontent.com/64299475/136254062-7aa92ae6-65a2-423d-b3fe-8facc63713e5.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/136254062-7aa92ae6-65a2-423d-b3fe-8facc63713e5.png">
 
 * Third-party device : Sensor (받아들임) / actuator (반응 - 불켜기)
 * Mesh node : Sensor, actuator로부터 정보 받거나 주는 것
@@ -116,7 +118,9 @@
 * 산업용 용도 많음 (long range 간헐적으로 모니터링)
 
 ### LoRa Protocol Layer
- <img width="425" alt="스크린샷 2021-10-07 오전 2 42 30" src="https://user-images.githubusercontent.com/64299475/136255736-6c80ad0c-4d68-4d06-8056-00cebe805b77.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/136255736-6c80ad0c-4d68-4d06-8056-00cebe805b77.png">
+
+
 
 * Class A : 필요할 때 필요한 것만 - 가장 LoRa 목적에 맞음
 * Class B : 주기적으로
@@ -132,7 +136,7 @@
 <img width="425" alt="스크린샷 2021-10-07 오전 2 53 02" src="https://user-images.githubusercontent.com/64299475/136257176-d531b565-087a-408b-94af-fe8d896bc355.png">
 
 * 모니터링 - Gateway - Network Server (어딘가로 보낸다) - Application server
-* End device와 Server, gateway를 묶음으로 만듦.
+* End device와 Server, gateway를 묶음으로 만든다.
 
 ### Protocol Stack
 <img width="434" alt="스크린샷 2021-10-07 오전 2 55 54" src="https://user-images.githubusercontent.com/64299475/136257645-dee32236-eebe-4f41-a500-3d804a73cc43.png">
@@ -140,9 +144,8 @@
 * Application 끼리는 필요한 정보 주고 받고 무선의 해당하는 부분은 LoRaWAN을 따르며 OpenSource 등을 사용할 수 있다.
 
 ## LoRa/LoRaWAN Implementation
-* Ethernet, Wifi, Bluetooth의 MAC은 바꿀 수 없음.
-* **LoRa, LoRaWAN의 MAC은 바꿀 수 있음.**
-
+* Ethernet, Wifi, Bluetooth의 MAC은 바꿀 수 없다.
+* **LoRa, LoRaWAN의 MAC은 바꿀 수 있다.**
 
 
 

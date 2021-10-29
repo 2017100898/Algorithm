@@ -23,52 +23,54 @@
 ## Datagram and Virtual Circuit
 * **Datagram** : Routing에 '주로' 사용 (인터넷)
 * **Virtual circuit**  : Forwarding 에 '주로' 사용 (전화기) 
-* 차이점 : 연결 설정을 할지 말지
+* 차이점은 연결 설정의 여부이다.
 
 ### Datagram
-<img width="760" alt="스크린샷 2021-10-24 오전 1 50 51" src="https://user-images.githubusercontent.com/64299475/138564931-535ba93c-c908-436e-a923-1f14a5e5fb6c.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138564931-535ba93c-c908-436e-a923-1f14a5e5fb6c.png">
+
+
 
 * **Connectionless** : 연결 설정 해제 과정이 없음.
-* ALOHA, 이더넷처럼 보내고 싶을 때 보냄
-* 라우터는 받아서 내가 가진 정보로 원하는 지점으로 보냄
-* A -> B 3개의 메시지를 보내면 각 라우터마다 길이 다를 수도 있다.
+* ALOHA, 이더넷처럼 보내고 싶을 때 보낸다.
+* 라우터는 받아서 내가 가진 정보로 원하는 지점으로 보낸다.
+* A ⇒ B 3개의 메시지를 보내면 각 라우터마다 길이 다를 수도 있다.
 * **패킷들이 다 독립적이기 때문에 같은 목적지로 가더라도 다른 줄로 내보낼 수 있다.** 따라서 보낸 순서와 받은 순서가 다를 수 있다.
-* **라우터 중 하나가 부서지면 연결 된 라우터들은 그것을 알 수 있다.** 인근 라우터들은 다른 길을 찾아서 안정적으로 패킷 보내줌. 모든 장치는 각각 대등하고 독립적으로 동작. (~인터넷)
+* **라우터 중 하나가 부서지면 연결 된 라우터들은 그것을 알 수 있다.** 인근 라우터들은 다른 길을 찾아서 안정적으로 패킷 보내줌. 모든 장치는 각각 대등하고 독립적으로 동작한다. (~인터넷)
 
 #### Forwarding process in a router
 <img width="572" alt="스크린샷 2021-10-24 오전 1 53 10" src="https://user-images.githubusercontent.com/64299475/138565016-9ef24db6-1f7e-409c-a030-0bd381661b46.png">
 
 * 네트워크 계층에서는 **Table 필수**
-* 패킷 안의 데이터그램 안의 destination address 보고 출력하는 interface로 보냄
+* 패킷 안의 데이터그램 안의 destination address를 보고 출력하는 interface로 보낸다.
 * input : 현재 받은 packet의 정보
 * output : 어느 줄로 보낼지
 
 ### Virtual Circuit
-<img width="574" alt="스크린샷 2021-10-24 오전 1 54 00" src="https://user-images.githubusercontent.com/64299475/138565038-014e08ab-a427-42cf-b612-3a695dbdb951.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138565038-014e08ab-a427-42cf-b612-3a695dbdb951.png">
 
 * **connection setup** : 연결을 할 때 어떤 장치 통과할지 미리 조정해 놓는 것
 * 연결을 먼저 하고 데이터 송수신되기 때문에 **데이터들의 목적지 같으면 똑같은 경로로 전달**
-* Table의 정보 datagram과 다름
-* input : port, Incoming label (ex. L1… 줄에서만 의미 있음)
+* Table의 정보가 datagram과 다르다.
+* input : port, Incoming label (ex. L1… 줄에서만 의미 있다.)
 * output: port, Outcoming label
-* 복잡한 연결 설정 과정을 마치고 나면 전달 속도 빨라짐
+* 복잡한 연결 설정 과정을 마치고 나면 전달 속도 빨라진다.
 
 #### example
-* A는 R1에 정보 전달 + 연결 설정 요청
-	* 최초에는 Label 없음. R1은 저장, Label R1이 채움 (14)
-	* 최초에만 어디로 보낼지 고민 
-	* R3에게 정보 전달 + 연결설정 요청
-	* R3이 Label 새로 채움
-	* R4 마찬가지로 Label 채움
-* B에 도착 후 B에 연결 설정 요청
-* 각각 table의 outgoing level 받은 쪽에서 채움 (B->R4->R3->R1)
+* A는 R1에 정보 전달 + 연결 설정 요청한다.
+	* 최초에는 Label 없다. R1은 저장, Label R1이 채움 (14)
+	* 최초에만 어디로 보낼지 고민한다.
+	* R3에게 정보 전달 + 연결설정 요청한다.
+	* R3이 Label 새로 채운다.
+	* R4 마찬가지로 Label 채운다.
+* B에 도착 후 B에 연결 설정 요청한다.
+* 각각 table의 outgoing level 받은 쪽에서 채운다. (B->R4->R3->R1)
 
 ## Network Performance
 * 네트워크 계층의 서비스를 이용하는 상위 계층 프로토콜들은 이상적인 서비스를 받을 것으로 기대하지만, 네트워크 계층은 완벽하지 않다. 
 * 네트워크의 성능은 지연, 처리량, 패킷 손실의 관점에서 측정될 수 있다. 
 
 ### Delay
-* Packet 전달 시 Source host -> Destination host 까지의 걸리는 시간 (지연)
+* Packet 전달 시 Source host ⇒ Destination host 까지의 걸리는 시간 (지연)
 * 네 가지 유형
 	* **transmission delay (전송지연)** : 인간이 만든 것, 표준 규격에 의거 전달하는 전송 지연
 	* **propagation delay (전파지연)** : 재료 등 자연이 만들어내는 지연 
@@ -77,21 +79,21 @@
 * 계산 가능, 계산 후 우리의 요구 수준 부합하는지 판단이 필요하다.
 
 ### Throughput
-<img width="580" alt="스크린샷 2021-10-24 오전 2 02 58" src="https://user-images.githubusercontent.com/64299475/138565291-adeea3d0-ea4e-41c5-be60-afa2cb3aca29.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138565291-adeea3d0-ea4e-41c5-be60-afa2cb3aca29.png">
 
 
 * 첫번째 의미 : 입력이 네트워크의 어느 지점에서 얼마나 흐를 수 있는지? (속도)
 * 두번째 의미 : 입력에 비해 출력이 얼마나 나왔는지? (소수점으로 표현)
 1. **Data rate** : 줄이 얼마만큼의 속도 제공할 수 있는가?
 	* source-destination 최대속도는 가장 느린 줄의 속도 (Transmission rate)
-	* 이렇듯 가장 느린 줄이 제약을 가하는 현상을 Bottleneck이라고 함 - 이를 제거하는 것이 중요
-2. Throughput 모르는 경우 있음. 
-	* 모르는 부분에서의 Throughput 값 맞출 수 있도록 요구해서 network performance의  Throughput  유지할 수 있어야 함.
+	* 이렇듯 가장 느린 줄이 제약을 가하는 현상을 Bottleneck이라고 한다. 이를 제거하는 것이 중요하다.
+2. Throughput 모르는 경우 있다. 
+	* 모르는 부분에서의 Throughput 값 맞출 수 있도록 요구해서 network performance의  Throughput  유지할 수 있어야 한다.
 
 ### Packet Loss
 * 내가 보낸 메시지 중에 몇 개가 없어졌는가?
 	* 감당할 수 없을만큼의 입력 버퍼 들어오거나  3계층에서 버퍼 오버플로우 시 패킷 유실
-* 장치 안에 버퍼가 얼마나 있고 혼잡도가 얼마인지 계산할 수 있어야 함. Congestion control 필요.
+* 장치 안에 버퍼가 얼마나 있고 혼잡도가 얼마인지 계산할 수 있어야 한다. Congestion control가 필요하다.
 
 ### Congestion control (혼잡제어)
 * 네트워크 계층의 혼잡은 처리량과 지연 두 가지 문제와 관련 있다.
@@ -108,15 +110,15 @@
 
 ## Addressing
 * IPv4 address 
-* IP address는 **줄**에 주는 것: 컴퓨터가 두 개 이상의 줄을 갖고 있으면 줄마다 address 부여.
-* 라우터가 address 갖는 것이 아니고, 줄에 address 부여.
+* IP address는 **줄**에 주는 것이다. 컴퓨터가 두 개 이상의 줄을 갖고 있으면 줄마다 address를 부여한다.
+* 또한, 라우터가 address를 갖는 것이 아니라, 줄에 address가 부여된다.
 
 ### IPv4 Address Space
-* 패킷이 있다면 주소 적는 field 있고, 이러한 address space 유한한 크기로  존재.
-* IPv4는 32bit 의 주솟값 가짐.
+* 패킷이 있다면 주소 적는 field 있고, 이러한 address space는 유한한 크기로  존재한다.
+* IPv4는 32bit 의 주솟값 가진다.
 
 ### Hierarchy in addressing
-* 현재는 컴퓨터가 매우 많음.
+* 현재는 컴퓨터가 매우 많다.
 * 국가-기관- … 단위로 쪼개서 IP 주소 나눠줌.
 * **Prefix** : 네트워크 정의 (n bits)
 * **Suffix** : 네트워크 내 호스트, 컴퓨터 의미 (32-n bits)
@@ -136,20 +138,19 @@
 ### Classless Addressing
 <img width="525" alt="스크린샷 2021-10-24 오전 2 12 37" src="https://user-images.githubusercontent.com/64299475/138565586-94db7955-54b0-4783-8a15-aa1c2fadb581.png">
 
-* 클래스가 없는 것, 가변적으로 n bit 구현
-* IP address 부족한 문제 발생
-* 하지만 이미 있는 것 버릴 수 없으므로 4바이트 제한 하되, n-bit 개념으로 prefix 할당하는 개념 도입하게 됨.
+* 클래스가 없는 것으로, 가변적으로 n bit 구현하는 방식이다.
+* IP address 부족한 문제 발생했으나 이미 있는 것을 버릴 수 없으므로 4바이트 제한 하되, n-bit 개념으로 prefix 할당하는 개념을 도입하게 되었다.
 
 ### Slash notation
-* 몇 bit가 network prefix인지 알려줄 방법 별도로 필요.
-	* `12.24.76.8/8`에서는 8비트가 prefix임을 판단. (12)
-	*  `23.14.67.92/12` 에서는 8+4비트, 14를 비트로 펼친 다음 앞쪽에 4비트까지 prefix
-* router가 알아야하는 것은, **나에게 연결된 네트워크와 그 네트워크의 prefix**
+* 몇 bit가 network prefix인지 알려줄 방법 별도로 필요하다.
+	* `12.24.76.8/8`에서는 8비트가 prefix임을 판단한다. (12)
+	*  `23.14.67.92/12` 에서는 8+4비트, 14를 비트로 펼친 다음 앞쪽에 4비트까지 prefix라고 판단한다.
+* router가 알아야하는 것은, **나에게 연결된 네트워크와 그 네트워크의 prefix**이다.
 
 ### Example of address aggregation
-<img width="584" alt="스크린샷 2021-10-24 오전 2 14 11" src="https://user-images.githubusercontent.com/64299475/138565629-6bf3e13b-61cf-4563-9bcf-f72dc0d28980.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138565629-6bf3e13b-61cf-4563-9bcf-f72dc0d28980.png">
 
-* 조직이 하나의 network prefix 할당받으면 내부적으로 주소를 잘라야 함.
+* 조직이 하나의 network prefix 할당받으면 내부적으로 주소를 잘라야 한다.
 * 우리 조직 바깥에 있는 사람은 우리 조직 내부에서 어떻게 돌아가든 관심 X
 	* 내부적으로는 26비트까지 가야 network이지만 모두 연속적이고 larger block이 이를 커버하므로, 바깥에서는 주소를 합쳐서 24비트만 봄.
 
@@ -161,13 +162,13 @@
 2. ip address 재사용 - 컴퓨터가 필요할 때 ip address 가져가고 다 쓰면 반납
 
 #### Message Format
-<img width="572" alt="스크린샷 2021-10-24 오전 2 15 17" src="https://user-images.githubusercontent.com/64299475/138565666-5f62b125-0592-4827-99f8-59838dcfd58d.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138565666-5f62b125-0592-4827-99f8-59838dcfd58d.png">
 
 * DHCP의 Message format에는 Client ip address, server ip address, gateway ip address, client hardware address 등이 있고, 이를 주고 받음으로써 ip 받아서 본인의 기기에 셋팅 가능.
 * Option field 사용하면 의미 담을 수 있음: DHCPDISCOVER, DHCPOFFER… 등 필드 채워서 전송
 
 #### Operation
-<img width="438" alt="스크린샷 2021-10-24 오전 2 15 55" src="https://user-images.githubusercontent.com/64299475/138565683-007bc556-1fbb-4ab9-a76c-e56e7f296985.png">
+<img width="450" src="https://user-images.githubusercontent.com/64299475/138565683-007bc556-1fbb-4ab9-a76c-e56e7f296985.png">
 
 * Client는 Server로부터 offer 받은 address로 source address 채움.
 * 임시로 IP 쓰고 반납하기 때문에 허용 시간 초과하면 재요청 또는 연장.
@@ -222,10 +223,10 @@
 
 * Network layer 위에 Transport layer 올라감. (TCP, UDP)
 * Network layer 안에서도 IP 위에  ICMP, IGMP, OSPF을 올릴 수 있음.
-* 하나의 ip 프로토콜 위에 여러개의 프로토콜 돌아갈 수 있다는 가정하에 multiplexing 개념 적용 가능.
+* 하나의 ip 프로토콜 위에 여러개의 프로토콜 돌아갈 수 있다는 가정하에 multiplexing 개념 적용 가능하다.
 
 ### Fragmentation
-* Layer 2는 Layer1의 특성 반영. 필연적으로 맞물림.
+* Layer 2는 Layer1의 특성 반영. 필연적으로 맞물린다.
 * IP protocol은 내가 보낼 network 장치의 IP 최대 사이즈 (2계층 패킷 사이즈)에 맞춰서 패킷 사이즈 조정해야 함. (= Fragmentation)
 
 ### Maximum transfer unit (MTU)
@@ -236,16 +237,16 @@
 	* Offset 값 : 0000/8 = 0 , 1400/8 = 175, 2800/8 = 350
 
 ### Security
-* IPv4는 보안까지 신경쓰지 않음.  (IPsec 별도로 같이 씀)
-* security는 성능을 많이 저하시키므로 필요에 의해서만 해야 함.
+* IPv4는 보안까지 신경쓰지 않고 보통 IPsec을 별도로 같이 쓴다.
+* 그러나 security는 성능을 많이 저하시키므로 필요에 의해서만 해야 한다.
 
 ### ICMPv4
-* IP protocol 이 제대로 동작하는지 관리하기 위한 프로토콜
+* ICMPv4는 IP protocol 이 제대로 동작하는지 관리하기 위한 프로토콜이다. 
 * 지연, 에러 리포팅, 정보 쿼리,…
 * 예시
-	* IP를 받으면 IP message의 헤더 및 데이터를 ICMP 프로토콜에 준다. ICMP는 header를 붙여서 돌려준다. -> 이를 통해 네트워크 및 링크, 라우터 살았는지 판단 가능 (디버깅)
-		* **Ping** : 상대방이 살아있고 중간 과정의 네트워크 장치와 줄들이 모두 괜찮다는 것, 안정적 동작, 갔다 온 시간, 네트워크 지연 파악 가능.
-		* **Traceroute** : TTL 늘려가면서 n번째 장비까지 보내고 응답 받음. 중간에 거쳐야하는 장치들을 하나하나 Ping해봄. Ping 했을 때 응답 안오면 어떤 장치에 문제가 있는지 traceroute 통해서 파악 가능.
+	* IP를 받으면 IP message의 헤더 및 데이터를 ICMP 프로토콜에 준다. ICMP는 header를 붙여서 돌려준다. 이를 통해 네트워크 및 링크, 라우터 살았는지 판단 가능하다. (디버깅)
+		* **Ping** : 상대방이 살아있고 중간 과정의 네트워크 장치와 줄들이 모두 괜찮다는 것, 안정적 동작, 갔다 온 시간, 그리고 네트워크 지연 등을 파악 할 수 있다.
+		* **Traceroute** : TTL 늘려가면서 n번째 장비까지 보내고 응답 받는다. 중간에 거쳐야하는 장치들을 하나하나 Ping해본다. Ping 했을 때 응답 안오면 어떤 장치에 문제가 있는지 traceroute 통해서 파악 가능하다.
 		
 ### Mobile IP
 * 지역과 상관 없는 가상의 IP
