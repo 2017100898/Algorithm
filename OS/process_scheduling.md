@@ -2,7 +2,7 @@
 <img height="200" src="https://user-images.githubusercontent.com/64299475/138259286-983938ac-1cdd-438d-a7c3-da98a8d28035.png">
 
 * Process Scheduling에는 long-term scheduling과 short-term scheduling이 있다.
-* 중요한 논제는 **그래서, 누구에게 CPU를 할당할 것인가?**이다.
+* 중요한 논제는 **그래서, 누구에게 CPU를 할당할 것인가?** 이다.
 
 ## Basic Concepts
 ### Multitasking
