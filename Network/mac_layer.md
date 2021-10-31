@@ -1,5 +1,7 @@
 # MAC Layer
 
+
+
 <img width="343" alt="스크린샷 2021-10-21 오후 10 11 29" src="https://user-images.githubusercontent.com/64299475/138284596-cbbe1b42-251b-42a2-800c-9d9332e3c9c0.png">
 
 * MAC subLayer : 공유매체에 여러 단말기가 접속할 때 에러 및 충돌을 방지하기 위한 제어를 수행한다.
@@ -25,9 +27,9 @@
 
 ### Data Flow Direction
 > 정보를 주고 받는 방향에 따른 명칭
-1. **Simplex** : Device A -> B 일방적으로 보내는 것
-2. **Half-duplex** : 무전기 등 Device A -> B or Device B -> A 중 한 가지만 됨
-3. **Full-duplex** : 전화, 인터넷 등  동일 시점에서 Device A 과 B가 양방향으로 정보 주고 받음
+1. **Simplex** : Device A ⇒ B 일방적으로 보내는 것
+2. **Half-duplex** : 무전기 등 Device A ⇒ B or Device B ⇒ A 중 한 가지만 되는 것
+3. **Full-duplex** : 전화, 인터넷 등  동일 시점에서 Device A 과 B가 양방향으로 정보 주고 받는 것
 
 ### Physical Structure
 > Medium(통신매체)의 연결 방식에 따른 명칭
@@ -36,7 +38,7 @@
 
 ### Topology
 
-![Types-of-network-topology](https://user-images.githubusercontent.com/64299475/132973718-b67b674f-9e8b-447e-a846-63ad2a27cd56.png)
+<img width="450" src="https://user-images.githubusercontent.com/64299475/132973718-b67b674f-9e8b-447e-a846-63ad2a27cd56.png">
 
 * Topology 는 Combination이 가능하다.
 * **Mesh**
@@ -84,13 +86,13 @@
 
 ### 상호 연동성에 따른 명칭 (Standards)
 * By Law
-	* 법을 지키도록 하는 것.
+	* 법을 지키도록 하는 것
 * By Fact
-	* 법은 아니지만 사람들이 표준으로 사용하고 있는 것.
+	* 법은 아니지만 사람들이 표준으로 사용하고 있는 것
 	* ex. microsoft, 한글
 
 ## MAC (Multiple-access protocols)
-![images-2](https://user-images.githubusercontent.com/64299475/132973749-6b28e432-b26d-4339-af25-ed671bcbdd5c.png)
+<img width="300" src="https://user-images.githubusercontent.com/64299475/132973749-6b28e432-b26d-4339-af25-ed671bcbdd5c.png">
 
 * MAC은 **Multiple access protocols (= Media access protocols**, 다중 접속 프로토콜)을 사용한다.
 * **Random-access protocols** 
@@ -153,7 +155,9 @@
 * Controlled access 에 속하는 프로토콜 : **Reservation, Polling, Token Passing**
 
 ### Reservation (예약) 
-![controlled access protocols_reservation](https://user-images.githubusercontent.com/64299475/138290171-bc59f06b-7220-410c-b19f-fab269f4c1e7.JPG)
+<img width="300" src="https://user-images.githubusercontent.com/64299475/138290171-bc59f06b-7220-410c-b19f-fab269f4c1e7.JPG">
+
+
 
 
 * 시간은 주로 간격을 두고 나뉘며 **n번 네트워크의 시간이 되면 데이터를 전송한다.**
@@ -161,23 +165,23 @@
 * 단점 : 내가 전송하고 싶을 때 바로 전송할 수 없고 예약 후 기다려야 하므로 지연시간이 증가한다.
 
 ### Polling
-![1611640899-71449](https://user-images.githubusercontent.com/64299475/138290139-7927d530-36d9-40b5-bc38-993d25c0a5d4.png)
+<img width="300" src="https://user-images.githubusercontent.com/64299475/138290139-7927d530-36d9-40b5-bc38-993d25c0a5d4.png">
 
 * **Station에게 보낼 데이터 있는지, 받을 수 있는지 물어본다.**
 * 장점 : 충돌이 거의 발생하지 않는다.
 * 단점 : 보낼 데이터가 없음에도 불구하고 메시지를 주고 받아야 하므로 낭비이며 지연이 증가한다.
 
 ### Token Passing
-<img width="454" alt="1590120663-70265" src="https://user-images.githubusercontent.com/64299475/138290146-a3bd45e3-71e1-4913-845a-628d6e241465.png">
+<img width="300" src="https://user-images.githubusercontent.com/64299475/138290146-a3bd45e3-71e1-4913-845a-628d6e241465.png">
 
 
 * Token은 권한을 뜻하며 **Station이 돌아가면서 발언권을 갖는다.**
 * 장점 : 채널 효율이 좋고 충돌이 없다.
 * 단점 : 지연이 발생한다.
 
-
 ## Channelization Protocols
-![Multiple_access](https://user-images.githubusercontent.com/64299475/138291394-17c48e22-1515-40d7-b1f8-21b56ebed02b.png)
+
+<img width="300" src="https://user-images.githubusercontent.com/64299475/138291394-17c48e22-1515-40d7-b1f8-21b56ebed02b.png">
 
 
 * multiple한 Station을 어떻게 공유할 것인가?

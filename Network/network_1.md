@@ -106,7 +106,7 @@
 <img width="567" alt="스크린샷 2021-10-24 오전 2 07 32" src="https://user-images.githubusercontent.com/64299475/138565410-330c0768-30cd-4f82-bd0e-035d3b06c55f.png">
 
 * 왼쪽 그림 :  버퍼 무한하면 congestion 발생 시 무한으로 뻗는다.
-* 오른쪽 그림 : buffer 유한하다면 일정 지점까진 올라가다가 뒤에는 알 수 없음.
+* 오른쪽 그림 : buffer 유한하다면 일정 지점까진 올라가다가 뒤에는 알 수 없다.
 
 ## Addressing
 * IPv4 address 
@@ -119,7 +119,7 @@
 
 ### Hierarchy in addressing
 * 현재는 컴퓨터가 매우 많다.
-* 국가-기관- … 단위로 쪼개서 IP 주소 나눠줌.
+* 국가-기관- … 단위로 쪼개서 IP 주소 나눠준다.
 * **Prefix** : 네트워크 정의 (n bits)
 * **Suffix** : 네트워크 내 호스트, 컴퓨터 의미 (32-n bits)
 
@@ -151,28 +151,28 @@
 <img width="450" src="https://user-images.githubusercontent.com/64299475/138565629-6bf3e13b-61cf-4563-9bcf-f72dc0d28980.png">
 
 * 조직이 하나의 network prefix 할당받으면 내부적으로 주소를 잘라야 한다.
-* 우리 조직 바깥에 있는 사람은 우리 조직 내부에서 어떻게 돌아가든 관심 X
-	* 내부적으로는 26비트까지 가야 network이지만 모두 연속적이고 larger block이 이를 커버하므로, 바깥에서는 주소를 합쳐서 24비트만 봄.
+* 우리 조직 바깥에 있는 사람은 우리 조직 내부에서 어떻게 돌아가든 관심 없다.
+	* 내부적으로는 26비트까지 가야 network이지만 모두 연속적이고 larger block이 이를 커버하므로, 바깥에서는 주소를 합쳐서 24비트만 본다.
 
 ## More Issues
 * IP address가 부족해서 나온 기법들
 
 ### DHCP (Dynamic Host Configuration Protocol)
-1. host 나 node에 네트워크 환경을 자동으로 설치하는 방법
-2. ip address 재사용 - 컴퓨터가 필요할 때 ip address 가져가고 다 쓰면 반납
+1. host 나 node에 네트워크 환경을 자동으로 설치하는 방법이다.
+2. ip address 재사용 - 컴퓨터가 필요할 때 ip address 가져가고 다 쓰면 반납한다.
 
 #### Message Format
 <img width="450" src="https://user-images.githubusercontent.com/64299475/138565666-5f62b125-0592-4827-99f8-59838dcfd58d.png">
 
-* DHCP의 Message format에는 Client ip address, server ip address, gateway ip address, client hardware address 등이 있고, 이를 주고 받음으로써 ip 받아서 본인의 기기에 셋팅 가능.
-* Option field 사용하면 의미 담을 수 있음: DHCPDISCOVER, DHCPOFFER… 등 필드 채워서 전송
+* DHCP의 Message format에는 Client ip address, server ip address, gateway ip address, client hardware address 등이 있고, 이를 주고 받음으로써 ip 받아서 본인의 기기에 셋팅 가능하다.
+* Option field 사용하면 의미 담을 수 있다: DHCPDISCOVER, DHCPOFFER… 등 필드 채워서 전송한다.
 
 #### Operation
 <img width="450" src="https://user-images.githubusercontent.com/64299475/138565683-007bc556-1fbb-4ab9-a76c-e56e7f296985.png">
 
-* Client는 Server로부터 offer 받은 address로 source address 채움.
-* 임시로 IP 쓰고 반납하기 때문에 허용 시간 초과하면 재요청 또는 연장.
-* 노트북이나 휴대폰으로 유무선 공유기에 접속할 때마다 해당 과정을 반복.
+* Client는 Server로부터 offer 받은 address로 source address 채운다.
+* 임시로 IP 쓰고 반납하기 때문에 허용 시간 초과하면 재요청 또는 연장한다.
+* 노트북이나 휴대폰으로 유무선 공유기에 접속할 때마다 해당 과정을 반복한다.
 
 ### NAT (Network Address Translation)
 <img width="574" alt="스크린샷 2021-10-24 오전 2 16 37" src="https://user-images.githubusercontent.com/64299475/138565700-852cf850-5bd6-451d-92d1-11090dff946a.png">
@@ -184,11 +184,11 @@
 #### Address translation
 <img width="589" alt="스크린샷 2021-10-24 오전 2 18 53" src="https://user-images.githubusercontent.com/64299475/138565757-aaca1c20-ba35-4ea0-92f5-6f0006e973dd.png">
 
-* NAT router을 통과하여 인터넷으로 나갈 때는, Source address -> Public address로 바뀐다.
-* 반대로 인터넷에서 받을 때는 Public -> Source 로 바뀐다.
+* NAT router을 통과하여 인터넷으로 나갈 때는, Source address ⇒ Public address로 바뀐다.
+* 반대로 인터넷에서 받을 때는 Public ⇒ Source 로 바뀐다.
 * 이럴 때는 인터넷에서 정보 받을 때 누구에게 전달해야되는지 모르는 문제점 발생한다.
 	* 따라서 Source address만 보는 것이 아닌 더 많은 것을 봐야 한다. (Source address, destination address, port number 등… 구분할 수 있는 정보 끄집어내야 하고, 우리가 쓸 수 있는 정보는 IP Frame 안에 있는 정보들)
-	* NAT 는 표준 Scheme이 없고 업체마다 고유한 알고리즘 만듦.
+	* NAT 는 표준 Scheme이 없고 업체마다 고유한 알고리즘을 만든다.
 * 통신사업자는 거대하고 Private한 network zone
 
 #### Longest mask matching
@@ -198,42 +198,42 @@
 * 네트워크는 뿌리가 있고 뿌리로부터 퍼지며 Hierarchical 하게 이뤄져 있다.
 
 #### Forwarding based on destination address
-* destination network를 찾아서 내려가다가 match 되면 Found -> Found된 곳으로 내보냄.
-* 부하가 크지만 연결 및 해제 설정 X
+* destination network를 찾아서 내려가다가 match 되면 Found ⇒ Found된 곳으로 내보낸다.
+* 부하가 크지만 연결 및 해제 설정 하지 않는다.
 
 #### Forwarding based on label
-* hash 값을 통해 next label 을 쉽게 알 수 있으므로 Lookup 기능 없어지고 바로 찾을 수 있음.
-* 연결 및 해제 설정 필요
+* hash 값을 통해 next label 을 쉽게 알 수 있으므로 Lookup 기능 없어지고 바로 찾을 수 있다.
+* 연결 및 해제 설정 필요하다.
 
 ## IP Protocol
-* 네트워크 레이어로서, 현재 인터넷을 지탱하고 있는 SW
+* 네트워크 레이어로서, 현재 인터넷을 지탱하고 있는 SW이다.
 
 ### Format
 <img width="514" alt="스크린샷 2021-10-24 오전 2 21 22" src="https://user-images.githubusercontent.com/64299475/138565811-f56274e3-db8d-4362-8fe5-40d31a237a61.png">
 
 * IP protocol의 header는 가변적이다. 20~60byte.
-	* option 을 통해 새로운 기능 확장 가능.
+	* option 을 통해 새로운 기능 확장 가능하다.
 	* Source ip address / destination ip address
 	* Protocol / Time-to-live (loop 방지) …
 	* header length / service type… 
-* header 뒤에 payload 들어감.
+* header 뒤에 payload 들어간다.
 
 ### Multiplexing
 <img width="475" alt="스크린샷 2021-10-24 오전 2 22 42" src="https://user-images.githubusercontent.com/64299475/138565840-8e7c39e5-5421-4168-a45e-c4db88169340.png">
 
-* Network layer 위에 Transport layer 올라감. (TCP, UDP)
-* Network layer 안에서도 IP 위에  ICMP, IGMP, OSPF을 올릴 수 있음.
+* Network layer 위에 Transport layer가 올라간다. (TCP, UDP)
+* Network layer 안에서도 IP 위에  ICMP, IGMP, OSPF을 올릴 수 있다.
 * 하나의 ip 프로토콜 위에 여러개의 프로토콜 돌아갈 수 있다는 가정하에 multiplexing 개념 적용 가능하다.
 
 ### Fragmentation
 * Layer 2는 Layer1의 특성 반영. 필연적으로 맞물린다.
-* IP protocol은 내가 보낼 network 장치의 IP 최대 사이즈 (2계층 패킷 사이즈)에 맞춰서 패킷 사이즈 조정해야 함. (= Fragmentation)
+* IP protocol은 내가 보낼 network 장치의 IP 최대 사이즈 (2계층 패킷 사이즈)에 맞춰서 패킷 사이즈 조정해야 한다. (= Fragmentation)
 
 ### Maximum transfer unit (MTU)
-* Layer2에서 받을 수 있는 최대 사이즈. 넘어가면 쪼개서 보내야 함.
+* Layer2에서 받을 수 있는 최대 사이즈. 넘어가면 쪼개서 보내야 한다.
 * 총 4000byte의 IP frame (0000~3999) 
 	* 3개로 찢어지면, 0 ~ 1399 / 1400 ~ 2799 / 2800 ~ 3999
-	* **Offset field** : 본인이 전달한 메시지의 최초의 것 : 0으로 계산, 8로 나눔
+	* **Offset field** : 본인이 전달한 메시지의 최초의 것 - 0으로 계산, 8로 나눈다.
 	* Offset 값 : 0000/8 = 0 , 1400/8 = 175, 2800/8 = 350
 
 ### Security
@@ -249,6 +249,6 @@
 		* **Traceroute** : TTL 늘려가면서 n번째 장비까지 보내고 응답 받는다. 중간에 거쳐야하는 장치들을 하나하나 Ping해본다. Ping 했을 때 응답 안오면 어떤 장치에 문제가 있는지 traceroute 통해서 파악 가능하다.
 		
 ### Mobile IP
-* 지역과 상관 없는 가상의 IP
-* 사람이 봤을 땐 안 바뀌지만, 밑바닥에서는 끊임없이 위치정보에 해당하는 IP 할당함.
-* 주로 회사에서 사용. 바뀌지 않는 IP address 사용하기 위함. 
+* Mobile IP는 지역과 상관 없는 가상의 IP이다.
+* 사람이 봤을 땐 안 바뀌지만, 밑바닥에서는 끊임없이 위치정보에 해당하는 IP 할당한다.
+* 주로 회사에서 사용한다. 바뀌지 않는 IP address 사용하기 위함이다.

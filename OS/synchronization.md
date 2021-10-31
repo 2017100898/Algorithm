@@ -20,7 +20,7 @@
 * 프로세스들이 여러개가 있고 데이터 공유가 있다고 했을 때, critical section은 **코드의 일부**를 뜻 한다.
 * shared data가 있다고 해서 반드시 critical section은 아니지만, **문제가 될 수 있는 부분이라면 critical section이 될 수 있다.**
 * 내가 critical section을 실행하고 있으면 다른 프로세스나 스레드가 해당 변수에 관해 실행을 못 하도록 보호한다.
-* critical section **앞 뒤에 입구와 출구를 만들어서** 내가 들어가면 다른 프로세스 접근 못 하도록 만들 수 있음.
+* critical section **앞 뒤에 입구와 출구를 만들어서** 내가 들어가면 다른 프로세스 접근 못 하도록 만들 수 있다.
 
 ```cpp
 do{
@@ -73,7 +73,7 @@ do{
 * Peterson’s algorithm은 느리고 비싸다. 즉, 자원의 소모가 많으며 2개의 프로세스에 대해서만 작동하는 단점을 지닌다.
 
 ## Hardware C.S
-* **lock을 이용한 방식** : 누가 들어가면 이용 못 함.
+* **lock을 이용한 방식** : 누가 들어가면 이용 못 하는 것
 * **Atomic** : 여러 operation이 하나의 명령처럼 수행 된다.
 
 
@@ -145,12 +145,12 @@ pthread_mutex_unlock(&mutex);
 ```
 
 ### Busy waiting in Mutex
-* 첫 번째 프로세스만 일단 지나가고 나머지는 while 문 실행 중...  계속해서 CPU 쓰고 있음 ⇒ **Busy waiting** (= spinlock)
-* 자원 낭비의 단점 존재하지만, waiting state로 만들면, 언제 또 다시 CPU 할당 받을지 모르고 context switching 일어남. 금방 내 차례 오면 그냥 spinlock이 효율적.
+* 첫 번째 프로세스만 일단 지나가고 나머지는 while 문 실행 중...  계속해서 CPU 쓰고 있는 것 ⇒ **Busy waiting** (= spinlock)
+* 자원 낭비의 단점 존재하지만, waiting state로 만들면, 언제 또 다시 CPU 할당 받을지 모르고 context switching 일어난다. 금방 내 차례가 오면 그냥 spinlock이 효율적이다.
 
 ## Semaphore
-* Mutex와 유사하지만 **Multi개의 진입을 허용함.**
-* wait()과 signal()로 이루어져있음.
+* Mutex와 유사하지만 **Multi개의 진입을 허용하는 것**
+* wait()과 signal()로 이루어져있다.
 
 ```cpp
 wait(S){ //S = 1
@@ -199,8 +199,8 @@ signal(S){
 
 * S = 2 일 때, P1 이 지나가면 S=1, P2이 지나가면 S=0이다.
 * P3은 S=-1, P4는 S=-2 이므로 S.value < 0 이 된다.
-* P3와 P4는 waiting 상태로 들어가게 됨.
-* signal 호출 시 S = -1이 된다. ⇒ **음수값은 지금 waiting queue에 있는 것이 있다는 뜻** ⇒  따라서 wakeup() 해줘야 함.
+* P3와 P4는 waiting 상태로 들어가게 된다.
+* signal 호출 시 S = -1이 된다. ⇒ **음수값은 지금 waiting queue에 있는 것이 있다는 뜻** ⇒  따라서 wakeup() 해줘야 한다.
 
 ### 구현
 ```cpp
@@ -221,9 +221,9 @@ sem_post(&sem) //=signal
 	* P0 은 P를 다 쓰고 S를 기다리고, P1은 S를 다 쓰고 P를 기다리고 있을 때 deadlock 발생.
 * **Problem 2 : Priority Inversion (우선순위 역전)**
 	* Process L , M , H 있다고 가정할 때, 우선순위는 L < M < H
-	* L이 R갖고 있을 때, H가 wait(R) 중인데, M이 CPU 점령 중. L은 M보다 낮아서 실행 안 됨. 결국 H도 계속 기다림.
+	* L이 R갖고 있을 때, H가 wait(R) 중인데, M이 CPU 점령 중이고 L은 M보다 낮아서 실행 안 된다. 결국 H도 계속 기다리는 문제가 발생한다.
 	* 해결하기 위해 *Prioirty-inheritance protocol* 사용
-		* H가 wait(R)이면, L도 H로 바꿈. 
+		* H가 wait(R)이면, L도 H로 바꾼다.
 * **Problem 3 : Incorrect use of semaphores**
 	* signal -> wait ?
 		* 자원보다 더 들어오게 될 수 있다.
