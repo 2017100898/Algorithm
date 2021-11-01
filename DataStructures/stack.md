@@ -15,7 +15,7 @@
 * Pop : 제일 위에 있는 item을 꺼낸다.
 * Top : 제일 위에 있는 item return한다.
 
-> Stack은 `top` pointer가 필요하며, 이는 현재 가장 위에 있는 것 포인팅한다.
-> ItemType은 generic하게 만들기 위해 사용된다.
+> Stack은 `top` pointer가 필요하며, 이는 현재 가장 위에 있는 것 포인팅한다.  
+> ItemType은 generic하게 만들기 위해 사용된다.  
 > Stack 비어있는데 Pop을 실행하면 underflow, 공간 없는데 Push 하면 overflow 가 발생한다.
 

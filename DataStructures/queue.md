@@ -17,9 +17,7 @@
   * Dequeue : 뺀다
 
 * Observers
-
   * IsEmpty
-
   * IsFull
 
     
@@ -29,23 +27,16 @@
 <img height = "240" src="https://user-images.githubusercontent.com/64299475/138327979-02899149-fac0-4bcf-a5b0-40567f143736.png">
 
 * 끝에 다다르면 다시 앞으로 보내지는 구조다. 원래는 f < r 이지만, 되돌리면 뒤에 것 숫자가 더 작아질 수 있다.
-
 * `rear = (rear+1)%maxQue` 처럼 maxQue의 modular 연산을 통해 Circluar Queue를 구현할 수 있다.
-
 * Full일 때와 Empty일 때 둘 다 `rear + 1 == front` 이므로 두 상태의 구분을 위해 **reserve 공간을 생성하고 front 한 칸 앞을 가리키도록 한다.**
-
 * front와 rear의 초기화
-
   * Original : front = 0, rear = -1
-
   * Reserved : front = -1, rear = -1
 
     
 
-> reserved cell 추가 시,
->
-> Full의 판단 : rear+1 == front
->
+> reserved cell 추가 시,  
+> Full의 판단 : rear+1 == front  
 > Empty의 판단 : rear == front
 
 

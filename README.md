@@ -49,6 +49,8 @@
 * [리스트 (List)](https://github.com/2017100898/TIL/blob/main/DataStructures/list.md)
 * [스택 (Stack)](https://github.com/2017100898/TIL/blob/main/DataStructures/stack.md)
 * [큐 (Queue)](https://github.com/2017100898/TIL/blob/main/DataStructures/queue.md)
+* [연결 리스트 (Linked List)](https://github.com/2017100898/TIL/blob/main/DataStructures/linked_list.md)
+
 
 ### Design Pattern
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
