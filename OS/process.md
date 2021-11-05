@@ -1,6 +1,6 @@
 # Process
 ## Process Conecept
-* **Process **는 프로그램과 다른 개념으로 **OS 관점에서의 job과 task** 이다. 프로그램이 실행되어 돌아가고 있는 동적인 상태를 뜻하며 OS로부터 메모리 할당 받는 작업의 단위이다.
+* **Process**는 프로그램과 다른 개념으로 **OS 관점에서의 job과 task** 이다. 프로그램이 실행되어 돌아가고 있는 동적인 상태를 뜻하며 OS로부터 메모리 할당 받는 작업의 단위이다.
 * **Program**은 정적인 상태로 파일 시스템에 존재하는 실행파일(.exe)을 뜻한다. Program은 실행되지 않을 수 있다.
 * **Processor**는 Hardware로 컴퓨터 운영을 위해 명령어들을 처리하는 논리회로다.  (CPU, GPU: Processor chip)
 
