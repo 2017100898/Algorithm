@@ -83,6 +83,8 @@
 * [스레드 (Thread)](https://github.com/2017100898/TIL/blob/main/OS/thread.md)
 * [프로세스 스케쥴링 (Process Scheduling)](https://github.com/2017100898/TIL/blob/main/OS/process_scheduling.md)
 * [동기화 (Synchronization)](https://github.com/2017100898/TIL/blob/main/OS/synchronization.md)
+* [데드락 (Deadlocks)](https://github.com/2017100898/TIL/blob/main/OS/deadlocks.md)
+
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
