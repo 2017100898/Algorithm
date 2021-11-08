@@ -42,7 +42,7 @@
 * [Future, async, await](https://github.com/2017100898/TIL/blob/main/Dart/future_async_await.md)
 * [For loop](https://github.com/2017100898/TIL/blob/main/Dart/for_loop.md)
 * [키 (Key)](https://github.com/2017100898/TIL/blob/main/Dart/key.md)
-* [Widget life cycle, API, Try-catch, JSON](https://github.com/2017100898/TIL/blob/main/Dart/widget_life_cycle_API_try_catch_JSON.md)
+
 
 ### Data Structures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
@@ -73,7 +73,7 @@
 * [Network Layer-1](https://github.com/2017100898/TIL/blob/main/Network/network_1.md)
 * [Network Layer-2](https://github.com/2017100898/TIL/blob/main/Network/network_2.md)
 * [Transport Layer-1](https://github.com/2017100898/TIL/blob/main/Network/transport_layer_1.md)
-
+* [Transport Layer-2](https://github.com/2017100898/TIL/blob/main/Network/transport_layer_2.md)
 
 ### OS
 * [운영체제 (Concept of Operating System)](https://github.com/2017100898/TIL/blob/main/OS/concept_of_operating_system.md)
