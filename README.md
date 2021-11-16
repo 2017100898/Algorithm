@@ -35,14 +35,14 @@
 * [Local Weather App](https://github.com/2017100898/TIL/blob/main/Dart/local-weather-app)
 * [Dart 문법 (Grammar of Dart Language)](https://github.com/2017100898/TIL/blob/main/Dart/grammar_of_dart_language.md)
 * [플러터 사용기 (Material App with Flutter)](https://github.com/2017100898/TIL/blob/main/Dart/material_app_with_flutter.md)
-* [Container and Column](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
-* [Snackbar and Toast](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
+* [컨테이너와 컬럼 (Container and Column)](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
+* [스낵바와 토스트 (Snackbar and Toast)](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
 * [Stateful Widget](https://github.com/2017100898/TIL/blob/main/Dart/stateful_widget.md)
 * [Final and Const Variable](https://github.com/2017100898/TIL/blob/main/Dart/final_and_const_variable.md)
 * [Future, async, await](https://github.com/2017100898/TIL/blob/main/Dart/future_async_await.md)
-* [For loop](https://github.com/2017100898/TIL/blob/main/Dart/for_loop.md)
+* [For 구문 (For loop)](https://github.com/2017100898/TIL/blob/main/Dart/for_loop.md)
 * [키 (Key)](https://github.com/2017100898/TIL/blob/main/Dart/key.md)
-
+* [Flutter with Flask](https://github.com/2017100898/TIL/blob/main/Dart/flutter_with_flask.md)
 
 ### Data Structures
 * [자료구조 (Data Structures)](https://github.com/2017100898/TIL/blob/main/DataStructures/data_structures.md)
