@@ -84,7 +84,7 @@
 * [프로세스 스케쥴링 (Process Scheduling)](https://github.com/2017100898/TIL/blob/main/OS/process_scheduling.md)
 * [동기화 (Synchronization)](https://github.com/2017100898/TIL/blob/main/OS/synchronization.md)
 * [데드락 (Deadlocks)](https://github.com/2017100898/TIL/blob/main/OS/deadlocks.md)
-
+* [메모리 관리 기법 (Memory Management Strategies)](https://github.com/2017100898/TIL/blob/main/OS/memory_management_strategies.md)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
@@ -94,3 +94,4 @@
 * [데이터모델링 (Data Modeling)](https://github.com/2017100898/TIL/blob/main/SQL/datamodeling.md)
 * [관계 (Relationship)](https://github.com/2017100898/TIL/blob/main/SQL/relationship.md)
 * [SQLD 대비](https://github.com/2017100898/TIL/tree/main/SQL/SQLD)
+
