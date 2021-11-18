@@ -5,7 +5,7 @@
 * App 수준과 Widget 수준의 데이터가 있다.
 	
 ## Stateless widget
-* State가 변하지 않는 위젯
+* 한번 생성되면 절대 바뀌지 않는 위젯. 즉, State가 변하지 않는 위젯.
 * 한 번 build 되면 state가 변하지 않으며, rebuild 만을 통해서 새로운 state 적용 가능.
 
 ### Tree
@@ -25,6 +25,22 @@
 	1. Child 위젯의 생성자를 통해서 데이터가 전달될 때
 	2. Internal state가 바뀔 때
 * setState method 필요 
+
+## Widget Life-cycle
+### Stateless widget
+* 재생성 하려면 완전히 파괴하고 rebuild하는 방법 밖에 없다.
+	* build method 만 신경쓰면 된다.
+
+### Stateful widget
+* widget의 구성요소, 속성을 지속적으로 추적하는 State object 요소와 결합한다.
+* 생명주기에 따라 각 시점에서 원하는 다양한 일들을 Stateful widget에 시킬 수 있다.
+* stateless 위젯보다 좀 더 긴 생명주기를 갖는다.
+
+### Stateful widget’s life-cycle method
+1. initState method
+2. build method
+3. dispose method
+
 
 ## 구현
 ```dart

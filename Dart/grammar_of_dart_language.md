@@ -336,3 +336,16 @@ void main() {
 
 * null일 때 기본값 설정시 ?? 활용   
 * null이 아닐 때만 함수 실행하고 싶으면 ? 활용
+
+## Try-catch
+* 예외 상황 처리 및 에러메시지 설정
+
+```dart
+    try {
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high);
+      print(position);
+    } catch (e) {
+      print('There was a problem.');
+    }
+````
