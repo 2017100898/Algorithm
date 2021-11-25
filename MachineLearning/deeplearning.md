@@ -3,19 +3,20 @@
 * DNN, CNN, RNN, LSTM 등 다양한 딥러닝 알고리즘이 존재한다.
 
 ## DNN (Deep Neural Network)
-![dnn](https://user-images.githubusercontent.com/64299475/133933240-5b24d317-16bb-429c-9569-f4fa43b7a89a.png)
+<img width = "400" src = "https://user-images.githubusercontent.com/64299475/133933240-5b24d317-16bb-429c-9569-f4fa43b7a89a.png">
 
-* 은닉층을 심층 구성한 신경망으로 학습하는 알고리즘이다.
+* DNN은 은닉층을 심층 구성한 신경망으로 학습하는 알고리즘이다.
 * **입력층, 2개 이상의 은닉층, 출력층**으로 이루어져 있다.
 * **입력층에서 가중치가 곱해져 은닉층으로 이동시키고, 은닉층에서도 가중치가 곱해지면서 다음 계층으로 이동하는 방식이다.**
 * 역전파 알고리즘은 출력층 - 은닉층 - 입력층으로 반복수행하고 결과값들을 수정하며 최적화된 결과를 도출한다.
 
 
 ## CNN (Convolution Neural Network)
-![unnamed-6](https://user-images.githubusercontent.com/64299475/133933193-109ba02b-206f-4c9f-963a-f09e6cdb5afe.png)
+<img width = "400" src = "https://user-images.githubusercontent.com/64299475/133933193-109ba02b-206f-4c9f-963a-f09e6cdb5afe.png">
+<img width = "400" src = "https://user-images.githubusercontent.com/64299475/133933202-e3930f63-50c0-4883-b79d-8dc1249ccb7d.png">
 
-* 이미지 분석 시 사용되는 심층 신경망으로, 합성곱 신경망이라고도 한다.
-![map](https://user-images.githubusercontent.com/64299475/133933202-e3930f63-50c0-4883-b79d-8dc1249ccb7d.png)
+* CNN은 이미지 분석 시 사용되는 심층 신경망으로, 합성곱 신경망이라고도 한다.
+
 
 1. 입력층 합성곱 연산
 	* 입력한 이미지에서 필터를 이용하여 특징 추출한 피처맵 구축
@@ -34,9 +35,9 @@
 	* 분류 과정 수행한 뒤 Softmax 함수 이용하여 결과를 확률로 분류함.
 
 ## RNN (Recurrent Neural Network)
-![rnn](https://user-images.githubusercontent.com/64299475/133933354-8f1f3792-b114-433c-8e0f-882a4a95f747.png)
+<img width = "400" src = "https://user-images.githubusercontent.com/64299475/133933354-8f1f3792-b114-433c-8e0f-882a4a95f747.png">
 
-* 입력층, 은닉층, 출력층으로 이뤄져있으며 은닉층에서 재귀적인 신경망을 지니는 알고리즘이다.
+* RNN은 입력층, 은닉층, 출력층으로 이뤄져있으며 은닉층에서 재귀적인 신경망을 지니는 알고리즘이다.
 * 음성인식 등 **Sequence 데이터**에서 많이 사용한다.
 * 장기의존성 문제 및 기울기 소실 문제때문에 학습이 잘 이뤄지지 않을 수도 있다.
 	* 장기의존성문제 : 현재 노드 위치와 먼 과거 입력값의 영향력이 점차 감소함으로써 발생 되는 문제
