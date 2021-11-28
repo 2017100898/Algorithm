@@ -9,9 +9,9 @@
 
 ## 대표 알고리즘
 * [이분검색 (Binary Search)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/binary_search.md)
-* 합병정렬 (Merge Sort)
-* 빠른정렬 (Quick Sort)
-* 쉬트라쎈 행렬곱셈 (Strassen Algorithm)
+* [합병정렬 (Merge Sort)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/implement/merge_sort.ipynb)
+* [빠른정렬 (Quick Sort)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/implement/quick_sort.ipynb)
+* [쉬트라쎈 행렬곱셈 (Strassen Algorithm)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/implement/strassen_algorithm.ipynb)
 * 큰 수의 곱셈 알고리즘 (Big Integer)
 
 ## 분할정복 사용하지 말아야 하는 경우
