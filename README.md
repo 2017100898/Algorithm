@@ -93,6 +93,8 @@
 * [메모리 관리 기법 (Memory Management Strategies)](https://github.com/2017100898/TIL/blob/main/OS/memory_management_strategies.md)
 * [가상 메모리 관리 (Virtual Memory Management)](https://github.com/2017100898/TIL/blob/main/OS/virtual_memory_management.md)
 * [파일 시스템 (File System)](https://github.com/2017100898/TIL/blob/main/OS/file_system.md)
+* [Secondary Storage Architecture](https://github.com/2017100898/TIL/blob/main/OS/secondary_storage_architecture.md)
+
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
