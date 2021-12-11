@@ -23,7 +23,7 @@
 * 넷플릭스에 들어가서 영화를 본다고 하자. 넷플릭스는 내가 들어가기 전에도 콘텐츠가 이미 존재하고 바뀌지 않기 때문에 Static Content이다. 
 * **Media Types : MIME** (Multipurpose Internet Mail Extensions)
 	* 실어나르는 Contents의 Type과 길이가 무엇인지 명시하는 프로토콜
-	* MIME Type :  `image/jpeg`
+	* MIME Type 예시 :  `image/jpeg`
 * **URI (Uniform Resource Identifier)**
 	* 인터넷에서 리소스를 찾아기 위한 Address
 	* 전세계에서 유일하게 식별할 수 있어야 한다.
@@ -51,7 +51,7 @@
 * **Connections Process**
 	1. Web Browser에 URL을 치면, DNS를 통해 URL에 대한 IP 주소를 가져온다.
 	2. Client는 Server에게 TCP 연결을 하고, HTTP GET이 나간다.
-	3. Response 를 가져오면 TCP를 끊고 연결을 해제한다.
+	3. Response를 가져오면 TCP를 끊고 연결을 해제한다.
 
 ### Architectural Components of the Web
 * **Proxy**
@@ -111,18 +111,18 @@ http.createServer(function (req, res){
 
 <img width="400" src="https://user-images.githubusercontent.com/64299475/142600226-f5bd0660-2365-4436-916b-fd465036fe03.png">
 
-* **QUIC Protocol**은 UDP 를 사용하므로, 기존 에러 검출 및 복구를 사용하지 않는다. TCP를 쓰지는 않지만, TCP에서 제공했던 에러 검출 및 복구 기법들을 UDP 위에서 직접 구현하게 된다.
-* **TCP는 중간에 문제가 발생하면, 재전송에 의해 뒤가 멈추고, 속도 조절이 안 되는 문제가 있으나, QUIC은 UDP이기 때문에 속도가 빠르고, 여러 줄로 가기 때문에 에러 검출 및 복구가 각각에 대해 이뤄지기 때문에 전체가 느려지는 현상을 방지할 수 있다.**
+* **QUIC Protocol**은 **UDP** 를 사용하므로, **기존 에러 검출 및 복구를 사용하지 않는다.** TCP를 쓰지는 않지만, **TCP에서 제공했던 에러 검출 및 복구 기법들을 UDP 위에서 직접 구현**하게 된다.
+* TCP는 중간에 문제가 발생하면, 재전송에 의해 뒤가 멈추고, 속도 조절이 안 되는 문제가 있으나, **QUIC은 UDP이기 때문에 속도가 빠르다. 또한, 여러 줄로 가기 때문에 에러 검출 및 복구가 각각에 대해 이뤄지기 때문에 전체가 느려지는 현상을 방지할 수 있다.**
 * TCP 위에서 HTTP 돌리니 문제 다수 발생해서 UDP 위에 올렸고, HTTP 2.0을 베이스로 개선을 시도 했다.
 	1. 연결 시 시간 오래 걸리는 문제
 	2. 전송 시의 Flow Control
 	3. Congestion Control
 	4. 네트워크 속도 지원 못하는 문제
-* TCP, UDP 성능 개선을 하기 위해서는 OS 커널을 건드려야 하는데, 이는 매우 부담스러운 일이다. 따라서 TCP가 아닌 UDP를 씀으로써 Transport layer가 아닌 그 위에서 무언가를 동작하도록 한다.
-* QUIC 은 초기 연결 시간을 빠르게 하기 때문에 사용자는 체감 시간이 극명하게 낮아진다. QUIC은 급속도로 퍼지고 있고, 특히 UDP를 사용했을 때 효과를 극대화할 수 있는 비디오 트래픽에서 두각을 나타내고 있다.
+* TCP, UDP 성능 개선을 하기 위해서는 OS 커널을 건드려야 하는데, 이는 매우 부담스러운 일이다. 따라서 TCP가 아닌 UDP를 씀으로써 Transport layer가 아닌 그 위 Application Layer에서 동작하도록 한다.
+* QUIC 은 초기 연결 시간을 빠르게 하기 때문에 사용자는 체감 시간이 극명하게 낮아진다. QUIC은 급속도로 퍼지고 있고, 특히 UDP를 사용했을 때 효과를 극대화할 수 있는 **비디오 트래픽에서 두각**을 나타내고 있다.
 
 ### Application Space Execution
-* QUIC은 Application Layer에서 에러 검출 및 복구를 한다.  Kernel 이 아닌 그 위에 개발이 되었기 때문에 성능 문제가 발생할 수 있다.
+* **QUIC은 Application Layer에서 에러 검출 및 복구를 한다.**  Kernel 이 아닌 그 위에 개발이 되었기 때문에 성능 문제가 발생할 수 있다.
 * Kernel 안에 있는 것들의 통신은 overhead가 적지만, QUIC은 시간이 조금 더 걸릴 수 있다. 그러나 부하가 큰 영향을 미칠 정도는 아니다.
 
 ### Client & Server Deployment
@@ -136,8 +136,9 @@ http.createServer(function (req, res){
 ### SIP & SDP
 <img width="400" src="https://user-images.githubusercontent.com/64299475/142602258-dbfffabd-7b99-4d7e-aaf8-ef16a5d96974.png">
 
-*  INVITE, 200 OK, 즉, 위 사진에서 초록색 글자에 대한 내용은 **SIP**에서 정의하고, 실질적인 Media 에 대한 정보는 **SDP**에서 별도로 정의한다. SIP가 SDP를 실어나르는 형식이다.
-* HTTP는 하나에 정의 되어 있고, SIP는 두 개로 나뉘어져 있다는 것 외에는 큰 차이는 없다.
+* INVITE, 200 OK, 즉, 위 사진에서 초록색 글자에 대한 내용은 **SIP**에서 정의하고, 실질적인 Media 에 대한 정보는 **SDP**에서 별도로 정의한다. SIP가 SDP를 실어나르는 형식이다.
+* Session Description Protocol (SDP)
+* **HTTP는 하나에 정의 되어 있고, SIP는 두 개로 나뉘어져 있다는 것** 외에는 큰 차이는 없다.
 
 ### User Agent
 * User Agent Client : 요구 보내는 쪽
@@ -146,8 +147,8 @@ http.createServer(function (req, res){
 ### Registrar
 <img width="400" src="https://user-images.githubusercontent.com/64299475/142604125-7937bd01-da68-4dfd-a109-4fa079d24aef.png">
 
-* 통신을 하기 위해서는 사용자가 현재 사용하고 있는 network 주소를 알아야 한다. 그러나 application의 ID는 고정 되어있지만 network 주소는 계속 바뀌는 문제가 있다. 
-* 이런 상황에서, 휴대폰의 네트워크 주소를 주기적으로 확인하여 **SIP의 ID를 Ip address로 맵핑하는 것을 Registrar라고 한다.** 그렇기 때문에 소프트웨어에 서버가 필요하다.
+* 통신을 하기 위해서는 사용자가 현재 사용하고 있는 network 주소를 알아야 한다. 그러나 application의 ID는 고정 되어있지만 **network 주소는 계속 바뀌는 문제가 있다.**
+* 이런 상황에서, 휴대폰의 네트워크 주소를 주기적으로 확인하여 **SIP의 ID를 Ip address로 맵핑하는 것을 *Registrar*라고 한다.** 그렇기 때문에 소프트웨어에 서버가 필요하다.
 * 이외에도 통신을 위해서는 Proxy Server, Redirect Server가 필요하다.
 
 ## Advanced Web Technologies
