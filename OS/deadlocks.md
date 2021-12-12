@@ -160,7 +160,7 @@ do{
 ### Recovery from Deadlock
 * **Process Termination**
 	* 엉킨 프로세스를 종료시킴으로써 Deadlock을 없앤다.
-	* 이는 간단하지만 손실이 크다. 따라서 부분적으로 하나씩 종료시킬 수도 있다. `Pratial Termination`
+	* 이는 간단하지만 손실이 크다. 따라서 부분적으로 하나씩 종료시킬 수도 있다. `Partial Termination`
 	* 이때, 비용이 적은 프로세스를 타겟을 먼저 종료시킬 수도 있다.
 * **Resource Preemption**
 	* Resource를 뺏어서 다른 프로세스에 할당한다.

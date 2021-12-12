@@ -14,7 +14,7 @@
 	* 파일의 특정한 **위치**는 **시작점으로부터의 거리로 나타낼 수 있고 이는 offset이라 한다.**
 * *File System*은 파일을 다루는 방법이다.
 	* 사용자 관점의 File을 디바이스에 어떻게 mapping 시킬 것인지, **즉 디스크에 어떻게 관리할 것인지 결정하는 것**이다.
-	* 논리적인 주소가 물리적인 주소로 바뀌기 위해서는 Translate이 필요하며, 이 또한 File System의 역할 중 하나다. Translate 시에 앞서 설명한 offset을 사용한다.
+	* 논리적인 주소가 물리적인 주소로 바뀌기 위해서는 **Translate**이 필요하며, 이 또한 File System의 역할 중 하나다. Translate 시에 앞서 설명한 offset을 사용한다.
 	* 파일은 연속적으로 들어가 있을 수도 있고, 쪼개어져서 들어갈 수도 있다. 쪼개져있는 파일을 찾아오는 것도 File System의 역할이다.
 
 ### File Operation
@@ -31,7 +31,7 @@
 * Unix는 파일 앞단의 정보를 통해 파일의 타입을 파악한다.
 
 ### File System 🥕🐇⚡️
-* **File System**은 크기가 한정된 **디스크에 파일을 어떤 식으로 저장하고 관리할 것인지에 대한 규칙 (방법론)**이다. 
+* **File System**은 크기가 한정된 **디스크에 파일을 어떤 식으로 저장하고 관리할 것인지에 대한 규칙 (방법론)** 이다. 
 * 따라서 File System은 한 가지가 아니며 운영체제마다 사용하는 File System도 다르다.
 * File System은 Disk 상의 Data Structure라고 할 수도 있다. Disk에 여러 파일 시스템이 동시에 올라가 있을 수도 있고 이때 각 File System의 단위를 **Volume**이라 한다.
 
@@ -69,7 +69,7 @@
 	4. 이를 다시 disk로 저장한다.
 * **Open a File**
 	1. System-wide open-file table이 있는지 찾는다.
-	2. 찾는다면 누군가가 사용하고 있다는 뜻이므로, 내 pre-process open-file table에서 FCB 주소로 directing 하면 되고, count++해준다.
+	2. 찾는다면 누군가가 사용하고 있다는 뜻이므로, 내 per-process open-file table에서 FCB 주소로 directing 하면 되고, count++해준다.
 	3. System-wide open-file table에 파일이 없으면 우선 그 파일에 해당하는 directory structure cache 부터 업데이트 해야 한다.
 	4. FCB를 table로 옮겨놓는다.
 	5. Directory 도 갖고와서 directory structure에 넣어준다.
@@ -83,15 +83,16 @@
 * `우리가 자주 사용하는 FCB도 메모리에 옮겨놓으면 더 빠르지 않을까?`
 
 #### System-wide open-file table
-	* 현재 열려있는 파일에 대한 테이블, 사용 시 FCB에 대한 정보를 복사해둔다.
-	* **count** : 현재 몇 개가 이 파일을 사용하고 있는지에 대한 정보
-	* FCB를 찾으러 파일을 가는 시간을 줄이기 위해 사용한다.
+* 현재 열려있는 파일에 대한 테이블, 사용 시 FCB에 대한 정보를 복사해둔다.
+* **count** : 현재 몇 개가 이 파일을 사용하고 있는지에 대한 정보
+* FCB를 찾으러 파일을 가는 시간을 줄이기 위해 사용한다.
+
 #### Per-process open-file table
-	* 프로세스마다 Per-process open-file table을 갖고 있고, 이것은 system-wide open-file table의 위치를 가리키고 있다.
+* 프로세스마다 Per-process open-file table을 갖고 있고, 이것은 system-wide open-file table의 위치를 가리키고 있다.
 
 ## File Access and Allocation Methods
 ### Sequential and Direct Access
-* `Access : 파일을 우리가 어떻게 접근할 것이냐?`
+* `Access : 파일에 어떻게 접근할 것이냐?`
 * **Sequential Access** : 순차적으로 읽는 것
 	* File pointer를 기준으로, current position 계속해서 오른쪽으로 가면서 read/write하는 접근 방식이다.
 	* 대부분의 파일은 sequential 방식을 사용한다.
@@ -100,7 +101,7 @@
 	* database에서 많이 사용한다. 
 
 ### Contiguous, Linked and Indexed Allocation
-* 파일을 실제로 어떻게 배치할 것이냐?
+* `파일을 실제로 어떻게 배치할 것이냐?`
 * Contiguous : 파일이 연속적으로 저장 되는 것
 * Non-contiguous : 파일을 블록단위로 잘라서 각각 배치하는 것
 * Allocation의 목표
@@ -128,10 +129,9 @@
 		* 첫번째 블록이 손실되면 뒤의 파일을 모두 사용하지 못하는 위험성이 존재한다.
 	* **FAT (File Allocation Table)**
 		* FAT는 link만 따로 모아둔 테이블이다. 테이블만 메모리로 옮겨서 사용할 수 있으므로, 메모리에서 특정 블록의 위치를 빠른 시간 안에 찾아내고, disk 에서는 한번에 접근할 수 있다.
-		
 * **Indexed Allocation** (paging 과 유사, inode)
-	* 어떤 공간 자체를 indexing 하기 위한 정보만을 담아놓는 디스크 블록으로 하나 할당해 주는 것이다. (index block)
-	* 디렉토리는 앞서 설명했던 start, length가 아닌파일에 대한 인덱스 블록에 대한 정보만 갖고 있으면 된다.
+	* **어떤 공간 자체를 indexing 하기 위한 정보만을 담아놓는 디스크 블록으로 하나 할당해 주는 것**이다. (index block)
+	* 디렉토리는 앞서 설명했던 start, length가 아닌, 파일에 대한 인덱스 블록에 대한 정보만 갖고 있으면 된다.
 	* **장점**
 		* No External Fragmentation
 		* Direct access 쉽게 할 수 있다.
@@ -152,10 +152,10 @@
 * 작은 파일에 있어서는 Contiguous Allocation을 하다가, 커지면 Indexed 로 바꾸는 방법도 있다.
 
 ## Free-Space Management
-* Disk space에 우리가 사용할 수 있는 공간을 관리하기 위해서는 free-space list 정보, 즉 사용할 수 있는 블록에 대한 정보를 갖고 있어야 한다.
+* Disk space에 우리가 사용할 수 있는 공간을 관리하기 위해서는 **free-space list 정보, 즉 사용할 수 있는 블록에 대한 정보를 갖고 있어야 한다.**
 * 구현 방법
-	* Bit Vector : 각 블록에 대해서 사용할 수 있는지 없는지를 0,1로 나타내는 것
-	* Linked List : 빈 공간 자체를 Linked List 방식으로 구현하는 것
+	* **Bit Vector** : 각 블록에 대해서 사용할 수 있는지 없는지를 0, 1로 나타내는 것
+	* **Linked List** : 빈 공간 자체를 Linked List 방식으로 구현하는 것
 
 ### Bit Vector (n blocks)
 * n 개의 블록이 storage에 있다고 하면, n개의 bit로 해당 블록이 비어있는지 표현하는 것이다.
@@ -201,6 +201,8 @@
 * **Page Cache는 파일에 있는 내용을 주소를 줘서 페이지로 Caching 하는 것**이다.
 
 ### I/O without a unified Buffer Cache
+<img width="300" src="https://user-images.githubusercontent.com/64299475/145722421-ec55119c-a4ed-4049-9de3-84d4ceb9349f.png">
+
 * memory-mapped I/O 할 때는 Page cache - buffer cache - file system 순서
 * 나머지 I/O 는 buffer cache-file system 순으로 찾아본다.
 * 이처럼 같은 내용을 담는 Cache가 2개 있는 것을 **Double caching**이라 한다.
@@ -216,7 +218,7 @@
 * **asynchronous는 데이터의 일관성이 동기화 되지 않고 시간적 차이가 있지만 읽고 쓰는 속도 자체를 빠르게 할 수 있다.**
 
 ### Page Replacement Algorithms
-* sequential access를 할 때, LRU는 좋지 않다. 
+* sequential access를 할 때, [LRU(Least-Recently-Used)](https://github.com/2017100898/TIL/blob/main/OS/virtual_memory_management.md#lru-page-replacement)는 좋지 않다. 
 
 ### Free-behind
 * 내가 현재 n번 페이지를 사용하면 n-1번 페이지를 지우는 것이다.
