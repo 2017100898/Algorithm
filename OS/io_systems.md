@@ -3,9 +3,9 @@
 * Input/Output
 * Basic I/O Hardware
 	* I/O Device
-	* Port : SSD와 PC를 연결하기 위해서는 USB를 꽂는다. 디바이스들을 연결할 수 있는 접점을 Port라고 한다.  Port는 레지스터로 구성되어있다.
+	* **Port** : SSD와 PC를 연결하기 위해서는 USB를 꽂는다. 디바이스들을 연결할 수 있는 접점을 Port라고 한다.  **Port는 레지스터로 구성되어있다.**
 	* Bus : 전기적인 신호가 흐를 수 있는 전선
-	* Device controller : 디바이스를 제어할 수 있는 별도의 물리적 장치 (보통 메인보드에 붙어있다, Host adaptor)
+	* **Device controller** : 디바이스를 제어할 수 있는 별도의 물리적 장치 (보통 메인보드에 붙어있다, Host adaptor)
 * Device Controller : Registers (상태를 유지할 수 있는 회로), 하나의 chip으로 이루어져 있다. (serial-port controller for mouse, keyboard) 규격화된 프로토콜을 따르고 있다.
 
 ## How does processor communicate with I/O?
@@ -20,11 +20,11 @@
 	* 디바이스가 직접 메모리에서 읽어가는 방식이다.
 
 ### Direct I/O (Isolated I/O)
-* Memory Mapped I/O와 Direct I/O의 가장 큰 차이점은 `virtual 메모리와 디바이스가 같은 주소 공간에 있느냐? 별도의 주소 공간을 따로 가지는가?` 이며,  별도의 주소공간을 가지는 것이 Direct I/O 다.
-* 주소 공간을 부를 때는 메모리에 접근하는 것과는 다른 방식을 사용해야하므로 별도의 special I/O instructions가 필요하고 느려질 수 있다. 
+* Memory Mapped I/O와 Direct I/O의 가장 큰 차이점은 `virtual 메모리와 디바이스가 같은 주소 공간에 있느냐? 별도의 주소 공간을 따로 가지는가?` 이며,  **별도의 주소공간을 가지는 것이 Direct I/O 다.**
+* 주소 공간을 부를 때는 메모리에 접근하는 것과는 다른 방식을 사용해야하므로 **별도의 special I/O instructions가 필요**하고 느려질 수 있다. 
 
 ### Memory Mapped I/O
-* Virtual Space 상에서 일정 부분을 디바이스에 할당하는 것을 말한다. 이를 통해, CPU 입장에서 메모리에 있는 데이터 값을 쓰는 것과 디바이스의 레지스터의 어떤 값을 쓰는 것을 같은 명령어로 수행할 수 있게 되므로 빠르다.
+* **Virtual Space 상에서 일정 부분을 디바이스에 할당하는 것**을 말한다. 이를 통해, CPU 입장에서 메모리에 있는 데이터 값을 쓰는 것과 디바이스의 레지스터의 어떤 값을 쓰는 것을 같은 명령어로 수행할 수 있게 되므로 빠르다.
 
 ## How do we know I/O device is ready?
 * Polling
@@ -60,9 +60,9 @@
 ### Interrupt Handling Example : Page Fault
 * Virtual memory 의 특정 페이지에 접근하려 했지만 그 페이지가 메인메모리에 있는 것이 아닌 디스크에 있을 때 발생하는 오류다.
 * 처리 루틴 
-	* save state of process in running
-	* moves the process to waiting queue (wait state)
-	* disk 에 있는 페이지를 fetch, 재시작
+	1. save state of process in running
+	2. moves the process to waiting queue (wait state)
+	3. disk 에 있는 페이지를 fetch, 재시작
 
 ### Interrupt Handling Example : System Call
 * `printf`
@@ -77,11 +77,11 @@
 <img  width = "400" src  ="https://user-images.githubusercontent.com/64299475/145532276-2c3bfbee-cb4b-49ac-b4f1-ce7b709914e9.png">
 
 * Bypasses
-* CPU 없이 컨트롤러와 메모리가 직접적으로 데이터를 주고 받는 방식을 말한다.
+* **CPU 없이 컨트롤러와 메모리가 직접적으로 데이터를 주고 받는 방식**을 말한다.
 	* 실제로는 중간 매개체가 아예 없는 것이 아닌, CPU가 하는 일 중, 메모리와 컨트롤러 사이에서 데이터를 주고 받을 수 있도록 하는 역할을 DMA로 분리해서 이를 실현한다.
 
 > 1. CPU가 메모리를 디스크에 써야한다하면 DMA에 명령을 내린다. 명령을 다 수행할 때까지 CPU는 그 일에 관여하지 않는다.  
-> 2. DMA는 데이터를 블록 단위로만 전송할 수 있다. disk controller는 DMA transfer를 준비하고, DMA controller는 DMA 를 준비한다.  
+> 2. DMA는 데이터를 블록 단위로만 전송할 수 있다. disk controller는 DMA transfer를 준비하고, DMA controller는 DMA를 준비한다.  
 > 3. C--을 반복해서 C=0이 될 때까지 DMA가 byte를 보낸다.  
 > 4. C=0이 되면 CPU에 interrupt를 보낸다.  
 
@@ -92,7 +92,7 @@
 	* `OS는 복잡하고 다른 이 장치들을 어떻게 처리할까?`
 
 ### Device Drivers
-* OS는 User가 디바이스 종류에 상관없이 제너럴하게 사용할 수 있게 한다.
+* **OS는 User가 디바이스 종류에 상관없이 제너럴하게 사용할 수 있게 한다.**
 * Device Driver은 명령을 그 device에 맞게 번역하는 코드다.
 * **장점**
 	* hardware에 independent 하다.
