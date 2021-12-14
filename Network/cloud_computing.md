@@ -17,16 +17,17 @@
 
 * **IaaS (Infrastructure as Service)**
 	* Amazon Web Service (AWS)
-	* 가장 근본적이고 날 것의 것을 제공한다. - **Hardware, Virtualized Instance (Virtual Machine), OS(Guest OS)**, 물리적인 Hardware을 빌려주는 것은 아니고 그 위에서 돌아가는 가상 머신을 빌려주는 것이다.
+	* 가장 근본적이고 날 것의 것을 제공한다. 다시 말해, 운영체제와 컴퓨터 장비를 제공한다. **Hardware, Virtualized Instance (Virtual Machine), OS(Guest OS)** 를 포함한다. 
+	* 그러나 물리적인 Hardware을 빌려주는 것은 아니고 그 위에서 돌아가는 가상 머신을 빌려주는 것이다.
 	* 필요할 때 가장 기초적인 인프라를 제공하고, 그 위에 해당하는 OS service, Application 등은 본인이 알아서 해결해야 한다.
 * **PaaS (Platform as Service)**
 	* Microsoft Azure
 	* Google App Engine
-	* **가상머신부터 OS service, Frameworks까지 제공한다.** 마찬가지로 그 위에 올라가는 Application은 본인이 해결을 해야하기 때문에 보통 개발 능력이 있는 사람들이 사용하는 서비스다.
+	* IaaS보다 확장된 것을 제공한다. **가상머신부터 OS service, Frameworks, Library까지 제공한다.** 마찬가지로 그 위에 올라가는 Application은 본인이 구현을 해야하기 때문에 보통 개발 능력이 있는 사람들이 사용하는 서비스다.
 * **SaaS (Service as Service)**
 	* Gmail System
 	* Microsoft Office Live/Online
-	* **바닥부터 서비스까지 모두 제공한다.** 사용자는 서비스를 바로 쓸 수 있고 사용한 만큼 비용을 지불하기만 하면 된다.
+	* **바닥부터 서비스까지 모두 제공한다.** 사용자는 기술적 구현 없이 서비스를 바로 쓸 수 있고 사용한 만큼 비용을 지불하기만 하면 된다.
 
 ### Public or Private
 * 빌려주는 자와 빌려쓰는 관계에 의해 정의된다.
@@ -43,18 +44,21 @@
 	
 ## Public Cloud Services
 ### Amazon Web Service (AWS)
+* IaaS가 강점이다.
 * Amazon은 자사가 필요해서 만든 소프트웨어들을 다른 사람들에게 빌려준다. AR, VR, Block Chain, Game, IoT, ML, Robot, DB 등까지 제공한다.
 
 ### Microsoft Azure
 * 마이크로소프트는 기업용 소프트웨어에 특화되어 있다. 따라서 제공하는 소프트웨어들이 주로 비즈니스, 기업에 초점이 맞춰져 있다.
 
 ### Google
+* Google은 Tensorflow, alphaGo 등 빅데이터 처리에 강점을 보인다.
 * 구글은 자체 하드웨어인 Tensorflow Processor가 있기 때문에, 유저들이 이 하드웨어 위에서 소프트웨어를 설계할 수 있도록 한다. MMORPG Game server 또한 제공하고 있다.
 
 ### Apple
-* 애플은 위 회사들과는 다른 관점이다. 애플은 그들의 기기와 컨텐츠를 파는 것이 중요하기 때문에 애플 기기끼리만 쉽게 연동할 수 있는 클라우드(iCloud)를 만들었다.
+* 애플은 위 회사들과는 다른 관점이다. 애플은 그들의 기기와 컨텐츠를 파는 것이 중요하기 때문에 애플 기기끼리만 쉽게 연동할 수 있는 클라우드`iCloud`를 만들었다.
 
 ## Cloud Computing APIs
+* IaaS는 비슷한 회사가 많지만 PaaS는 차이가 심하다.
 * EC2, S3는 사실상 업계의 표준이다.
 
 ### EC2 (Amazon Elastic Compute Cloud)
@@ -65,10 +69,11 @@
 
 ### S3 (Amazon Simple Storage Service)
 * 단순하게 Storage를 관리하는 서비스다. REST, SOAP, BitTorrent
-* 아마존이 쓴 후 검증이 된 것을 제공한다. 
+* 아마존이 쓴 후 검증이 된 것을 제공하므로 신뢰성이 보장된다.
 
 ## Thin Client 
-* Thin Client는 _웹브라우저만_ 켤 수 있는 컴퓨터다. 이런 컴퓨터는 웹브라우저만 사용할 때 사용하고, 일반적으로 웹브라우저 바깥의 운영체제에 무언가를 쓰는 것을 금지한다. 이러한 Thin Client는 웹상으로 대부분의 서비스가 돌아가는 세상이 되었음을 시사한다.
+* Thin Client는 OS에서 하던 일을 웹브라우저에서 하도록 하는 것이다.
+* Thin Client는 **웹브라우저만 켤 수 있는 컴퓨터**다. 이런 컴퓨터는 웹브라우저만 사용할 때 사용하고, 일반적으로 웹브라우저 바깥의 운영체제에 무언가를 쓰는 것을 금지한다. 이러한 Thin Client는 웹상으로 대부분의 서비스가 돌아가는 세상이 되었음을 시사한다.
 * Microsoft office의 웹버전 워드, 엑셀, 파워포인트 등
 * 가장 유명한 Thin Client는 [Google Chromium OS](https://www.chromium.org/) 다.
 * Firefox OS, FlinsOS
@@ -78,7 +83,7 @@
 * 사내의 인프라를 사내의 다른 조직이 사용하는 것을 뜻한다. 사내 인프라 위에 사내 어플리케이션이 올라가는 것이 특징이다.
 
 ### 오픈스택 (OpenStack)
-* OpenStack은 클라우드 컴퓨팅을 본인의 회사에서 구축할 수 있도록 하는 오픈소스 솔루션이다. 즉 _Private Cloud 환경 구축을 위한 Solution_이다.
+* OpenStack은 클라우드 컴퓨팅을 본인의 회사에서 구축할 수 있도록 하는 오픈소스 솔루션이다. 즉 **Private Cloud 환경 구축을 위한 Solution**이다.
 * 프로세서, 네트워크, 저장소를 빌려주는 소프트웨어이며, 유저는 API를 통해 빌려쓸 수 있다.
 * 오픈 스택을 기반으로 데이터분석, 인공지능, 알고리즘 등의 규모가 커졌다.
 
@@ -93,7 +98,7 @@
 * **Docker** : 돌아가는 프로그램이 어떤 OS 위에서 돌든 상관 없이 컨테이너를 실행시킬 수 있게 하는 소프트웨어 (개발, 운영)
 * **Kubernetes** : Container-orchestration. 많은 컴퓨터 위에서 관리 및 제어 할 수 있는 소프트웨어. 수만개의 소프트웨어들이 유기적으로 돌아가도록 한다. (운영)
 * Cloud Native Computing Foundation : 소프트웨어의 설계부터 수만개의 컴퓨터에 맞도록 하는 회사다. Linux 산하의 Foundation.
-* **Cloud Native** : Container, Microservices (돌아가는 프로그램을 잘게 쪼개서 CPU를 분배하는 것), Continuous delivery (굉장히 빨라진 개발환경-CI/CD),  DevOps
-* **Edge computing** : 디바이스 대신 해주는 일은 중앙이 아닌 디바이스의 근처에서 해주는 방법이다. 즉, 작은 데이터센터들이 유저들 가까이로 들어가는 것이다. - StarlingX
+* **Cloud Native** : 프로그램을 잘게 쪼개서, 각자 따로 개발하고 실행하는 것이며 서버는 작은 서비스 (micro-service)로 돌아 간다. Container, Microservices (돌아가는 프로그램을 잘게 쪼개서 CPU를 분배하는 것, 이를 통해 프로그램을 각자 다른 언어로 만들 수 있게 됨), Continuous delivery (굉장히 빨라진 개발환경-CI/CD),  DevOps (자동화 기법을 추가해서 등장함)
+* **Edge computing** : 디바이스 대신 해주는 일은 중앙이 아닌 디바이스(user)의 근처에서 해주는 방법이다. 즉, **작은 데이터센터들이 유저들 가까이로 들어가는 것이다.** - StarlingX
 	* 그러나 외부로 나가야하기 때문에 보안의 문제가 발생하고, 서버와 소프트웨어가 작다. 신뢰성과 용량확장에도 에러가 있을 수 있다.
 * Software-Defined Cars

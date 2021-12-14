@@ -9,7 +9,6 @@
 * Port만 다르면, 한 개의 컴퓨터 내에서도 두 개의 컴퓨터가 통신하는 것이 가능하며, Host-to-Host, Process-to-Process만 가능하다면 LAN 뿐만 아니라, 지역적인 위치에 상관없이 통신이 가능하다.
 
 
-
 ### Client and Server Architecture
 <img width="400" src="https://user-images.githubusercontent.com/64299475/140792124-e858ff07-e637-459f-b8f8-c892e9b56d33.png">
 

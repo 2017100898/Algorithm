@@ -28,7 +28,7 @@
 	* 인터넷에서 리소스를 찾아기 위한 Address
 	* 전세계에서 유일하게 식별할 수 있어야 한다.
 	* 위치에 대한 정보도 들어가야 한다.
-	* URL (locator) and URN (Name)
+	* URL (locator, 찾아갈 컴퓨터의 주소) and URN (Name)
 
 ### HTTP Method
 * **GET** : Client 가 Server에게 받기 원하는 리소스를 요청, 파일 다운로드
@@ -39,26 +39,25 @@
 * **TRACE** : Proxy가 있는지 확인 (디버그 목적 등으로도 사용 가능)
 * **OPTIONS** : Server가 지원하는 Method 모두 알려달라고 요청 (보통은 OPTIONS 안 됨)
 
-#### 기타
+#### Status code
 * **200** : OK. 요청한 작업 성공적으로 수행
 * **302** : 정보가 있는 다른 곳으로 이동
 * **404** : 파일 지워졌을 때
 
 ### Connection
-* HTTP는 기본적으로 밑에 TCP를 쓰도록 권장되고 있다.
-* HTTP는 자체적으로 신뢰성을 보장할 수 없으나 **TCP는 Reliable 하다.** 
-* UDP를 쓰면 유실될 수 있다.
-* **Connections Process**
+* HTTP는 기본적으로 밑에 TCP를 쓰도록 권장되고 있다. 
+* HTTP는 자체적으로 신뢰성을 보장할 수 없으나 **TCP는 Reliable 하다.** 즉, 신뢰성 때문에 HTTP는 TCP를 권장한다. UDP를 쓰면 정보가 유실될 수 있다.
+* **HTTP Connections Process**
 	1. Web Browser에 URL을 치면, DNS를 통해 URL에 대한 IP 주소를 가져온다.
 	2. Client는 Server에게 TCP 연결을 하고, HTTP GET이 나간다.
 	3. Response를 가져오면 TCP를 끊고 연결을 해제한다.
 
 ### Architectural Components of the Web
-* **Proxy**
-	* HTTP Client와 Server 사이에 존재하는 장치이다.
+* **Proxy** 서버
+	* HTTP Client와 Server 사이에 존재하는 장치이다. 그러나 보이지 않는다.
 	* Proxy는 Client와 Server사이에서 주고 받는 트래픽을 쳐다보고, 막아야할지 말아야할지 결정을 한다. 예를 들어 대한민국에서는 들어가지 못 하는 사이트, 바이러스가 있는 사이트, 회사 내에서 업무와 관련 없는 사이트 등을 차단한다.
 	* Client나 Server를 보호하기 위해 사용할 수 있다.
-	* Proxy는 압축 등 다양한 기능이 있다.
+	* Proxy는 압축을 통한 성능 최적화 등 다양한 기능이 있다.
 	
 ## Web Browser as Development Tool
 * Firefox, Chrome, Safari 등 Web Browser에서 개발자 도구 (웹 개발 도구)를 이용함으로써 메모리, 디버거, 저장소 등을 직접 경험할 수 있다.
@@ -90,6 +89,7 @@ http.createServer(function (req, res){
 * Javascript, HTML, CSS 은 웹브라우저를 벗어나서 platform에 Independent하게 개발할 수 있는 도구로서 자리를 잡게 된다.
 
 ## HTTP 2.0
+* 기존 HTTP1.x에서 발생한 문제를 개선하는 쪽으로 진화했다.
 * SPEEDY
 
 ### HTTP 문제점에 대한 해결책
@@ -120,10 +120,9 @@ http.createServer(function (req, res){
 	4. 네트워크 속도 지원 못하는 문제
 * TCP, UDP 성능 개선을 하기 위해서는 OS 커널을 건드려야 하는데, 이는 매우 부담스러운 일이다. 따라서 TCP가 아닌 UDP를 씀으로써 Transport layer가 아닌 그 위 Application Layer에서 동작하도록 한다.
 * QUIC 은 초기 연결 시간을 빠르게 하기 때문에 사용자는 체감 시간이 극명하게 낮아진다. QUIC은 급속도로 퍼지고 있고, 특히 UDP를 사용했을 때 효과를 극대화할 수 있는 **비디오 트래픽에서 두각**을 나타내고 있다.
-
-### Application Space Execution
-* **QUIC은 Application Layer에서 에러 검출 및 복구를 한다.**  Kernel 이 아닌 그 위에 개발이 되었기 때문에 성능 문제가 발생할 수 있다.
-* Kernel 안에 있는 것들의 통신은 overhead가 적지만, QUIC은 시간이 조금 더 걸릴 수 있다. 그러나 부하가 큰 영향을 미칠 정도는 아니다.
+* **Fast Establishment** : 연결 설정에서의 overhead를 줄이고자 했다. 기존 TCP와 다르게 QUIC은 간단한 연결 과정을 거치고 한 번 연결 설정을 한 적이 있으면 추가 작업이 필요 없다.
+* **Enhanced Error Correction** : **QUIC은 에러 검출 및 복구 기능이 없는 UDP를 베이스로 사용하지만 Application Layer에서 에러 검출 및 복구를 한다.**  Kernel 이 아닌 그 위에 개발이 되었기 때문에 성능 문제가 발생할 수 있다.
+* **Application Space Execution** : Kernel 안에 있는 것들의 통신은 overhead가 적지만, context switching 에 의해 QUIC은 시간이 조금 더 걸릴 수 있다. 그러나 부하가 큰 영향을 미칠 정도는 아니다.
 
 ### Client & Server Deployment
 * Client  : chrome에서  `chrome://net-internals/#quic` 을 통해 QUIC을 켤 수 있다.
@@ -137,7 +136,7 @@ http.createServer(function (req, res){
 <img width="400" src="https://user-images.githubusercontent.com/64299475/142602258-dbfffabd-7b99-4d7e-aaf8-ef16a5d96974.png">
 
 * INVITE, 200 OK, 즉, 위 사진에서 초록색 글자에 대한 내용은 **SIP**에서 정의하고, 실질적인 Media 에 대한 정보는 **SDP**에서 별도로 정의한다. SIP가 SDP를 실어나르는 형식이다.
-* Session Description Protocol (SDP)
+* Session Description Protocol (SDP) : IP 주소, Port 번호 등의 SIP가 주고 받아야 하는 정보를 포함한다. 
 * **HTTP는 하나에 정의 되어 있고, SIP는 두 개로 나뉘어져 있다는 것** 외에는 큰 차이는 없다.
 
 ### User Agent
@@ -149,7 +148,7 @@ http.createServer(function (req, res){
 
 * 통신을 하기 위해서는 사용자가 현재 사용하고 있는 network 주소를 알아야 한다. 그러나 application의 ID는 고정 되어있지만 **network 주소는 계속 바뀌는 문제가 있다.**
 * 이런 상황에서, 휴대폰의 네트워크 주소를 주기적으로 확인하여 **SIP의 ID를 Ip address로 맵핑하는 것을 *Registrar*라고 한다.** 그렇기 때문에 소프트웨어에 서버가 필요하다.
-* 이외에도 통신을 위해서는 Proxy Server, Redirect Server가 필요하다.
+* 이외에도 통신을 위해서는 Proxy Server(SIP 메시지를 user agent에게 받는다), Redirect Server(SIP 주소를 새로운 주소로 변환한다)가 필요하다.
 
 ## Advanced Web Technologies
 ### WebRTC (Web Real-Time Communication)
@@ -166,6 +165,7 @@ http.createServer(function (req, res){
 
 ### Solid
 * Blockchain과 비슷한 방법으로, 나의 저장소를 내가 관리하는 방법이다.
+* 허가 없이는 데이터를 가져가지 못 하도록 한다.
 
 
 
