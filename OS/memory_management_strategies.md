@@ -7,7 +7,7 @@
 * 모든 작업은 메모리에서 일어나고 있다. 메모리는 컴퓨터 시스템의 중심적인 역할을 수행한다.
 * CPU는 메모리로부터 명령을 받고, 명령을 수행하고 다시 메모리로 값을 저장하는 방식으로 동작한다. **메모리는 CPU로부터 값을 주고 받을 수 있는 유일한 저장장치이다.**
 * CPU는 Disk, network, printers 를 직접 제어하는 것이 아닌, **메모리를 통해 제어한다.**
-* Stall : 메모리를 쓰는 동안 낭비되는 CPU 사이클
+* **Stall** : 메모리를 쓰는 동안 낭비되는 CPU 사이클 - `hyperthread 기법 사용으로 해결 가능`
 * `메모리를 어떻게 관리할 것인가?`
 * SRAM - Cache
 	* 가장 비싸고 빠르고, 용량이 작은 메모리
@@ -91,7 +91,7 @@
 * Internal Fragmentation
 
 ### External Fragmentation Solutions
-* **Compaction** : Hole이 발생하면 Hole을 하나로 모으는 것
+* **Compaction** (디스크 조각 모음) : Hole이 발생하면 Hole을 하나로 모으는 것
 	* Compaction을 하기 위해서는 기존의 프로세스들이 자리 이동을 해야 한다. `Relocation of Dynamic`
 * Load Time시 모두 변환이 되면, Relocation 마다 바인딩을 다시 해야하는 불편함이 있다. `따라서, Only Contiguous Allocation 방법은 사용하지 않는다.`
 * **Logical Memory는 붙어있어도, 물리적 메모리는 Noncontiguous Allocation을 사용하여 처리한다.**

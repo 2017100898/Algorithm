@@ -131,6 +131,7 @@ do{
 		* **Safety algorithm** : Safe Sequence 가 존재하는지 찾는 것
 		* **Resource-Request algorithm** : 어떤 request 왔을 때 resource 줬다고 가정하고, 시뮬레이션을 해보는 알고리즘
 	
+🌈
 > n = number of process  
 > m = number of resources types  
 > Available : 사용가능한 갯수 (m vector로 표현)  
