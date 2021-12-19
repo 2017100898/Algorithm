@@ -54,6 +54,7 @@
 * [큐 (Queue)](https://github.com/2017100898/TIL/blob/main/DataStructures/queue.md)
 * [연결 리스트 (Linked List)](https://github.com/2017100898/TIL/blob/main/DataStructures/linked_list.md)
 * [재귀 (Recursion)](https://github.com/2017100898/TIL/blob/main/DataStructures/recursion.md)
+* [트리 (Tree)](https://github.com/2017100898/TIL/blob/main/DataStructures/tree.md)
 
 
 ### Design Pattern
