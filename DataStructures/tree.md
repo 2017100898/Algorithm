@@ -16,3 +16,18 @@
 * Inorder : 왼쪽 - 자신 - 오른쪽
 * Postorder : 왼쪽 - 오른쪽 - 자신
 * Preorder : 자신 - 왼쪽 - 오른쪽
+
+
+
+## Big O
+
+| operation    | BST     | Array-based List | Linked List |
+| ------------ | ------- | ---------------- | ----------- |
+| Constructor  | O(1)    | O(1)             | O(1)        |
+| Destructor   | O(N)    | O(1)             | O(N)        |
+| IsFull       | O(1)    | O(1)             | O(1)        |
+| IsEmpty      | O(1)    | O(1)             | O(1)        |
+| RetrieveItem | O(logN) | O(logN)          | O(N)        |
+| InsertItem   | O(logN) | O(N)             | O(N)        |
+| DeleteItem   | O(logN) | O(N)             | O(N)        |
+

@@ -55,6 +55,9 @@
 * [연결 리스트 (Linked List)](https://github.com/2017100898/TIL/blob/main/DataStructures/linked_list.md)
 * [재귀 (Recursion)](https://github.com/2017100898/TIL/blob/main/DataStructures/recursion.md)
 * [트리 (Tree)](https://github.com/2017100898/TIL/blob/main/DataStructures/tree.md)
+* [힙 (Heap)](https://github.com/2017100898/TIL/blob/main/DataStructures/heap.md)
+* [그래프 (Graph)](https://github.com/2017100898/TIL/blob/main/DataStructures/graph.md)
+* [정렬과 검색 (Sorting and Searching)](https://github.com/2017100898/TIL/blob/main/DataStructures/sorting_and_searching.md)
 
 
 ### Design Pattern
