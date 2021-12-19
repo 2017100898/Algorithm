@@ -47,6 +47,13 @@
 * 이 정렬 방법은 새로운 메모리가 필요하므로 메모리를 많이 쓴다.
 * 개선된 형태로 메모리 절반 정도를 줄일 수 있다.
 
+## Sorting 시간 복잡도
+<img width = "400" src= "https://user-images.githubusercontent.com/64299475/146688195-d848d475-5e79-4035-948f-5259617fe742.png">
+<img width = "400" src= "https://user-images.githubusercontent.com/64299475/146688197-9d67ce70-c6c1-424b-a9b7-e562713384ae.png">
+
+## Sorting pros and cons 정리
+<img width = "470" src= "https://user-images.githubusercontent.com/64299475/146688196-8beb4cfe-5457-45ef-855f-035ea6dcf21a.png">
+
 ## Search
 * Linear Searching - O(N)
 * High-Probability Ordering - O(N)
@@ -72,10 +79,9 @@
 
 * 사진에서 보는 바와 같이 77003을 삭제했을 때, 42504를 찾으려면 곤란하다.
 
-
 ### 충돌(Collision)
-* 이미 array에 숫자 있을 때 충돌이 일어난다.
-* **Rehashing** : 충돌이 생기면 다른 hash function 사용하는 것이다.
+* 이미 array에 숫자 있을 때 충돌이 일어난다. 해싱 구성 시 이를 어떻게 처리할 건지에 대한 정보를 반드시 포함해야 한다.
+* **Rehashing** : 충돌이 생기면 다른 hash function 사용하는 방법이다. (closed hashing)
   * f1 = key %100
   * f2 = (f1+1)%100
   * f3 = (f2+1)%100 `Linear Probing`
@@ -83,10 +89,12 @@
   * (HashVal + random) % array size `Random Probing (1-3-7-...)`
 * Collision을 줄이기 위해서는 Table을 크게 만들거나, Uniform 하게 분배해야 한다.
 
+## Opened Hashing
 ### Buckets
 <img width="440" src="https://user-images.githubusercontent.com/64299475/146688190-ab076188-9e9a-42d7-afab-461afe0807ee.png">
 
 * 충돌 처리 방법
+* 메모리를 얼마나 쓸지 예상하지 못 한다는 단점이 존재한다.
 * 어차피 3개가 넘어가면 또 다시 충돌이 일어나므로 좋은 방법은 아니다.
 * 너무 크게 만들면 Memory 낭비가 심하다.
 
@@ -94,3 +102,4 @@
 <img width="440" src="https://user-images.githubusercontent.com/64299475/146688188-bb82249c-2d20-4083-955d-4567235cb589.png">
 
 * Linked List를 이용한 충돌 처리 방법
+* 메모리를 얼마나 쓸지 예상하지 못 한다는 단점이 존재한다.
