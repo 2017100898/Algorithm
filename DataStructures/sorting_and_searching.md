@@ -54,6 +54,10 @@
 ## Sorting pros and cons 정리
 <img width = "470" src= "https://user-images.githubusercontent.com/64299475/146688196-8beb4cfe-5457-45ef-855f-035ea6dcf21a.png">
 
+## Tag Sort
+* 키 필드를 정렬하여 올바른 순서를 만든 다음 실제 데이터 레코드를 해당 순서로 배치하는 정렬 방법
+* 실제 레코드 대신 포인터를 재배치하여 이동 시간을 단축할 수 있다.
+
 ## Search
 * Linear Searching - O(N)
 * High-Probability Ordering - O(N)
