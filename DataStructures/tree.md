@@ -7,12 +7,12 @@
 
 * **Level**은 root 노드부터 **0, 1, 2, ...** 순이다.
 * **Height**는 root 노드부터 **1, 2, 3, ...** 순이다. (Height = Level + 1)
-* Leaf 노드 : Child 하나도 없는 노드
+* Leaf 노드 : Child가 하나도 없는 노드
 	* *가장 깊은 Level의 노드가 leaf 노드라는 개념은 틀렸다.*
 * Ancestor of a node : 부모와 부모보다 더 위에 있는 노드들
 	* *다시 말해, 해당 노드에서 루트노드로 갈 때 지나가는 모든 노드다.*
 * Descendant of a node : 자식과 자식보다 더 위에 있는 노드들
-* 노드가 하나만 남아도 Tree가 된다.
+* 노드가 하나만 남아도 Tree라 부를 수 있다.
 
 ## Tree Traversal
 * Inorder : 왼쪽 - 자신 - 오른쪽
