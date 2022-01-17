@@ -10,6 +10,7 @@
 * [Machine Learning](https://github.com/2017100898/TIL/tree/main/MachineLearning)
 * [Network](https://github.com/2017100898/TIL/tree/main/Network)
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
+* [Pattern Recognition]()
 * [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
 
 
@@ -103,6 +104,11 @@
 * [Secondary Storage Architecture](https://github.com/2017100898/TIL/blob/main/OS/secondary_storage_architecture.md)
 * [I/O 시스템 (I/O Systems)](https://github.com/2017100898/TIL/blob/main/OS/io_systems.md)
 
+### Pattern Recognition
+* 베이시언 결정 이론
+* [확률 분포 추정](https://fuschia-polo-2d8.notion.site/7d484254a4c64318b905a4c54ec4a1c7)
+* 신경망
+* SVM
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
