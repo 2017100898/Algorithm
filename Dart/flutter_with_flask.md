@@ -102,6 +102,16 @@ Future getData(var url) async {
 
 * http의 get 함수를 통해 원하는 url로의 요청을 하고, Json 데이터를 파싱함으로써 앱에 정보를 띄울 수 있게 된다.
 * ~~Android 앱은 주소가 10.0.2.2:40732 여야 한다는 말이 있더라~~
+* Web(Chrome)으로 개발할 때 xmlhttprequest error가 발생하면, 아래 방법을 시도해 보자.
+```
+1- Go to flutter\bin\cache and remove a file named: flutter_tools.stamp
+
+2- Go to flutter\packages\flutter_tools\lib\src\web and open the file chrome.dart.
+
+3- Find '--disable-extensions'
+
+4- Add '--disable-web-security'
+```
 
 ## Before Click
 <img width="300" src="https://user-images.githubusercontent.com/64299475/142008354-ed703aeb-9869-4ddd-acb9-493ea25b3fff.png">
