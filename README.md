@@ -109,6 +109,8 @@
 * [확률 분포 추정](https://fuschia-polo-2d8.notion.site/7d484254a4c64318b905a4c54ec4a1c7)
 * [신경망](https://fuschia-polo-2d8.notion.site/ae51983e993d467dbe839f5668b29415)
 * SVM
+* 질적 분류
+* [순차 데이터의 인식](https://fuschia-polo-2d8.notion.site/394ce912dcca414d90bbd7f524bbd5b8)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
