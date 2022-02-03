@@ -109,8 +109,8 @@
 * [베이시언 결정 이론](https://fuschia-polo-2d8.notion.site/c0f6b7cfb6d44f318711df3d928e4701)
 * [확률 분포 추정](https://fuschia-polo-2d8.notion.site/7d484254a4c64318b905a4c54ec4a1c7)
 * [신경망](https://fuschia-polo-2d8.notion.site/ae51983e993d467dbe839f5668b29415)
-* SVM
-* 질적 분류
+* [SVM](https://fuschia-polo-2d8.notion.site/SVM-ca80b8bfe8f040e3919461869da86e2d)
+* [질적 분류](https://fuschia-polo-2d8.notion.site/25930c6f49d34c129f4559aca6c3194a)
 * [순차 데이터의 인식](https://fuschia-polo-2d8.notion.site/394ce912dcca414d90bbd7f524bbd5b8)
 
 ### SQL
