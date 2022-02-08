@@ -10,7 +10,7 @@
 * [Machine Learning](https://github.com/2017100898/TIL/tree/main/MachineLearning)
 * [Network](https://github.com/2017100898/TIL/tree/main/Network)
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
-* [Pattern Recognition]()
+* [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
 * [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
 
 
@@ -112,6 +112,7 @@
 * [SVM](https://fuschia-polo-2d8.notion.site/SVM-ca80b8bfe8f040e3919461869da86e2d)
 * [질적 분류](https://fuschia-polo-2d8.notion.site/25930c6f49d34c129f4559aca6c3194a)
 * [순차 데이터의 인식](https://fuschia-polo-2d8.notion.site/394ce912dcca414d90bbd7f524bbd5b8)
+* [특징 추출](https://fuschia-polo-2d8.notion.site/dfecdb9b664f479fb20accb40bf95eab)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
