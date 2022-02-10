@@ -113,6 +113,8 @@
 * [질적 분류](https://fuschia-polo-2d8.notion.site/25930c6f49d34c129f4559aca6c3194a)
 * [순차 데이터의 인식](https://fuschia-polo-2d8.notion.site/394ce912dcca414d90bbd7f524bbd5b8)
 * [특징 추출](https://fuschia-polo-2d8.notion.site/dfecdb9b664f479fb20accb40bf95eab)
+* [특징 선택](https://fuschia-polo-2d8.notion.site/1ae76ff405d3414995f88398c2164e4a)
+
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
