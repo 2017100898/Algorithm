@@ -116,6 +116,7 @@
 * [특징 선택](https://fuschia-polo-2d8.notion.site/1ae76ff405d3414995f88398c2164e4a)
 * [군집화](https://fuschia-polo-2d8.notion.site/4489a5e019de4d44a3d41211356e976a)
 * [최적화 알고리즘](https://fuschia-polo-2d8.notion.site/24f46245d35445c5b3c23438c7154ccc)
+* [혼성 모델](https://fuschia-polo-2d8.notion.site/6789d394758b4be182096d387f5237af)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
