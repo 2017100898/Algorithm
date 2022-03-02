@@ -11,6 +11,7 @@
 * [Network](https://github.com/2017100898/TIL/tree/main/Network)
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
 * [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
+* [Pytorch](https://github.com/2017100898/TIL/)
 * [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
 
 
@@ -117,6 +118,9 @@
 * [군집화](https://fuschia-polo-2d8.notion.site/4489a5e019de4d44a3d41211356e976a)
 * [최적화 알고리즘](https://fuschia-polo-2d8.notion.site/24f46245d35445c5b3c23438c7154ccc)
 * [혼성 모델](https://fuschia-polo-2d8.notion.site/6789d394758b4be182096d387f5237af)
+
+### Pytorch
+* [Pytorch Basic](https://fuschia-polo-2d8.notion.site/Pytorch-Basic-8ca8f891602947678763721a54117d91)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
