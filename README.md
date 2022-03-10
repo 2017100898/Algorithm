@@ -121,6 +121,7 @@
 
 ### Pytorch
 * [Pytorch Basic](https://fuschia-polo-2d8.notion.site/Pytorch-Basic-8ca8f891602947678763721a54117d91)
+* [MLP 실습](https://fuschia-polo-2d8.notion.site/MLP-Implementation-c34adee434a7495280de7ba981cb7b16)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
