@@ -123,6 +123,7 @@
 * [Pytorch Basic](https://fuschia-polo-2d8.notion.site/Pytorch-Basic-5dfd89827dd947db942a5aff4c54756c)
 * [MLP 실습](https://fuschia-polo-2d8.notion.site/MLP-6a36329b1f7442089c14ce126fc87c41)
 * [DeepLearning Basic](https://fuschia-polo-2d8.notion.site/Deep-Learning-0292185e01b44265a84a7f7f84c7e092)
+* [AutoEncoder 실습](https://fuschia-polo-2d8.notion.site/AutoEncoder-with-FashionMNIST-18f59024b0514a1c833d8e2e0400887a)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
