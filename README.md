@@ -7,7 +7,7 @@
 * [Data Structures](https://github.com/2017100898/TIL/tree/main/DataStructures)
 * [Design Pattern](https://github.com/2017100898/TIL/tree/main/DesignPattern)
 * [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
-* [Machine Learning](https://github.com/2017100898/TIL/tree/main/MachineLearning)
+* [Graph Theory](https://github.com/2017100898/TIL/tree/main/GraphTheory)
 * [Network](https://github.com/2017100898/TIL/tree/main/Network)
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
 * [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
@@ -70,11 +70,9 @@
 ### Linux
 * [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
  
-### Machine Learning
+### Graph Theory
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
 * [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_measures.md)
-* [인공신경망과 퍼셉트론(ANN and Perceptron)](https://github.com/2017100898/TIL/blob/main/MachineLearning/ann_and_perceptron.md)
-* [딥러닝 개념 (Deep Learning)](https://github.com/2017100898/TIL/blob/main/MachineLearning/deeplearning.md)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
@@ -124,6 +122,7 @@
 * [MLP 실습](https://fuschia-polo-2d8.notion.site/MLP-6a36329b1f7442089c14ce126fc87c41)
 * [DeepLearning Basic](https://fuschia-polo-2d8.notion.site/Deep-Learning-0292185e01b44265a84a7f7f84c7e092)
 * [AutoEncoder 실습](https://fuschia-polo-2d8.notion.site/AutoEncoder-with-FashionMNIST-18f59024b0514a1c833d8e2e0400887a)
+* [Computer Vision](https://fuschia-polo-2d8.notion.site/Computer-Vision-81be2e19cb4b4a2bbc1af161daf46cab)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
