@@ -6,8 +6,8 @@
 * [Dart](https://github.com/2017100898/TIL/tree/main/Dart)
 * [Data Structures](https://github.com/2017100898/TIL/tree/main/DataStructures)
 * [Design Pattern](https://github.com/2017100898/TIL/tree/main/DesignPattern)
-* [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
 * [Graph Theory](https://github.com/2017100898/TIL/tree/main/GraphTheory)
+* [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
 * [Network](https://github.com/2017100898/TIL/tree/main/Network)
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
 * [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
@@ -67,12 +67,12 @@
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
 * [Design Pattern](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_pattern.md)
 
+### Graph Theory
+* [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/GraphTheory/graph_theory.md)
+* [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/GraphTheory/graph_measures.md)
+
 ### Linux
 * [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
- 
-### Graph Theory
-* [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_theory.md)
-* [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/MachineLearning/graph_measures.md)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
@@ -123,6 +123,7 @@
 * [DeepLearning Basic](https://fuschia-polo-2d8.notion.site/Deep-Learning-0292185e01b44265a84a7f7f84c7e092)
 * [AutoEncoder 실습](https://fuschia-polo-2d8.notion.site/AutoEncoder-with-FashionMNIST-18f59024b0514a1c833d8e2e0400887a)
 * [Computer Vision](https://fuschia-polo-2d8.notion.site/Computer-Vision-81be2e19cb4b4a2bbc1af161daf46cab)
+* [CNN 실습](https://fuschia-polo-2d8.notion.site/CIFAR-10-d8aabfd6bc1d4cfcb57c91296322a63a)
 
 ### SQL
 * [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
