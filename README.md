@@ -124,13 +124,13 @@
 * [AutoEncoder 실습](https://fuschia-polo-2d8.notion.site/AutoEncoder-with-FashionMNIST-18f59024b0514a1c833d8e2e0400887a)
 * [Computer Vision](https://fuschia-polo-2d8.notion.site/Computer-Vision-81be2e19cb4b4a2bbc1af161daf46cab)
 * [CNN 실습](https://fuschia-polo-2d8.notion.site/CIFAR-10-d8aabfd6bc1d4cfcb57c91296322a63a)
+* [Natural Language Processing](https://fuschia-polo-2d8.notion.site/NLP-efd17c668d264017baa9484fa0003d15)
 
 ### SQL
-* [Programmers SQL 문제](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
+* [Programmers SQL](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
 * [엔터티 (Entity)](https://github.com/2017100898/TIL/blob/main/SQL/entity.md)
 * [속성 (Attribute)](https://github.com/2017100898/TIL/blob/main/SQL/attribute.md)
 * [SQL기본 (SQL Basic)](https://github.com/2017100898/TIL/blob/main/SQL/sqlbasic.md)
 * [데이터모델링 (Data Modeling)](https://github.com/2017100898/TIL/blob/main/SQL/datamodeling.md)
 * [관계 (Relationship)](https://github.com/2017100898/TIL/blob/main/SQL/relationship.md)
-* [SQLD 대비](https://github.com/2017100898/TIL/tree/main/SQL/SQLD)
 
