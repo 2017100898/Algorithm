@@ -8,6 +8,7 @@
 * [Design Pattern](https://github.com/2017100898/TIL/tree/main/DesignPattern)
 * [Graph Theory](https://github.com/2017100898/TIL/tree/main/GraphTheory)
 * [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
+* [Machine Learning](https://github.com/2017100898/TIL)
 * [Network](https://github.com/2017100898/TIL/tree/main/Network)
 * [OS](https://github.com/2017100898/TIL/tree/main/OS)
 * [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
@@ -73,6 +74,9 @@
 
 ### Linux
 * [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
+
+### Machine Learning
+* [Linear Models for Regression](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Regression-328103f546fe4d47a46e9acee9005e02)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
