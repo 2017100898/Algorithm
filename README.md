@@ -77,6 +77,7 @@
 
 ### Machine Learning
 * [Linear Models for Regression](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Regression-328103f546fe4d47a46e9acee9005e02)
+* [Nearest Neighbor Methods](https://fuschia-polo-2d8.notion.site/Nearest-Neighbor-Methods-5e8ad98024034b789b10781f0579700b)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
