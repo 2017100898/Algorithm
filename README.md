@@ -81,6 +81,7 @@
 * [Linear Models for Regression](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Regression-328103f546fe4d47a46e9acee9005e02)
 * [Linear Models for Binary Classification](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Classification-8c36b439a90b497aae9414e8138d3048)
 * [Linear Models for Multiclass Classification](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Multiclass-Classification-392468ef18ae4e4faa16fa348d686ab9)
+* [Gradient Descent, Gradient Boosting](https://fuschia-polo-2d8.notion.site/Gradient-Descent-Gradient-Boosting-661ebf20a4804c33bc2e50e5cfa6a467)
 * [Model Evaluation : Bias-Variance Tradeoff](https://fuschia-polo-2d8.notion.site/Model-Evaluation-Bias-Variance-Tradeoff-1fd7a81b865846638ae8dee02fd81e47)
 
 ### Network
