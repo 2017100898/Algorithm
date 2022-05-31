@@ -81,9 +81,10 @@
 * [Linear Models for Regression](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Regression-328103f546fe4d47a46e9acee9005e02)
 * [Linear Models for Binary Classification](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Classification-8c36b439a90b497aae9414e8138d3048)
 * [Linear Models for Multiclass Classification](https://fuschia-polo-2d8.notion.site/Linear-Models-for-Multiclass-Classification-392468ef18ae4e4faa16fa348d686ab9)
+* [Trees, Forests, Ensembles](https://fuschia-polo-2d8.notion.site/Trees-Forests-Ensembles-937090fe1a8e4108b6364317f688e653)
+* [Ensemble Models](https://fuschia-polo-2d8.notion.site/Ensemble-Models-ae3408bbd6044d1088bd2b3a4f8cf8cb)
 * [Gradient Descent, Gradient Boosting](https://fuschia-polo-2d8.notion.site/Gradient-Descent-Gradient-Boosting-661ebf20a4804c33bc2e50e5cfa6a467)
 * [Model Evaluation : Bias-Variance Tradeoff](https://fuschia-polo-2d8.notion.site/Model-Evaluation-Bias-Variance-Tradeoff-1fd7a81b865846638ae8dee02fd81e47)
-* [Trees, Forests, Ensembles](https://fuschia-polo-2d8.notion.site/Trees-Forests-Ensembles-937090fe1a8e4108b6364317f688e653)
 
 ### Network
 * [OSI 7 Layer](https://github.com/2017100898/TIL/blob/main/Network/OSI_7_Layer.md)
