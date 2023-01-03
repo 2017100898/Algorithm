@@ -5,6 +5,7 @@
 * [Algorithm](https://github.com/2017100898/TIL/tree/main/Algorithm)
 * [Dart](https://github.com/2017100898/TIL/tree/main/Dart)
 * [Data Structures](https://github.com/2017100898/TIL/tree/main/DataStructures)
+* [Deep Learning](https://github.com/2017100898/TIL)
 * [Design Pattern](https://github.com/2017100898/TIL/tree/main/DesignPattern)
 * [Graph Theory](https://github.com/2017100898/TIL/tree/main/GraphTheory)
 * [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
@@ -63,6 +64,8 @@
 * [그래프 (Graph)](https://github.com/2017100898/TIL/blob/main/DataStructures/graph.md)
 * [정렬과 검색 (Sorting and Searching)](https://github.com/2017100898/TIL/blob/main/DataStructures/sorting_and_searching.md)
 
+### Deep Learning
+* [Explainable AI (XAI)](https://www.notion.so/Explainable-AI-XAI-900b5f6a3bd14ed480e21c4f7f615e2a)
 
 ### Design Pattern
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
