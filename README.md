@@ -15,6 +15,7 @@
 * [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
 * [Pytorch](https://github.com/2017100898/TIL/)
 * [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
+* [Statistics](https://github.com/2017100898/TIL/)
 
 
 ### Algorithm
@@ -153,3 +154,17 @@
 * [데이터모델링 (Data Modeling)](https://github.com/2017100898/TIL/blob/main/SQL/datamodeling.md)
 * [관계 (Relationship)](https://github.com/2017100898/TIL/blob/main/SQL/relationship.md)
 
+
+### Statistics
+* [고유값과 고유벡터](https://aims-lab.tistory.com/6)
+* [확률 모형과 확률 변수](https://aims-lab.tistory.com/21)
+* [조건부 확률](https://aims-lab.tistory.com/44)
+* [p-value](https://aims-lab.tistory.com/71)
+* [평균과 중앙값](https://aims-lab.tistory.com/103)
+* [확률과 우도 (Likelihood)](https://aims-lab.tistory.com/124)
+* [부트스트랩 (Boostrap)](https://aims-lab.tistory.com/126)
+* [Information Gain와 Entropy](https://aims-lab.tistory.com/119)
+* [빅데이터와 정규성 테스트](https://aims-lab.tistory.com/120)
+* [모수적 방법론과 비모수적 방법론](https://aims-lab.tistory.com/122)
+* [베이지안과 프리퀀티스트](https://aims-lab.tistory.com/130)
+* [검정력 (statistical power)](https://aims-lab.tistory.com/132)
