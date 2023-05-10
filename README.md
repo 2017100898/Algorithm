@@ -157,7 +157,9 @@
 
 ### Statistics
 * [고유값과 고유벡터](https://aims-lab.tistory.com/6)
+* [샘플링과 리샘플링](https://aims-lab.tistory.com/12)
 * [확률 모형과 확률 변수](https://aims-lab.tistory.com/21)
+* [누적 분포 함수와 확률 밀도 함수](https://aims-lab.tistory.com/22)
 * [조건부 확률](https://aims-lab.tistory.com/44)
 * [공분산과 상관계수](https://aims-lab.tistory.com/54)
 * [신뢰구간 (Confidence Interval)](https://aims-lab.tistory.com/55)
@@ -174,3 +176,4 @@
 * [베이지안과 프리퀀티스트](https://aims-lab.tistory.com/130)
 * [검정력 (statistical power)](https://aims-lab.tistory.com/132)
 * [결측치 처리 (missing value)](https://aims-lab.tistory.com/133)
+* [이상치 판단](https://aims-lab.tistory.com/138)
