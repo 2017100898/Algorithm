@@ -67,6 +67,8 @@
 
 ### Deep Learning
 * [Explainable AI (XAI)](https://www.notion.so/Explainable-AI-XAI-900b5f6a3bd14ed480e21c4f7f615e2a)
+* [Stack GAN](https://aims-lab.tistory.com/34)
+
 
 ### Design Pattern
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
@@ -177,3 +179,4 @@
 * [검정력 (statistical power)](https://aims-lab.tistory.com/132)
 * [결측치 처리 (missing value)](https://aims-lab.tistory.com/133)
 * [이상치 판단](https://aims-lab.tistory.com/138)
+* [필요한 표본 크기 계산](https://aims-lab.tistory.com/140)
