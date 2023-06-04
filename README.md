@@ -180,3 +180,5 @@
 * [결측치 처리 (missing value)](https://aims-lab.tistory.com/133)
 * [이상치 판단](https://aims-lab.tistory.com/138)
 * [필요한 표본 크기 계산](https://aims-lab.tistory.com/140)
+* [Bias 통제 방법](https://aims-lab.tistory.com/142)
+* [로그함수](https://aims-lab.tistory.com/145)
