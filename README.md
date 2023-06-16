@@ -182,3 +182,4 @@
 * [필요한 표본 크기 계산](https://aims-lab.tistory.com/140)
 * [Bias 통제 방법](https://aims-lab.tistory.com/142)
 * [로그함수](https://aims-lab.tistory.com/145)
+* [Cross Validation](https://aims-lab.tistory.com/146)
