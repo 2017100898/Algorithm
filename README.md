@@ -183,3 +183,9 @@
 * [Bias 통제 방법](https://aims-lab.tistory.com/142)
 * [로그함수](https://aims-lab.tistory.com/145)
 * [Cross Validation](https://aims-lab.tistory.com/146)
+
+
+### Swift
+* [변수와 상수](https://fuschia-polo-2d8.notion.site/db35a142e4464a479ee8030a55c5d4ac?pvs=4)
+* [조건문과 반복문](https://fuschia-polo-2d8.notion.site/c68b64b29e9a4c309598016161b7170c?pvs=4)
+* [옵셔널 (Optional)](https://fuschia-polo-2d8.notion.site/Optional-46178d2c56924c9db58521b233145fdd?pvs=4)
