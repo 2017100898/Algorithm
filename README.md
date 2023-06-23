@@ -189,3 +189,4 @@
 * [변수와 상수](https://fuschia-polo-2d8.notion.site/db35a142e4464a479ee8030a55c5d4ac?pvs=4)
 * [조건문과 반복문](https://fuschia-polo-2d8.notion.site/c68b64b29e9a4c309598016161b7170c?pvs=4)
 * [옵셔널 (Optional)](https://fuschia-polo-2d8.notion.site/Optional-46178d2c56924c9db58521b233145fdd?pvs=4)
+* [함수와 클로저](https://fuschia-polo-2d8.notion.site/d3a88f7173b24d95b169e8aa28cab655?pvs=4)
