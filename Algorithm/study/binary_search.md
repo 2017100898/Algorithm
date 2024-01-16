@@ -48,3 +48,28 @@ void binsearch(int n, const keytype S[], keytype x, index& location){
 
 ```
 
+# Lower bound / Upper bound
+* Lower bound: 원하는 target 값 이상이 처음 나오는 값
+	* 예를 들어  41 45 45 46 이 있을 때 Lower bound(45)는 처음 나오는 45가 된다.
+* Upper bound: 원하는 값 target 초과인 값이 처음으로 나오는 위치
+	* 예를 들어, 41 45 45 46 이 있을 때 Upper bound(45)는 46이 된다.
+
+```Python
+def lower_bound(target):
+	left, right = 0, n - 1
+	min_idx = n
+
+	while left <= right:
+		mid = (left + right) // 2 # 이진탐색과 달리, 일반적인 arr[mid]==target 은 없다
+		if arr[mid] >= target: # 원하는 target 이상이 처음 나오는 값을 찾기 위함 !
+			min_idx = min(min_idx, mid) # 값이 같을 때, 최소 index 를 갱신하기 위함
+			right = mid - 1
+
+		else:
+			left = mid + 1
+
+	return min_idx
+```
+
+* Upper bound - Lower bound == 배열 내 수의 개수
+* 따라서, Upper bound == Lower bound일 때 배열 내 값이 없다고 본다.
