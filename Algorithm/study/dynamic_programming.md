@@ -1,4 +1,4 @@
-# Dynamic Programming
+# 동적 계획법 (Dynamic Programming)
 * 다이나믹 프로그래밍은 분할정복법과 마찬가지로 문제를 나눈 후에 나누어진 부분들을 먼저 푸는 알고리즘이다. 이때 인덱스를 효과적으로 설정하여 **작은 문제들의 중복 해결을 방지**한다.
 * 상향식 해결법으로 **먼저 작은 문제 해결하고 결과를 큰 문제의 해결**로 확산한다.
 
@@ -14,3 +14,16 @@
 * [플로이드-워셜 구현2](https://github.com/2017100898/TIL/blob/main/Algorithm/study/floyd_warshall_algorithm.md)
 * [이항계수](https://github.com/2017100898/TIL/blob/main/Algorithm/study/binomial_coefficient.md)
 * 연쇄 행렬 곱셈
+
+## 메모이제이션
+* 재귀함수로 피보나치 수열을 계산하게 되면 시간이 매우 오래 걸린다.
+    * 이 문제를 해결하기 위해서는 중복 계산을 없애면 된다.
+* memo array를 만들어 메모를 하면 된다.
+* memo를 모두 -1로 초기화하고, 값을 계산할 때마다 저장한다.
+* memo의 값이 -1이 아니라면 이미 계산한 적이 있다는 뜻이므로 memo에 적혀있는 값을 그대로 반환한다.
+* Top-down 방식
+
+## Tabulation
+* 재귀 함수 이외에도 for문을 통해 동적 계획법 문제를 해결할 수 있다.
+* 순서대로 배열에 값을 채워나가는 방식이다.
+* Bottom-Up 방식
