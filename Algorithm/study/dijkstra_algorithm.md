@@ -52,3 +52,27 @@ int dijkstra(int start) {
 }
 
 ```
+```python
+def dijkstra(mat, start):
+    dist = [INF] * (n+1)
+    dist[start] = 0
+
+    Q = []
+    heapq.heappush(Q, [dist[start], start])
+
+    while Q:
+        curr_dist, curr_dest = heapq.heappop(Q)
+
+        if curr_dist > dist[curr_dest]:
+            continue
+
+        for new_dest, new_dist in mat[curr_dest]:
+            distance = curr_dist + new_dist
+            
+            if distance < dist[new_dest]:
+                dist[new_dest] = distance
+
+                heapq.heappush(Q, [dist[new_dest], new_dest])
+            
+    return dist
+```
