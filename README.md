@@ -1,26 +1,8 @@
-# Today I Learned
-<img src= "https://img.shields.io/github/last-commit/2017100898/TIL?color=lavender&label=last%20commit">
+# Today I Learned 🚀🎨
 
-## Categories
-* [Algorithm](https://github.com/2017100898/TIL/tree/main/Algorithm)
-* [Dart](https://github.com/2017100898/TIL/tree/main/Dart)
-* [Data Structures](https://github.com/2017100898/TIL/tree/main/DataStructures)
-* [Deep Learning](https://github.com/2017100898/TIL)
-* [Design Pattern](https://github.com/2017100898/TIL/tree/main/DesignPattern)
-* [Graph Theory](https://github.com/2017100898/TIL/tree/main/GraphTheory)
-* [Linux](https://github.com/2017100898/TIL/tree/main/Linux)
-* [Machine Learning](https://github.com/2017100898/TIL)
-* [Network](https://github.com/2017100898/TIL/tree/main/Network)
-* [OS](https://github.com/2017100898/TIL/tree/main/OS)
-* [Pattern Recognition](https://fuschia-polo-2d8.notion.site/76a0a84b557449a1a773e31328f9cd8e?v=004cfef100b04f5a9f296b499bb7d5ad)
-* [Pytorch](https://github.com/2017100898/TIL/)
-* [SQL](https://github.com/2017100898/TIL/tree/main/SQL)
-* [Statistics](https://github.com/2017100898/TIL/)
-
+[![mymelody](https://mazassumnida.wtf/api/v2/generate_badge?boj=mymelody)](https://solved.ac/mymelody)
 
 ### Algorithm
-* [백준 알고리즘 (BOJ)](https://github.com/2017100898/TIL/tree/main/Algorithm/BOJ)
-* [구현](https://github.com/2017100898/TIL/tree/main/Algorithm/study/implement)
 * [분할정복법 (Divide and Conquer)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/divide_and_conquer.md)
 * [깊이우선탐색 (DFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/DFS.md)
 * [너비우선탐색 (BFS)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/BFS.md)
@@ -36,12 +18,10 @@
 * [피보나치 수 (Fibonacci Numbers)](https://github.com/2017100898/TIL/blob/main/Algorithm/study/fibonacci.md)
 
 ### Dart
-* [Cute Cherry UI](https://github.com/2017100898/TIL/blob/main/Dart/cute-cherry-ui)
-* [Local Weather App](https://github.com/2017100898/TIL/blob/main/Dart/local-weather-app)
-* [Dart 문법 (Grammar of Dart Language)](https://github.com/2017100898/TIL/blob/main/Dart/grammar_of_dart_language.md)
-* [플러터 사용기 (Material App with Flutter)](https://github.com/2017100898/TIL/blob/main/Dart/material_app_with_flutter.md)
-* [컨테이너와 컬럼 (Container and Column)](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
-* [스낵바와 토스트 (Snackbar and Toast)](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
+* [Grammar of Dart Language](https://github.com/2017100898/TIL/blob/main/Dart/grammar_of_dart_language.md)
+* [Material App with Flutter](https://github.com/2017100898/TIL/blob/main/Dart/material_app_with_flutter.md)
+* [Container and Column](https://github.com/2017100898/TIL/blob/main/Dart/container_and_column.md)
+* [Snackbar and Toast](https://github.com/2017100898/TIL/blob/main/Dart/snack_bar_and_toast.md)
 * [Stateful Widget](https://github.com/2017100898/TIL/blob/main/Dart/stateful_widget.md)
 * [Final and Const Variable](https://github.com/2017100898/TIL/blob/main/Dart/final_and_const_variable.md)
 * [Future, async, await](https://github.com/2017100898/TIL/blob/main/Dart/future_async_await.md)
@@ -65,11 +45,6 @@
 * [그래프 (Graph)](https://github.com/2017100898/TIL/blob/main/DataStructures/graph.md)
 * [정렬과 검색 (Sorting and Searching)](https://github.com/2017100898/TIL/blob/main/DataStructures/sorting_and_searching.md)
 
-### Deep Learning
-* [Explainable AI (XAI)](https://www.notion.so/Explainable-AI-XAI-900b5f6a3bd14ed480e21c4f7f615e2a)
-* [Stack GAN](https://aims-lab.tistory.com/34)
-
-
 ### Design Pattern
 * [Design By Figure](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_by_figure.md)
 * [Design Pattern](https://github.com/2017100898/TIL/blob/main/DesignPattern/design_pattern.md)
@@ -77,9 +52,6 @@
 ### Graph Theory
 * [그래프 이론 (Graph Theory)](https://github.com/2017100898/TIL/blob/main/GraphTheory/graph_theory.md)
 * [그래프 측정 (Graph measure)](https://github.com/2017100898/TIL/blob/main/GraphTheory/graph_measures.md)
-
-### Linux
-* [아치 리눅스 (Arch Linux)](https://github.com/2017100898/TIL/blob/main/Linux/arch_linux.md)
 
 ### Machine Learning
 * [Nearest Neighbor Methods](https://fuschia-polo-2d8.notion.site/Nearest-Neighbor-Methods-5e8ad98024034b789b10781f0579700b)
@@ -147,46 +119,3 @@
 * [Computer Vision](https://fuschia-polo-2d8.notion.site/Computer-Vision-81be2e19cb4b4a2bbc1af161daf46cab)
 * [CNN 실습](https://fuschia-polo-2d8.notion.site/CIFAR-10-d8aabfd6bc1d4cfcb57c91296322a63a)
 * [Natural Language Processing](https://fuschia-polo-2d8.notion.site/NLP-efd17c668d264017baa9484fa0003d15)
-
-### SQL
-* [Programmers SQL](https://github.com/2017100898/TIL/tree/main/SQL/Programmers)
-* [엔터티 (Entity)](https://github.com/2017100898/TIL/blob/main/SQL/entity.md)
-* [속성 (Attribute)](https://github.com/2017100898/TIL/blob/main/SQL/attribute.md)
-* [SQL기본 (SQL Basic)](https://github.com/2017100898/TIL/blob/main/SQL/sqlbasic.md)
-* [데이터모델링 (Data Modeling)](https://github.com/2017100898/TIL/blob/main/SQL/datamodeling.md)
-* [관계 (Relationship)](https://github.com/2017100898/TIL/blob/main/SQL/relationship.md)
-
-
-### Statistics
-* [고유값과 고유벡터](https://aims-lab.tistory.com/6)
-* [샘플링과 리샘플링](https://aims-lab.tistory.com/12)
-* [확률 모형과 확률 변수](https://aims-lab.tistory.com/21)
-* [누적 분포 함수와 확률 밀도 함수](https://aims-lab.tistory.com/22)
-* [조건부 확률](https://aims-lab.tistory.com/44)
-* [공분산과 상관계수](https://aims-lab.tistory.com/54)
-* [신뢰구간 (Confidence Interval)](https://aims-lab.tistory.com/55)
-* [p-value](https://aims-lab.tistory.com/71)
-* [A/B Test](https://aims-lab.tistory.com/86)
-* [평균과 중앙값](https://aims-lab.tistory.com/103)
-* [중심극한정리](https://aims-lab.tistory.com/104)
-* [Information Gain와 Entropy](https://aims-lab.tistory.com/119)
-* [빅데이터와 정규성 테스트](https://aims-lab.tistory.com/120)
-* [모수적 방법론과 비모수적 방법론](https://aims-lab.tistory.com/122)
-* [확률과 우도 (Likelihood)](https://aims-lab.tistory.com/124)
-* [부트스트랩 (Bootstrap)](https://aims-lab.tistory.com/126)
-* [데이터가 적을 때의 예측 모델 수립](https://aims-lab.tistory.com/129)
-* [베이지안과 프리퀀티스트](https://aims-lab.tistory.com/130)
-* [검정력 (statistical power)](https://aims-lab.tistory.com/132)
-* [결측치 처리 (missing value)](https://aims-lab.tistory.com/133)
-* [이상치 판단](https://aims-lab.tistory.com/138)
-* [필요한 표본 크기 계산](https://aims-lab.tistory.com/140)
-* [Bias 통제 방법](https://aims-lab.tistory.com/142)
-* [로그함수](https://aims-lab.tistory.com/145)
-* [Cross Validation](https://aims-lab.tistory.com/146)
-
-
-### Swift
-* [변수와 상수](https://fuschia-polo-2d8.notion.site/db35a142e4464a479ee8030a55c5d4ac?pvs=4)
-* [조건문과 반복문](https://fuschia-polo-2d8.notion.site/c68b64b29e9a4c309598016161b7170c?pvs=4)
-* [옵셔널 (Optional)](https://fuschia-polo-2d8.notion.site/Optional-46178d2c56924c9db58521b233145fdd?pvs=4)
-* [함수와 클로저](https://fuschia-polo-2d8.notion.site/d3a88f7173b24d95b169e8aa28cab655?pvs=4)
